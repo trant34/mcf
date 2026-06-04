@@ -1,0 +1,65 @@
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.onnx
+*.engine
+*.h5
+*.tflite
+
+.cache/
+huggingface/
+models/
+
+*.wav
+*.mp3
+*.flac
+*.pcm
+*.pcap
+*.pcapng
+*.raw
+
+# Môi trường ảo (Virtual Environments)
+venv/
+env/
+.venv/
+.env/
+
+# Cache 
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.mypy_cache/
+
+# (Binaries)
+*.exe
+*.exe~
+*.dll
+*.dylib
+*.test
+*.out
+
+/services/logic/mcf-server
+/services/logic/mcf-server.exe
+/services/logic/main
+/services/logic/main.exe
+
+vendor/
+
+.vscode/
+*.code-workspace
+
+# JetBrains (GoLand, PyCharm)
+.idea/
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride

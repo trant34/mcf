@@ -1,0 +1,15 @@
+--extra-index-url https://download.pytorch.org/whl/cu121
+
+# Core AI & Audio
+torch
+torchaudio
+numpy
+faster-whisper
+silero-vad
+
+# Network Replay
+scapy
+
+# gRPC
+grpcio
+grpcio-tools

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MCF Live Translation</title>
+    <style>
+      body {
+        background-color: #121212;
+        color: #ffffff;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+      }
+      #video-container {
+        width: 80%;
+        height: 60vh;
+        background-color: #202124;
+        border-radius: 12px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        padding-bottom: 30px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        position: relative;
+      }
+      #subtitle-box {
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 15px 30px;
+        border-radius: 8px;
+        text-align: center;
+        max-width: 80%;
+        font-size: 1.2rem;
+        line-height: 1.5;
+      }
+      .vi-text {
+        color: #4fc3f7;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      .en-text {
+        color: #a8ff9e;
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>MCF Real-Time AI Translation</h2>
+    <div id="video-container">
+      <div id="subtitle-box">
+        <div id="vi-sub" class="vi-text">Đang chờ tín hiệu âm thanh...</div>
+        <div id="en-sub" class="en-text">Waiting for audio signal...</div>
+      </div>
+    </div>
+
+    <script>
+      // Kết nối tới Golang WebSocket
+      const ws = new WebSocket("ws://" + window.location.host + "/ws");
+      const viSub = document.getElementById("vi-sub");
+      const enSub = document.getElementById("en-sub");
+
+      ws.onmessage = function (event) {
+        const data = event.data;
+        // Cắt chuỗi dựa trên ký tự "=>" mà ta đã define trong Python
+        const parts = data.split("=>");
+        if (parts.length > 1) {
+          viSub.innerText = parts[0].trim();
+          enSub.innerText = parts[1].trim();
+        } else {
+          viSub.innerText = data;
+          enSub.innerText = "";
+        }
+      };
+    </script>
+  </body>
+</html>
