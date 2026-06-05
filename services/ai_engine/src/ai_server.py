@@ -14,13 +14,22 @@ sys.path.append(os.path.join(current_dir, 'pb'))
 
 from pb import ai_service_pb2
 from pb import ai_service_pb2_grpc
+from config import Config
 
-print("[AI Engine] Loading Silero VAD (Pip package) to CPU...", flush=True)
+# Setup structured logger
+logger = Config.setup_logger("ai_engine")
+logger.info("Loading Silero VAD (Pip package) to CPU...")
 vad_model = load_silero_vad()
 
-print("[AI Engine] Loading Whisper (INT8) to GPU...", flush=True)
-whisper_model = WhisperModel("small", device="cuda", compute_type="int8")
-print("[AI Engine] Ready receiving!", flush=True)
+logger.info("Loading Whisper model", extra={"context": {
+    "model_size": Config.WHISPER_MODEL_SIZE,
+    "device": Config.DEVICE,
+    "compute_type": Config.COMPUTE_TYPE
+}})
+whisper_model = WhisperModel(Config.WHISPER_MODEL_SIZE, device=Config.DEVICE, compute_type=Config.COMPUTE_TYPE)
+logger.info("Whisper model loaded, ready to process streams")
+
+Config.log_config(logger)
 
 def decode_pcma_chunk(payload_bytes):
     if not payload_bytes:
@@ -35,13 +44,13 @@ def decode_pcma_chunk(payload_bytes):
 class RealTranslationService(ai_service_pb2_grpc.TranslationServiceServicer): 
     def ProcessMediaStream(self, request_iterator, context):
         session_id = "UNKNOWN"
-        print("\n[AI Engine] Client connected Bi-directional stream", flush=True)
+        logger.info("Client connected to bi-directional stream")
 
-        SAMPLE_RATE = 16000
-        SILENCE_THRESHOLD = 0.012
-        SILENCE_TIMEOUT_SAMPLES = int(0.6 * SAMPLE_RATE)
-        MAX_AUDIO_SAMPLES = int(15.0 * SAMPLE_RATE)
-        MIN_AUDIO_SAMPLES = int(1.0 * SAMPLE_RATE)
+        SAMPLE_RATE = Config.SAMPLE_RATE
+        SILENCE_THRESHOLD = Config.SILENCE_THRESHOLD
+        SILENCE_TIMEOUT_SAMPLES = int(Config.SILENCE_TIMEOUT_SECONDS * SAMPLE_RATE)
+        MAX_AUDIO_SAMPLES = int(Config.MAX_AUDIO_SECONDS * SAMPLE_RATE)
+        MIN_AUDIO_SAMPLES = int(Config.MIN_AUDIO_SECONDS * SAMPLE_RATE)
 
         current_pcm_samples = []
         consecutive_silence_samples = 0 
@@ -52,11 +61,15 @@ class RealTranslationService(ai_service_pb2_grpc.TranslationServiceServicer):
                 session_id = request.session_id
 
                 if request.is_eos: 
-                    print(f"[AI Engine] Receive ending signal from session {session_id}", flush=True)
+                    logger.info("Received end-of-stream signal", extra={"session_id": session_id})
                     break
                 
                 if request.HasField("config"): 
-                    print(f"[AI Engine] Session config: {request.config.source_language} -> {request.config.target_language}", flush=True)
+                    session_source_lang = request.config.source_language
+                    logger.info("Session configured", extra={"session_id": session_id, "context": {
+                        "source_language": request.config.source_language,
+                        "target_language": request.config.target_language
+                    }})
                     continue
 
                 if request.HasField("audio_chunk"): 
@@ -95,7 +108,7 @@ class RealTranslationService(ai_service_pb2_grpc.TranslationServiceServicer):
                         has_speech = False 
 
                         tensor_audio = torch.from_numpy(audio_chunk)
-                        timestamps = get_speech_timestamps(tensor_audio, vad_model, sampling_rate=SAMPLE_RATE, threshold=0.5)
+                        timestamps = get_speech_timestamps(tensor_audio, vad_model, sampling_rate=SAMPLE_RATE, threshold=Config.VAD_THRESHOLD)
 
                         if len(timestamps) > 0: 
                             inf_start = time.time()
@@ -104,7 +117,7 @@ class RealTranslationService(ai_service_pb2_grpc.TranslationServiceServicer):
                             segments_vi, _ = whisper_model.transcribe(
                                 audio_chunk,
                                 task="transcribe",
-                                language="vi",
+                                language=session_source_lang,
                                 beam_size=1,
                                 vad_filter=False
                             )
@@ -115,7 +128,7 @@ class RealTranslationService(ai_service_pb2_grpc.TranslationServiceServicer):
                                 segments_en, _ = whisper_model.transcribe(
                                     audio_chunk,
                                     task="translate",
-                                    language="vi",
+                                    language=session_source_lang,
                                     beam_size=1,
                                     vad_filter=False
                                 )
@@ -124,9 +137,12 @@ class RealTranslationService(ai_service_pb2_grpc.TranslationServiceServicer):
                                 latency = (time.time() - inf_start) * 1000
                                 duration = len(audio_chunk) / SAMPLE_RATE
 
-                                print(f"\n[Dual-Pass] Audio: {duration:.1f}s | Latency: {latency:.0f}ms")
-                                print(f"  VI 🇻🇳: {text_vi}")
-                                print(f"  EN 🇬🇧: {text_en}")
+                                logger.info("Inference completed", extra={"session_id": session_id, "context": {
+                                    "duration_s": round(duration, 1),
+                                    "latency_ms": round(latency, 0),
+                                    "source_text": text_vi,
+                                    "translated_text": text_en
+                                }})
 
                                 combined_text = f"{text_vi} \n=> {text_en}"
 
@@ -137,22 +153,25 @@ class RealTranslationService(ai_service_pb2_grpc.TranslationServiceServicer):
                                 )
 
         except Exception as e: 
-            print(f"[AI Engine] Error stream session {session_id}: {e}", flush=True)
+            logger.error("Error processing stream", extra={"session_id": session_id}, exc_info=True)
 
-        print(f"[AI Engine] Stream close for session {session_id}", flush=True)
+        logger.info("Stream closed", extra={"session_id": session_id})
 
     @staticmethod
     def serve():
-        server = grpc.server(futures.ThreadPoolExecutor(max_workers=4))
+        server = grpc.server(futures.ThreadPoolExecutor(max_workers=Config.GRPC_MAX_WORKERS))
         ai_service_pb2_grpc.add_TranslationServiceServicer_to_server(RealTranslationService(), server)
-        server.add_insecure_port('127.0.0.1:50052')
+        server.add_insecure_port(Config.GRPC_SERVER_ADDRESS)
 
-        print("[AI Engine] gRPC Server listening on port 50052...", flush=True)
+        logger.info("gRPC Server starting", extra={"context": {
+            "address": Config.GRPC_SERVER_ADDRESS,
+            "max_workers": Config.GRPC_MAX_WORKERS
+        }})
         server.start()
         try: 
             server.wait_for_termination()
         except KeyboardInterrupt: 
-            print("[AI Engine] Stopping gRPC server...", flush=True)
+            logger.info("Stopping gRPC server...")
             server.stop(0)
 
 if __name__ == "__main__":

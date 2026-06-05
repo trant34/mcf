@@ -3,10 +3,10 @@ package ai_client
 import (
 	"context"
 	"io"
-	"log"
 	pb "mcf/services/logic/internal/pb/api/proto"
 	"time"
 
+	"go.uber.org/zap"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
 )
@@ -14,10 +14,11 @@ import (
 type AIClient struct {
 	conn   *grpc.ClientConn
 	client pb.TranslationServiceClient
+	logger *zap.Logger
 }
 
-func NewAIClient(targetAddress string) (*AIClient, error) {
-	log.Printf("[AI Client] Connecting to AI service at %s\n", targetAddress)
+func NewAIClient(targetAddress string, logger *zap.Logger) (*AIClient, error) {
+	logger.Info("Connecting to AI service", zap.String("address", targetAddress))
 
 	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
 	defer cancel()
@@ -27,11 +28,12 @@ func NewAIClient(targetAddress string) (*AIClient, error) {
 		return nil, err
 	}
 
-	log.Printf("[AI Client] Successfully connected to AI service at %s\n", targetAddress)
+	logger.Info("Successfully connected to AI service", zap.String("address", targetAddress))
 	client := pb.NewTranslationServiceClient(conn)
 	return &AIClient{
 		conn:   conn,
 		client: client,
+		logger: logger,
 	}, nil
 }
 
@@ -52,15 +54,15 @@ func (c *AIClient) ProcessStream(ctx context.Context, sessionID string, audioCha
 			SessionId: sessionID,
 			Payload: &pb.MediaRequest_Config_{
 				Config: &pb.MediaRequest_Config{
-					SourceLanguage: "en-US",
-					TargetLanguage: "vi-VN",
+					SourceLanguage: "vi",
+					TargetLanguage: "en",
 					EnableTts:      false,
 					SampleRate:     16000,
 				},
 			},
 		}
 		if err := stream.Send(configReq); err != nil {
-			log.Printf("[AI Client] Failed to send config request: %v\n", err)
+			c.logger.Error("Failed to send config request", zap.String("session_id", sessionID), zap.Error(err))
 			return
 		}
 
@@ -73,7 +75,7 @@ func (c *AIClient) ProcessStream(ctx context.Context, sessionID string, audioCha
 				stream.CloseSend()
 				return
 			case audioChunk := <-audioChan:
-				log.Printf("[AI Client] Sending audio chunk of size %d bytes for session [%s]\n", len(audioChunk), sessionID)
+				c.logger.Debug("Sending audio chunk", zap.String("session_id", sessionID), zap.Int("size", len(audioChunk)))
 				// Send audio chunk as MediaData
 				req := &pb.MediaRequest{
 					SessionId:      sessionID,
@@ -83,7 +85,7 @@ func (c *AIClient) ProcessStream(ctx context.Context, sessionID string, audioCha
 					},
 				}
 				if err := stream.Send(req); err != nil {
-					log.Printf("[AI Client] Failed to send audio chunk: %v\n", err)
+					c.logger.Error("Failed to send audio chunk", zap.String("session_id", sessionID), zap.Error(err))
 					return
 				}
 				seq++
@@ -95,13 +97,13 @@ func (c *AIClient) ProcessStream(ctx context.Context, sessionID string, audioCha
 	for {
 		resp, err := stream.Recv()
 		if err == io.EOF {
-			log.Printf("[AI Client] Server AI closed the stream for session [%s]\n", sessionID)
+			c.logger.Info("AI Server closed the stream", zap.String("session_id", sessionID))
 			break
 		}
 
 		if err != nil {
 			if ctx.Err() == nil {
-				log.Printf("[AI Client] Error received text: %v\n", err)
+				c.logger.Error("Error receiving text", zap.String("session_id", sessionID), zap.Error(err))
 			}
 			break
 		}

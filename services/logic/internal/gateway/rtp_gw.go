@@ -2,19 +2,21 @@ package gateway
 
 import (
 	"context"
-	"log"
 	"net"
 
 	"github.com/pion/rtp"
+	"go.uber.org/zap"
 )
 
 type RTPGateway struct {
 	Address string
+	logger  *zap.Logger
 }
 
-func NewRTPGateway(address string) *RTPGateway {
+func NewRTPGateway(address string, logger *zap.Logger) *RTPGateway {
 	return &RTPGateway{
 		Address: address,
+		logger:  logger,
 	}
 }
 
@@ -30,7 +32,7 @@ func (r *RTPGateway) StartListening(ctx context.Context, sessionID string, audio
 	}
 	defer conn.Close()
 
-	log.Printf("[RTPGateway] Listening RTP on %s for Session [%s]...\n", r.Address, sessionID)
+	r.logger.Info("Listening RTP", zap.String("addr", r.Address), zap.String("session_id", sessionID))
 
 	go func() {
 		<-ctx.Done()
@@ -43,10 +45,10 @@ func (r *RTPGateway) StartListening(ctx context.Context, sessionID string, audio
 		n, _, err := conn.ReadFromUDP(buffer)
 		if err != nil {
 			if ctx.Err() != nil {
-				log.Printf("[RTPGateway] Close UDP connection for Session [%s].\n", sessionID)
+				r.logger.Debug("Close UDP connection", zap.String("session_id", sessionID))
 				return nil
 			}
-			log.Printf("[RTPGateway] Reading UDP Error: %v\n", err)
+			r.logger.Error("Reading UDP Error", zap.Error(err))
 			continue
 		}
 

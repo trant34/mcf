@@ -1,0 +1,22 @@
+2026-06-05T16:52:21.277+0700	INFO	config/config.go:33	Configuration loaded	{"http_listen_addr": "0.0.0.0:8080", "rtp_listen_addr": "0.0.0.0:5004", "ai_service_addr": "127.0.0.1:50052", "session_id": "CALL-TEST-001", "log_level": "info"}
+2026-06-05T16:52:21.279+0700	INFO	mcf-server/main.go:21	=== Starting MCF Server ===
+2026-06-05T16:52:21.279+0700	INFO	ai_client/client.go:21	Connecting to AI service	{"address": "127.0.0.1:50052"}
+2026-06-05T16:52:21.279+0700	INFO	gateway/http_gw.go:71	Starting HTTP Gateway server	{"addr": "0.0.0.0:8080"}
+2026-06-05T16:52:21.281+0700	INFO	ai_client/client.go:31	Successfully connected to AI service	{"address": "127.0.0.1:50052"}
+2026-06-05T16:52:21.283+0700	INFO	logic_core/session.go:28	Starting session orchestration	{"session_id": "CALL-TEST-001"}
+2026-06-05T16:52:21.283+0700	INFO	gateway/rtp_gw.go:35	Listening RTP	{"addr": "0.0.0.0:5004", "session_id": "CALL-TEST-001"}
+2026-06-05T16:54:44.749+0700	ERROR	ai_client/client.go:106	Error receiving text	{"session_id": "CALL-TEST-001", "error": "rpc error: code = Unavailable desc = Cancelling all calls"}
+2026-06-05T16:54:45.616+0700	INFO	mcf-server/main.go:48	Received shutdown signal, stopping MCF Server...
+2026-06-05T16:54:45.617+0700	INFO	logic_core/session.go:51	Session orchestration stopping	{"session_id": "CALL-TEST-001"}
+2026-06-05T16:54:46.618+0700	INFO	mcf-server/main.go:51	=== MCF Server Stopped Successfully ===
+2026-06-05T16:56:07.048+0700	INFO	config/config.go:33	Configuration loaded	{"http_listen_addr": "0.0.0.0:8080", "rtp_listen_addr": "0.0.0.0:5004", "ai_service_addr": "127.0.0.1:50052", "session_id": "CALL-TEST-001", "log_level": "info"}
+2026-06-05T16:56:07.049+0700	INFO	mcf-server/main.go:21	=== Starting MCF Server ===
+2026-06-05T16:56:07.049+0700	INFO	ai_client/client.go:21	Connecting to AI service	{"address": "127.0.0.1:50052"}
+2026-06-05T16:56:07.049+0700	INFO	gateway/http_gw.go:71	Starting HTTP Gateway server	{"addr": "0.0.0.0:8080"}
+2026-06-05T16:56:07.051+0700	INFO	ai_client/client.go:31	Successfully connected to AI service	{"address": "127.0.0.1:50052"}
+2026-06-05T16:56:07.051+0700	INFO	logic_core/session.go:28	Starting session orchestration	{"session_id": "CALL-TEST-001"}
+2026-06-05T16:56:07.052+0700	INFO	gateway/rtp_gw.go:35	Listening RTP	{"addr": "0.0.0.0:5004", "session_id": "CALL-TEST-001"}
+2026-06-05T16:57:42.897+0700	ERROR	ai_client/client.go:106	Error receiving text	{"session_id": "CALL-TEST-001", "error": "rpc error: code = Unavailable desc = Cancelling all calls"}
+2026-06-05T16:57:43.953+0700	INFO	mcf-server/main.go:48	Received shutdown signal, stopping MCF Server...
+2026-06-05T16:57:43.953+0700	INFO	logic_core/session.go:51	Session orchestration stopping	{"session_id": "CALL-TEST-001"}
+2026-06-05T16:57:44.953+0700	INFO	mcf-server/main.go:51	=== MCF Server Stopped Successfully ===

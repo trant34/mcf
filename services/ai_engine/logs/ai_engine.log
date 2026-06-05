@@ -1,0 +1,53 @@
+[INFO] 2026-06-05T16:50:47 | ai_engine | Loading Silero VAD (Pip package) to CPU...
+[INFO] 2026-06-05T16:50:47 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda', 'compute_type': 'int8'}
+[INFO] 2026-06-05T16:50:51 | ai_engine | Whisper model loaded, ready to process streams
+[INFO] 2026-06-05T16:50:51 | ai_engine | AI Engine Configuration loaded | context={'grpc_server_address': '0.0.0.0:50052', 'grpc_max_workers': 4, 'device': 'cuda', 'whisper_model_size': 'small', 'compute_type': 'int8', 'sample_rate': 16000, 'silence_threshold': 0.012, 'silence_timeout': 0.6, 'max_audio': 15.0, 'min_audio': 1.0, 'vad_threshold': 0.5, 'log_level': 'INFO'}
+[INFO] 2026-06-05T16:50:51 | ai_engine | gRPC Server starting | context={'address': '0.0.0.0:50052', 'max_workers': 4}
+[INFO] 2026-06-05T16:52:21 | ai_engine | Client connected to bi-directional stream
+[INFO] 2026-06-05T16:52:21 | ai_engine | Session configured | session_id=CALL-TEST-001 | context={'source_language': 'vi', 'target_language': 'en'}
+[INFO] 2026-06-05T16:54:44 | ai_engine | Stopping gRPC server...
+[ERROR] 2026-06-05T16:54:44 | ai_engine | Error processing stream | session_id=CALL-TEST-001
+Traceback (most recent call last):
+  File "C:\Users\IMS-DPT\Downloads\mcf\services\ai_engine\src\ai_server.py", line 60, in ProcessMediaStream
+    for request in request_iterator:
+  File "C:\Users\IMS-DPT\Downloads\mcf\services\ai_engine\venv\Lib\site-packages\grpc\_server.py", line 542, in __next__
+    return self._next()
+           ^^^^^^^^^^^^
+  File "C:\Users\IMS-DPT\Downloads\mcf\services\ai_engine\venv\Lib\site-packages\grpc\_server.py", line 534, in _next
+    request = self._look_for_request()
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\IMS-DPT\Downloads\mcf\services\ai_engine\venv\Lib\site-packages\grpc\_server.py", line 516, in _look_for_request
+    _raise_rpc_error(self._state)
+  File "C:\Users\IMS-DPT\Downloads\mcf\services\ai_engine\venv\Lib\site-packages\grpc\_server.py", line 220, in _raise_rpc_error
+    raise rpc_error
+grpc.RpcError
+[INFO] 2026-06-05T16:54:44 | ai_engine | Stream closed | session_id=CALL-TEST-001
+[INFO] 2026-06-05T16:55:51 | ai_engine | Loading Silero VAD (Pip package) to CPU...
+[INFO] 2026-06-05T16:55:51 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda', 'compute_type': 'int8'}
+[INFO] 2026-06-05T16:55:55 | ai_engine | Whisper model loaded, ready to process streams
+[INFO] 2026-06-05T16:55:55 | ai_engine | AI Engine Configuration loaded | context={'grpc_server_address': '0.0.0.0:50052', 'grpc_max_workers': 4, 'device': 'cuda', 'whisper_model_size': 'small', 'compute_type': 'int8', 'sample_rate': 16000, 'silence_threshold': 0.012, 'silence_timeout': 0.6, 'max_audio': 15.0, 'min_audio': 1.0, 'vad_threshold': 0.5, 'log_level': 'INFO'}
+[INFO] 2026-06-05T16:55:55 | ai_engine | gRPC Server starting | context={'address': '0.0.0.0:50052', 'max_workers': 4}
+[INFO] 2026-06-05T16:56:07 | ai_engine | Client connected to bi-directional stream
+[INFO] 2026-06-05T16:56:07 | ai_engine | Session configured | session_id=CALL-TEST-001 | context={'source_language': 'vi', 'target_language': 'en'}
+[INFO] 2026-06-05T16:56:50 | ai_engine | Inference completed | session_id=CALL-TEST-001 | context={'duration_s': 14.5, 'latency_ms': 7418.0, 'source_text': 'Hello cho mình gặp một phần kinh hợp vậy ạ. Nhà mình đang gặp sự cố gắng chuyển tươi NEC bạn chờ chờ từ tối hôm qua tới giờ, đôi lúc mất. Mà chủ yếu là không có kết nối được luôn. Mình thử tắt modem dần bật lại vài lần, rút dây, đợi nó force và cắm lại. Như tình hình vẫn không cải thiện.', 'translated_text': "Hello, I'm Viet. I'm Viet, and I'm here to meet the legendary"}
+[INFO] 2026-06-05T16:56:59 | ai_engine | Inference completed | session_id=CALL-TEST-001 | context={'duration_s': 15.0, 'latency_ms': 1526.0, 'source_text': 'Thì thoàn có mạng một chút, nhưng rất yếu, cơn như không thể mở nội trong web nào cả. Mình cũng thử kiểm trai bằng điện thoại, và cả wifi đã 4 giờ, chắc chắn là không phải lỗ thiết bị, và chỉ có mạng wifi bị. Dạy chỉ của nhà mình là số 45, Đường Lê Văn Sĩ, phường 14.', 'translated_text': "Although it is a bit weak, it cannot be opened in any web. I also test it by phone, and the Wi-Fi is 4G, so it is not a bad device. And only the Wi-Fi is broken. My family's address is number 45, Van Sĩ street, ward 14."}
+[INFO] 2026-06-05T16:57:00 | ai_engine | Inference completed | session_id=CALL-TEST-001 | context={'duration_s': 2.2, 'latency_ms': 667.0, 'source_text': 'và hãy subscribe cho kênh lalaschool để không bỏ lỡ những video hấp dẫn', 'translated_text': 'Thank you for watching.'}
+[INFO] 2026-06-05T16:57:16 | ai_engine | Inference completed | session_id=CALL-TEST-001 | context={'duration_s': 15.0, 'latency_ms': 1318.0, 'source_text': 'mình đang ký dịch phụ internet gọi Supernet 2 nhưng mình nếu mình nhớ không nhầm trên chủ đầm là Trần Minh Khoa xoên thoại là 0908 123456 mình gọi lên chín mong bên kỹ thuật có thể kiểm tra rút và bảo lạng sợp chứ hôm nay mình...', 'translated_text': 'I am writing the Internet password, call it Supernet2 But if I remember correctly, the password is 0908123456 I call it 9-9-1, it can be checked and checked as soon as possible So today I ...'}
+[INFO] 2026-06-05T16:57:23 | ai_engine | Inference completed | session_id=CALL-TEST-001 | context={'duration_s': 4.7, 'latency_ms': 3594.0, 'source_text': 'Tên là bị online cả này, mà mặt kiểu này thì bỏ thay rồi. Ai có muốn chuyện nữa?', 'translated_text': 'I will do it online, but this time I will leave it here I have one more thing to do'}
+[INFO] 2026-06-05T16:57:42 | ai_engine | Stopping gRPC server...
+[ERROR] 2026-06-05T16:57:42 | ai_engine | Error processing stream | session_id=CALL-TEST-001
+Traceback (most recent call last):
+  File "C:\Users\IMS-DPT\Downloads\mcf\services\ai_engine\src\ai_server.py", line 60, in ProcessMediaStream
+    for request in request_iterator:
+  File "C:\Users\IMS-DPT\Downloads\mcf\services\ai_engine\venv\Lib\site-packages\grpc\_server.py", line 542, in __next__
+    return self._next()
+           ^^^^^^^^^^^^
+  File "C:\Users\IMS-DPT\Downloads\mcf\services\ai_engine\venv\Lib\site-packages\grpc\_server.py", line 534, in _next
+    request = self._look_for_request()
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\IMS-DPT\Downloads\mcf\services\ai_engine\venv\Lib\site-packages\grpc\_server.py", line 516, in _look_for_request
+    _raise_rpc_error(self._state)
+  File "C:\Users\IMS-DPT\Downloads\mcf\services\ai_engine\venv\Lib\site-packages\grpc\_server.py", line 220, in _raise_rpc_error
+    raise rpc_error
+grpc.RpcError
+[INFO] 2026-06-05T16:57:42 | ai_engine | Stream closed | session_id=CALL-TEST-001
