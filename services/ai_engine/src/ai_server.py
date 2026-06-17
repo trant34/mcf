@@ -15,6 +15,7 @@ sys.path.append(os.path.join(current_dir, 'pb'))
 from pb import ai_service_pb2
 from pb import ai_service_pb2_grpc
 from config import Config
+from video.video_http_server import start_video_http_server
 
 # Setup structured logger
 logger = Config.setup_logger("ai_engine")
@@ -159,6 +160,7 @@ class RealTranslationService(ai_service_pb2_grpc.TranslationServiceServicer):
 
     @staticmethod
     def serve():
+        video_http_server = start_video_http_server()
         server = grpc.server(futures.ThreadPoolExecutor(max_workers=Config.GRPC_MAX_WORKERS))
         ai_service_pb2_grpc.add_TranslationServiceServicer_to_server(RealTranslationService(), server)
         server.add_insecure_port(Config.GRPC_SERVER_ADDRESS)
@@ -173,6 +175,8 @@ class RealTranslationService(ai_service_pb2_grpc.TranslationServiceServicer):
         except KeyboardInterrupt: 
             logger.info("Stopping gRPC server...")
             server.stop(0)
+            if video_http_server is not None:
+                video_http_server.shutdown()
 
 if __name__ == "__main__":
     RealTranslationService.serve()

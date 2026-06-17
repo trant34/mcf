@@ -10,6 +10,7 @@ import (
 	"os/signal"
 	"syscall"
 	"time"
+	"net/http"
 
 	"go.uber.org/zap"
 )
@@ -25,7 +26,6 @@ func main() {
 
 	// Gateway
 	httpGW := gateway.NewHTTPGateway(cfg.Logger)
-	go httpGW.StartServer(cfg.HTTPListenAddr)
 	rtpGW := gateway.NewRTPGateway(cfg.RTPListenAddr, cfg.Logger)
 
 	// AI Client
@@ -34,9 +34,20 @@ func main() {
 		cfg.Logger.Fatal("Failed to initialize AI client", zap.Error(err))
 	}
 	defer aiClient.Close()
+	videoAI := ai_client.NewVideoHTTPClient(cfg.VideoAIEndpoint, cfg.VideoAITimeout)
+	httpGW.SetVideoInferenceHandler(func(r *http.Request, in gateway.VideoInferenceRequest) ([]byte, error) {
+		return videoAI.Infer(r.Context(), ai_client.VideoHTTPRequest{
+			SessionID: in.SessionID, StreamID: in.StreamID,
+			FrameID: in.FrameID, RTPTimestamp: in.RTPTimestamp,
+			OriginalWidth: in.OriginalWidth, OriginalHeight: in.OriginalHeight,
+			EffectType: in.EffectType, JPEG: in.JPEG,
+		})
+	})
 
 	// Orchestrator
 	orchestrator := logic_core.NewOrchestrator(httpGW, rtpGW, aiClient, cfg.Logger)
+	
+	go httpGW.StartServer(cfg.HTTPListenAddr)
 
 	// Start RTP listener in a separate goroutine
 	go orchestrator.HandleCallSession(ctx, cfg.SessionID)

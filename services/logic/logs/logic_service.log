@@ -20,3 +20,124 @@
 2026-06-05T16:57:43.953+0700	INFO	mcf-server/main.go:48	Received shutdown signal, stopping MCF Server...
 2026-06-05T16:57:43.953+0700	INFO	logic_core/session.go:51	Session orchestration stopping	{"session_id": "CALL-TEST-001"}
 2026-06-05T16:57:44.953+0700	INFO	mcf-server/main.go:51	=== MCF Server Stopped Successfully ===
+2026-06-09T08:08:49.737Z	INFO	config/config.go:38	Configuration loaded	{"http_listen_addr": "0.0.0.0:8080", "rtp_listen_addr": "0.0.0.0:5004", "ai_service_addr": "127.0.0.1:50052", "session_id": "CALL-TEST-001", "video_effect": "bg_blur", "log_level": "info"}
+2026-06-09T08:08:49.738Z	INFO	mcf-server/main.go:21	=== Starting MCF Server ===
+2026-06-09T08:08:49.738Z	INFO	ai_client/client.go:25	Connecting to AI service	{"address": "127.0.0.1:50052"}
+2026-06-09T08:08:49.738Z	INFO	gateway/http_gw.go:88	Starting HTTP Gateway server	{"addr": "0.0.0.0:8080"}
+2026-06-09T08:08:49.748Z	INFO	ai_client/client.go:34	Successfully connected to AI service	{"address": "127.0.0.1:50052"}
+2026-06-09T08:08:49.748Z	INFO	logic_core/session.go:30	Starting session orchestration	{"session_id": "CALL-TEST-001"}
+2026-06-09T08:08:49.748Z	INFO	gateway/rtp_gw.go:35	Listening RTP	{"addr": "0.0.0.0:5004", "session_id": "CALL-TEST-001"}
+2026-06-09T08:34:25.842Z	INFO	mcf-server/main.go:48	Received shutdown signal, stopping MCF Server...
+2026-06-09T08:34:25.843Z	INFO	logic_core/session.go:38	Session orchestration stopping	{"session_id": "CALL-TEST-001"}
+2026-06-09T08:34:26.843Z	INFO	mcf-server/main.go:51	=== MCF Server Stopped Successfully ===
+2026-06-09T08:34:31.503Z	INFO	config/config.go:38	Configuration loaded	{"http_listen_addr": "0.0.0.0:8080", "rtp_listen_addr": "0.0.0.0:5004", "ai_service_addr": "127.0.0.1:50052", "session_id": "CALL-TEST-001", "video_effect": "bg_blur", "log_level": "info"}
+2026-06-09T08:34:31.503Z	INFO	mcf-server/main.go:21	=== Starting MCF Server ===
+2026-06-09T08:34:31.503Z	INFO	ai_client/client.go:25	Connecting to AI service	{"address": "127.0.0.1:50052"}
+2026-06-09T08:34:31.504Z	INFO	gateway/http_gw.go:93	Starting HTTP Gateway server	{"addr": "0.0.0.0:8080"}
+2026-06-09T08:34:31.505Z	INFO	ai_client/client.go:34	Successfully connected to AI service	{"address": "127.0.0.1:50052"}
+2026-06-09T08:34:31.506Z	INFO	logic_core/session.go:30	Starting session orchestration	{"session_id": "CALL-TEST-001"}
+2026-06-09T08:34:31.506Z	INFO	gateway/rtp_gw.go:35	Listening RTP	{"addr": "0.0.0.0:5004", "session_id": "CALL-TEST-001"}
+2026-06-09T08:35:06.620Z	INFO	gateway/http_gw.go:83	Received video segmentation request	{"session_id": "CALL-VIDEO-TEST", "frame_id": 1}
+2026-06-09T08:42:48.342Z	ERROR	ai_client/client.go:61	Error receiving text	{"session_id": "CALL-TEST-001", "error": "rpc error: code = Unavailable desc = Cancelling all calls"}
+2026-06-09T08:42:54.512Z	INFO	mcf-server/main.go:48	Received shutdown signal, stopping MCF Server...
+2026-06-09T08:42:54.512Z	INFO	logic_core/session.go:38	Session orchestration stopping	{"session_id": "CALL-TEST-001"}
+2026-06-09T08:42:55.513Z	INFO	mcf-server/main.go:51	=== MCF Server Stopped Successfully ===
+2026-06-09T08:43:09.240Z	INFO	config/config.go:38	Configuration loaded	{"http_listen_addr": "0.0.0.0:8080", "rtp_listen_addr": "0.0.0.0:5004", "ai_service_addr": "127.0.0.1:50052", "session_id": "CALL-TEST-001", "video_effect": "bg_blur", "log_level": "info"}
+2026-06-09T08:43:09.241Z	INFO	mcf-server/main.go:21	=== Starting MCF Server ===
+2026-06-09T08:43:09.241Z	INFO	ai_client/client.go:25	Connecting to AI service	{"address": "127.0.0.1:50052"}
+2026-06-09T08:43:09.241Z	INFO	gateway/http_gw.go:93	Starting HTTP Gateway server	{"addr": "0.0.0.0:8080"}
+2026-06-09T08:43:10.245Z	INFO	ai_client/client.go:34	Successfully connected to AI service	{"address": "127.0.0.1:50052"}
+2026-06-09T08:43:10.245Z	INFO	logic_core/session.go:30	Starting session orchestration	{"session_id": "CALL-TEST-001"}
+2026-06-09T08:43:10.245Z	INFO	gateway/rtp_gw.go:35	Listening RTP	{"addr": "0.0.0.0:5004", "session_id": "CALL-TEST-001"}
+2026-06-09T08:44:23.829Z	ERROR	gateway/http_gw.go:79	Video segmentation request failed	{"error": "AI stream closed before video result"}
+2026-06-09T08:44:39.353Z	ERROR	gateway/http_gw.go:79	Video segmentation request failed	{"error": "AI stream closed before video result"}
+2026-06-09T08:50:26.482Z	INFO	mcf-server/main.go:48	Received shutdown signal, stopping MCF Server...
+2026-06-09T08:50:26.483Z	INFO	logic_core/session.go:38	Session orchestration stopping	{"session_id": "CALL-TEST-001"}
+2026-06-09T08:50:27.483Z	INFO	mcf-server/main.go:51	=== MCF Server Stopped Successfully ===
+2026-06-09T08:50:55.594Z	INFO	config/config.go:38	Configuration loaded	{"http_listen_addr": "0.0.0.0:8080", "rtp_listen_addr": "0.0.0.0:5004", "ai_service_addr": "127.0.0.1:50052", "session_id": "CALL-TEST-001", "video_effect": "bg_blur", "log_level": "info"}
+2026-06-09T08:50:55.594Z	INFO	mcf-server/main.go:21	=== Starting MCF Server ===
+2026-06-09T08:50:55.594Z	INFO	ai_client/client.go:25	Connecting to AI service	{"address": "127.0.0.1:50052"}
+2026-06-09T08:50:55.595Z	INFO	gateway/http_gw.go:93	Starting HTTP Gateway server	{"addr": "0.0.0.0:8080"}
+2026-06-09T08:50:55.596Z	INFO	ai_client/client.go:34	Successfully connected to AI service	{"address": "127.0.0.1:50052"}
+2026-06-09T08:50:55.597Z	INFO	logic_core/session.go:30	Starting session orchestration	{"session_id": "CALL-TEST-001"}
+2026-06-09T08:50:55.597Z	INFO	gateway/rtp_gw.go:35	Listening RTP	{"addr": "0.0.0.0:5004", "session_id": "CALL-TEST-001"}
+2026-06-09T08:51:01.545Z	INFO	gateway/http_gw.go:83	Received video segmentation request	{"session_id": "CALL-VIDEO-TEST", "frame_id": 1}
+2026-06-09T08:56:49.106Z	ERROR	ai_client/client.go:61	Error receiving text	{"session_id": "CALL-TEST-001", "error": "rpc error: code = Unavailable desc = Cancelling all calls"}
+2026-06-09T08:56:55.650Z	INFO	mcf-server/main.go:48	Received shutdown signal, stopping MCF Server...
+2026-06-09T08:56:55.650Z	INFO	logic_core/session.go:38	Session orchestration stopping	{"session_id": "CALL-TEST-001"}
+2026-06-09T08:56:56.651Z	INFO	mcf-server/main.go:51	=== MCF Server Stopped Successfully ===
+2026-06-09T08:57:06.826Z	INFO	config/config.go:38	Configuration loaded	{"http_listen_addr": "0.0.0.0:8080", "rtp_listen_addr": "0.0.0.0:5004", "ai_service_addr": "127.0.0.1:50052", "session_id": "CALL-TEST-001", "video_effect": "bg_blur", "log_level": "info"}
+2026-06-09T08:57:06.826Z	INFO	mcf-server/main.go:21	=== Starting MCF Server ===
+2026-06-09T08:57:06.826Z	INFO	ai_client/client.go:25	Connecting to AI service	{"address": "127.0.0.1:50052"}
+2026-06-09T08:57:06.827Z	INFO	gateway/http_gw.go:93	Starting HTTP Gateway server	{"addr": "0.0.0.0:8080"}
+2026-06-09T08:57:09.312Z	INFO	ai_client/client.go:34	Successfully connected to AI service	{"address": "127.0.0.1:50052"}
+2026-06-09T08:57:09.313Z	INFO	logic_core/session.go:30	Starting session orchestration	{"session_id": "CALL-TEST-001"}
+2026-06-09T08:57:09.313Z	INFO	gateway/rtp_gw.go:35	Listening RTP	{"addr": "0.0.0.0:5004", "session_id": "CALL-TEST-001"}
+2026-06-09T08:57:18.823Z	INFO	gateway/http_gw.go:83	Received video segmentation request	{"session_id": "CALL-VIDEO-TEST", "frame_id": 1}
+2026-06-09T08:57:51.989Z	ERROR	ai_client/client.go:61	Error receiving text	{"session_id": "CALL-TEST-001", "error": "rpc error: code = Unavailable desc = Cancelling all calls"}
+2026-06-09T10:02:25.132Z	INFO	config/config.go:38	Configuration loaded	{"http_listen_addr": "0.0.0.0:8080", "rtp_listen_addr": "0.0.0.0:5004", "ai_service_addr": "127.0.0.1:50052", "session_id": "CALL-TEST-001", "video_effect": "bg_blur", "log_level": "info"}
+2026-06-09T10:02:25.132Z	INFO	mcf-server/main.go:21	=== Starting MCF Server ===
+2026-06-09T10:02:25.132Z	INFO	ai_client/client.go:25	Connecting to AI service	{"address": "127.0.0.1:50052"}
+2026-06-09T10:02:25.132Z	INFO	gateway/http_gw.go:93	Starting HTTP Gateway server	{"addr": "0.0.0.0:8080"}
+2026-06-09T10:02:25.136Z	INFO	ai_client/client.go:34	Successfully connected to AI service	{"address": "127.0.0.1:50052"}
+2026-06-09T10:02:25.137Z	INFO	logic_core/session.go:30	Starting session orchestration	{"session_id": "CALL-TEST-001"}
+2026-06-09T10:02:25.137Z	INFO	gateway/rtp_gw.go:35	Listening RTP	{"addr": "0.0.0.0:5004", "session_id": "CALL-TEST-001"}
+2026-06-09T10:03:49.694Z	INFO	gateway/http_gw.go:83	Received video segmentation request	{"session_id": "CALL-VIDEO-TEST", "frame_id": 1}
+2026-06-09T10:05:29.522Z	ERROR	ai_client/client.go:61	Error receiving text	{"session_id": "CALL-TEST-001", "error": "rpc error: code = Unavailable desc = Cancelling all calls"}
+2026-06-09T10:05:39.090Z	INFO	mcf-server/main.go:48	Received shutdown signal, stopping MCF Server...
+2026-06-09T10:05:39.091Z	INFO	logic_core/session.go:38	Session orchestration stopping	{"session_id": "CALL-TEST-001"}
+2026-06-09T10:05:40.091Z	INFO	mcf-server/main.go:51	=== MCF Server Stopped Successfully ===
+2026-06-09T10:05:44.154Z	INFO	config/config.go:38	Configuration loaded	{"http_listen_addr": "0.0.0.0:8080", "rtp_listen_addr": "0.0.0.0:5004", "ai_service_addr": "127.0.0.1:50052", "session_id": "CALL-TEST-001", "video_effect": "bg_blur", "log_level": "info"}
+2026-06-09T10:05:44.155Z	INFO	mcf-server/main.go:21	=== Starting MCF Server ===
+2026-06-09T10:05:44.155Z	INFO	ai_client/client.go:25	Connecting to AI service	{"address": "127.0.0.1:50052"}
+2026-06-09T10:05:44.155Z	INFO	gateway/http_gw.go:93	Starting HTTP Gateway server	{"addr": "0.0.0.0:8080"}
+2026-06-09T10:05:44.156Z	INFO	ai_client/client.go:34	Successfully connected to AI service	{"address": "127.0.0.1:50052"}
+2026-06-09T10:05:44.156Z	INFO	logic_core/session.go:30	Starting session orchestration	{"session_id": "CALL-TEST-001"}
+2026-06-09T10:05:44.156Z	INFO	gateway/rtp_gw.go:35	Listening RTP	{"addr": "0.0.0.0:5004", "session_id": "CALL-TEST-001"}
+2026-06-09T10:05:54.865Z	INFO	gateway/http_gw.go:83	Received video segmentation request	{"session_id": "CALL-VIDEO-TEST", "frame_id": 1}
+2026-06-09T10:10:41.950Z	INFO	gateway/http_gw.go:83	Received video segmentation request	{"session_id": "CALL-VIDEO-TEST", "frame_id": 1}
+2026-06-11T08:13:43.497Z	INFO	config/config.go:38	Configuration loaded	{"http_listen_addr": "0.0.0.0:8080", "rtp_listen_addr": "0.0.0.0:5004", "ai_service_addr": "127.0.0.1:50052", "session_id": "CALL-TEST-001", "video_effect": "bg_blur", "log_level": "info"}
+2026-06-11T08:13:43.498Z	INFO	mcf-server/main.go:21	=== Starting MCF Server ===
+2026-06-11T08:13:43.498Z	INFO	ai_client/client.go:25	Connecting to AI service	{"address": "127.0.0.1:50052"}
+2026-06-11T08:13:43.498Z	INFO	gateway/http_gw.go:93	Starting HTTP Gateway server	{"addr": "0.0.0.0:8080"}
+2026-06-11T08:13:43.503Z	INFO	ai_client/client.go:34	Successfully connected to AI service	{"address": "127.0.0.1:50052"}
+2026-06-11T08:13:43.503Z	INFO	logic_core/session.go:30	Starting session orchestration	{"session_id": "CALL-TEST-001"}
+2026-06-11T08:13:43.503Z	INFO	gateway/rtp_gw.go:35	Listening RTP	{"addr": "0.0.0.0:5004", "session_id": "CALL-TEST-001"}
+2026-06-11T08:14:11.663Z	INFO	gateway/http_gw.go:83	Received video segmentation request	{"session_id": "CALL-VIDEO-TEST", "frame_id": 1}
+2026-06-11T08:41:50.165Z	INFO	gateway/http_gw.go:83	Received video segmentation request	{"session_id": "CALL-PCAP-VIDEO-001", "frame_id": 1}
+2026-06-12T00:42:06.891Z	INFO	config/config.go:38	Configuration loaded	{"http_listen_addr": "0.0.0.0:8080", "rtp_listen_addr": "0.0.0.0:5004", "ai_service_addr": "127.0.0.1:50052", "session_id": "CALL-TEST-001", "video_effect": "bg_blur", "log_level": "info"}
+2026-06-12T00:42:06.892Z	INFO	mcf-server/main.go:21	=== Starting MCF Server ===
+2026-06-12T00:42:06.892Z	INFO	ai_client/client.go:25	Connecting to AI service	{"address": "127.0.0.1:50052"}
+2026-06-12T00:42:06.892Z	INFO	gateway/http_gw.go:93	Starting HTTP Gateway server	{"addr": "0.0.0.0:8080"}
+2026-06-12T00:42:06.897Z	INFO	ai_client/client.go:34	Successfully connected to AI service	{"address": "127.0.0.1:50052"}
+2026-06-12T00:42:06.898Z	INFO	logic_core/session.go:30	Starting session orchestration	{"session_id": "CALL-TEST-001"}
+2026-06-12T00:42:06.898Z	INFO	gateway/rtp_gw.go:35	Listening RTP	{"addr": "0.0.0.0:5004", "session_id": "CALL-TEST-001"}
+2026-06-12T00:44:28.081Z	INFO	gateway/http_gw.go:83	Received video segmentation request	{"session_id": "CALL-PCAP-VIDEO-001", "frame_id": 1}
+2026-06-16T04:10:17.738Z	INFO	config/config.go:44	Configuration loaded	{"http_listen_addr": "0.0.0.0:8080", "rtp_listen_addr": "0.0.0.0:5004", "ai_service_addr": "127.0.0.1:50052", "video_ai_endpoint": "http://127.0.0.1:50053/v1/video/infer", "video_ai_timeout": "1.5s", "session_id": "CALL-TEST-001", "log_level": "info"}
+2026-06-16T04:10:17.738Z	INFO	mcf-server/main.go:22	=== Starting MCF Server ===
+2026-06-16T04:10:17.739Z	INFO	ai_client/client.go:43	Connecting to AI service	{"address": "127.0.0.1:50052"}
+2026-06-16T04:10:17.739Z	INFO	gateway/http_gw.go:208	Starting HTTP Gateway server	{"addr": "0.0.0.0:8080"}
+2026-06-16T04:10:17.751Z	INFO	ai_client/client.go:53	Successfully connected to AI service	{"address": "127.0.0.1:50052"}
+2026-06-16T04:10:17.752Z	INFO	logic_core/session.go:28	Starting session orchestration	{"session_id": "CALL-TEST-001"}
+2026-06-16T04:10:17.753Z	INFO	gateway/rtp_gw.go:35	Listening RTP	{"addr": "0.0.0.0:5004", "session_id": "CALL-TEST-001"}
+2026-06-16T04:18:39.980Z	INFO	mcf-server/main.go:58	Received shutdown signal, stopping MCF Server...
+2026-06-16T04:18:39.980Z	INFO	logic_core/session.go:51	Session orchestration stopping	{"session_id": "CALL-TEST-001"}
+2026-06-16T04:18:40.980Z	INFO	mcf-server/main.go:61	=== MCF Server Stopped Successfully ===
+2026-06-16T04:19:13.436Z	INFO	config/config.go:44	Configuration loaded	{"http_listen_addr": "0.0.0.0:8080", "rtp_listen_addr": "0.0.0.0:5004", "ai_service_addr": "127.0.0.1:50052", "video_ai_endpoint": "http://127.0.0.1:50053/v1/video/infer", "video_ai_timeout": "1.5s", "session_id": "CALL-TEST-001", "log_level": "info"}
+2026-06-16T04:19:13.436Z	INFO	mcf-server/main.go:22	=== Starting MCF Server ===
+2026-06-16T04:19:13.436Z	INFO	ai_client/client.go:43	Connecting to AI service	{"address": "127.0.0.1:50052"}
+2026-06-16T04:19:13.438Z	INFO	ai_client/client.go:53	Successfully connected to AI service	{"address": "127.0.0.1:50052"}
+2026-06-16T04:19:13.438Z	INFO	logic_core/session.go:28	Starting session orchestration	{"session_id": "CALL-TEST-001"}
+2026-06-16T04:19:13.438Z	INFO	gateway/http_gw.go:208	Starting HTTP Gateway server	{"addr": "0.0.0.0:8080"}
+2026-06-16T04:19:13.439Z	INFO	gateway/rtp_gw.go:35	Listening RTP	{"addr": "0.0.0.0:5004", "session_id": "CALL-TEST-001"}
+2026-06-16T04:26:03.384Z	INFO	mcf-server/main.go:59	Received shutdown signal, stopping MCF Server...
+2026-06-16T04:26:03.385Z	INFO	logic_core/session.go:51	Session orchestration stopping	{"session_id": "CALL-TEST-001"}
+2026-06-16T04:26:04.385Z	INFO	mcf-server/main.go:62	=== MCF Server Stopped Successfully ===
+2026-06-16T04:26:15.814Z	INFO	config/config.go:44	Configuration loaded	{"http_listen_addr": "0.0.0.0:8080", "rtp_listen_addr": "0.0.0.0:5004", "ai_service_addr": "127.0.0.1:50052", "video_ai_endpoint": "http://127.0.0.1:50053/v1/video/infer", "video_ai_timeout": "1.5s", "session_id": "CALL-TEST-001", "log_level": "info"}
+2026-06-16T04:26:15.814Z	INFO	mcf-server/main.go:22	=== Starting MCF Server ===
+2026-06-16T04:26:15.815Z	INFO	ai_client/client.go:43	Connecting to AI service	{"address": "127.0.0.1:50052"}
+2026-06-16T04:26:15.816Z	INFO	ai_client/client.go:53	Successfully connected to AI service	{"address": "127.0.0.1:50052"}
+2026-06-16T04:26:15.816Z	INFO	logic_core/session.go:28	Starting session orchestration	{"session_id": "CALL-TEST-001"}
+2026-06-16T04:26:15.816Z	INFO	gateway/http_gw.go:212	Starting HTTP Gateway server	{"addr": "0.0.0.0:8080"}
+2026-06-16T04:26:15.817Z	INFO	gateway/rtp_gw.go:35	Listening RTP	{"addr": "0.0.0.0:5004", "session_id": "CALL-TEST-001"}
+2026-06-16T04:26:52.479Z	ERROR	gateway/http_gw.go:193	Video inference failed	{"session_id": "CALL-VIDEO-TEST", "frame_id": 1, "error": "Post \"http://127.0.0.1:50053/v1/video/infer\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)"}
