@@ -42,6 +42,11 @@ class TranslationServiceStub:
                 request_serializer=ai__service__pb2.MediaRequest.SerializeToString,
                 response_deserializer=ai__service__pb2.MediaResponse.FromString,
                 _registered_method=True)
+        self.ProcessVideoStream = channel.stream_stream(
+                '/mcf.ai.v1.TranslationService/ProcessVideoStream',
+                request_serializer=ai__service__pb2.VideoRequest.SerializeToString,
+                response_deserializer=ai__service__pb2.VideoResponse.FromString,
+                _registered_method=True)
 
 
 class TranslationServiceServicer:
@@ -56,6 +61,12 @@ class TranslationServiceServicer:
         context.set_details('Method not implemented!')
         raise NotImplementedError('Method not implemented!')
 
+    def ProcessVideoStream(self, request_iterator, context):
+        """Missing associated documentation comment in .proto file."""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
 
 def add_TranslationServiceServicer_to_server(servicer, server):
     rpc_method_handlers = {
@@ -63,6 +74,11 @@ def add_TranslationServiceServicer_to_server(servicer, server):
                     servicer.ProcessMediaStream,
                     request_deserializer=ai__service__pb2.MediaRequest.FromString,
                     response_serializer=ai__service__pb2.MediaResponse.SerializeToString,
+            ),
+            'ProcessVideoStream': grpc.stream_stream_rpc_method_handler(
+                    servicer.ProcessVideoStream,
+                    request_deserializer=ai__service__pb2.VideoRequest.FromString,
+                    response_serializer=ai__service__pb2.VideoResponse.SerializeToString,
             ),
     }
     generic_handler = grpc.method_handlers_generic_handler(
@@ -95,6 +111,33 @@ class TranslationService:
             '/mcf.ai.v1.TranslationService/ProcessMediaStream',
             ai__service__pb2.MediaRequest.SerializeToString,
             ai__service__pb2.MediaResponse.FromString,
+            options,
+            channel_credentials,
+            insecure,
+            call_credentials,
+            compression,
+            wait_for_ready,
+            timeout,
+            metadata,
+            _registered_method=True)
+
+    @staticmethod
+    def ProcessVideoStream(request_iterator,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            insecure=False,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.stream_stream(
+            request_iterator,
+            target,
+            '/mcf.ai.v1.TranslationService/ProcessVideoStream',
+            ai__service__pb2.VideoRequest.SerializeToString,
+            ai__service__pb2.VideoResponse.FromString,
             options,
             channel_credentials,
             insecure,

@@ -51,6 +51,14 @@ class Config:
     MAX_AUDIO_SECONDS = float(os.getenv("MAX_AUDIO_SECONDS", "15.0"))
     MIN_AUDIO_SECONDS = float(os.getenv("MIN_AUDIO_SECONDS", "1.0"))
     
+    # ── Video Processing Configuration ──────────────────────────
+    SEG_MODEL_PATH  = os.getenv("SEG_MODEL_PATH",  "../model_checkpoints/selfie_segmenter.tflite")
+    INFER_FPS       = int(os.getenv("INFER_FPS",   "10"))
+    INFER_WIDTH     = int(os.getenv("INFER_WIDTH",  "256"))
+    INFER_HEIGHT    = int(os.getenv("INFER_HEIGHT", "144"))
+    VIDEO_EFFECT    = os.getenv("VIDEO_EFFECT",    "bg_blur")  # bg_blur|bg_replace|bg_remove
+    BG_IMAGE_PATH   = os.getenv("BG_IMAGE_PATH",   "")
+
     # VAD (Voice Activity Detection) Configuration
     VAD_THRESHOLD = float(os.getenv("VAD_THRESHOLD", "0.5"))
     

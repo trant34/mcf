@@ -7,6 +7,10 @@ numpy
 faster-whisper
 silero-vad
 
+mediapipe
+av
+
+
 # Network Replay
 scapy
 

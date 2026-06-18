@@ -11,6 +11,28 @@ import (
 	"google.golang.org/grpc/credentials/insecure"
 )
 
+type VideoFrameInput struct {
+	SessionID      string
+	FrameID        int64
+	RTPTimestamp   int64
+	OriginalWidth  int32
+	OriginalHeight int32
+	Encoding       string
+	ImageData      []byte
+}
+
+type VideoMaskResult struct {
+	SessionID    string
+	FrameID      int64
+	RTPTimestamp int64
+	MaskWidth    int32
+	MaskHeight   int32
+	RLECounts    []uint32
+	LatencyMS    float32
+	Status       string
+	ErrorMessage string
+}
+
 type AIClient struct {
 	conn   *grpc.ClientConn
 	client pb.TranslationServiceClient
@@ -114,4 +136,120 @@ func (c *AIClient) ProcessStream(ctx context.Context, sessionID string, audioCha
 	}
 
 	return nil
+}
+
+func (c *AIClient) ProcessVideoStream(
+	ctx context.Context,
+	sessionID string,
+	config *pb.VideoConfig,
+	frameChan <-chan VideoFrameInput,
+	maskChan chan<- VideoMaskResult,
+) error {
+	stream, err := c.client.ProcessVideoStream(ctx)
+	if err != nil {
+		return err
+	}
+
+	// Gửi config một lần khi mở stream.
+	if err := stream.Send(&pb.VideoRequest{
+		SessionId: sessionID,
+		Payload: &pb.VideoRequest_Config{
+			Config: config,
+		},
+	}); err != nil {
+		return err
+	}
+
+	errChan := make(chan error, 2)
+
+	// Goroutine gửi frame.
+	go func() {
+		for {
+			select {
+			case <-ctx.Done():
+				_ = stream.Send(&pb.VideoRequest{
+					SessionId: sessionID,
+					IsEos:     true,
+				})
+				_ = stream.CloseSend()
+				errChan <- nil
+				return
+
+			case frame, ok := <-frameChan:
+				if !ok {
+					_ = stream.Send(&pb.VideoRequest{
+						SessionId: sessionID,
+						IsEos:     true,
+					})
+					_ = stream.CloseSend()
+					errChan <- nil
+					return
+				}
+
+				req := &pb.VideoRequest{
+					SessionId: sessionID,
+					Payload: &pb.VideoRequest_Frame{
+						Frame: &pb.VideoFrame{
+							FrameId:        frame.FrameID,
+							RtpTimestamp:   frame.RTPTimestamp,
+							OriginalWidth:  frame.OriginalWidth,
+							OriginalHeight: frame.OriginalHeight,
+							Encoding:       frame.Encoding,
+							ImageData:      frame.ImageData,
+						},
+					},
+				}
+
+				if err := stream.Send(req); err != nil {
+					errChan <- err
+					return
+				}
+			}
+		}
+	}()
+
+	// Goroutine nhận mask.
+	go func() {
+		for {
+			resp, err := stream.Recv()
+			if err == io.EOF {
+				errChan <- nil
+				return
+			}
+			if err != nil {
+				errChan <- err
+				return
+			}
+
+			if resp.Mask == nil {
+				continue
+			}
+
+			result := VideoMaskResult{
+				SessionID:    resp.SessionId,
+				FrameID:      resp.Mask.FrameId,
+				RTPTimestamp: resp.Mask.RtpTimestamp,
+				MaskWidth:    resp.Mask.MaskWidth,
+				MaskHeight:   resp.Mask.MaskHeight,
+				RLECounts:    append([]uint32(nil), resp.Mask.RleCounts...),
+				LatencyMS:    resp.Mask.LatencyMs,
+				Status:       resp.Mask.Status,
+				ErrorMessage: resp.Mask.ErrorMessage,
+			}
+
+			select {
+			case maskChan <- result:
+			case <-ctx.Done():
+				errChan <- nil
+				return
+			}
+		}
+	}()
+
+	select {
+	case <-ctx.Done():
+		return nil
+	case err := <-errChan:
+		return err
+	}
 }

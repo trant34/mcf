@@ -1,0 +1,669 @@
+[INFO] 2026-06-09T03:13:27 | ai_engine | Loading Silero VAD (Pip package) to CPU...
+[INFO] 2026-06-09T03:13:27 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda', 'compute_type': 'int8'}
+[INFO] 2026-06-09T03:13:31 | ai_engine | Whisper model loaded, ready to process streams
+[INFO] 2026-06-09T03:13:31 | ai_engine | AI Engine Configuration loaded | context={'grpc_server_address': '0.0.0.0:50052', 'grpc_max_workers': 4, 'device': 'cuda', 'whisper_model_size': 'small', 'compute_type': 'int8', 'sample_rate': 16000, 'silence_threshold': 0.012, 'silence_timeout': 0.6, 'max_audio': 15.0, 'min_audio': 1.0, 'vad_threshold': 0.5, 'log_level': 'INFO'}
+[INFO] 2026-06-09T03:13:31 | ai_engine | gRPC Server starting | context={'address': '0.0.0.0:50052', 'max_workers': 4}
+[INFO] 2026-06-09T03:50:09 | ai_engine | Loading Silero VAD...
+[INFO] 2026-06-09T03:50:09 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda'}
+[INFO] 2026-06-09T03:50:12 | ai_engine | Whisper ready
+[INFO] 2026-06-09T03:50:12 | ai_engine | AI Engine Configuration loaded | context={'grpc_server_address': '0.0.0.0:50052', 'grpc_max_workers': 4, 'device': 'cuda', 'whisper_model_size': 'small', 'compute_type': 'int8', 'sample_rate': 16000, 'silence_threshold': 0.012, 'silence_timeout': 0.6, 'max_audio': 15.0, 'min_audio': 1.0, 'vad_threshold': 0.5, 'log_level': 'INFO'}
+[INFO] 2026-06-09T03:50:12 | ai_engine | gRPC server starting | context={'address': '0.0.0.0:50052'}
+[INFO] 2026-06-09T04:20:55 | ai_engine | Loading Silero VAD...
+[INFO] 2026-06-09T04:20:55 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda'}
+[INFO] 2026-06-09T04:21:34 | ai_engine | Loading Silero VAD...
+[INFO] 2026-06-09T04:21:34 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda'}
+[INFO] 2026-06-09T04:29:38 | ai_engine | Loading Silero VAD...
+[INFO] 2026-06-09T04:29:38 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda'}
+[INFO] 2026-06-09T04:29:40 | ai_engine | Whisper ready
+[INFO] 2026-06-09T04:29:40 | ai_engine | AI Engine Configuration loaded | context={'grpc_server_address': '0.0.0.0:50052', 'grpc_max_workers': 4, 'device': 'cuda', 'whisper_model_size': 'small', 'compute_type': 'int8', 'sample_rate': 16000, 'silence_threshold': 0.012, 'silence_timeout': 0.6, 'max_audio': 15.0, 'min_audio': 1.0, 'vad_threshold': 0.5, 'log_level': 'INFO'}
+[INFO] 2026-06-09T04:29:40 | ai_engine | gRPC server starting | context={'address': '0.0.0.0:50052'}
+[INFO] 2026-06-09T04:33:57 | ai_engine | Loading Silero VAD...
+[INFO] 2026-06-09T04:33:58 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda'}
+[INFO] 2026-06-09T04:34:03 | ai_engine | Whisper ready
+[INFO] 2026-06-09T04:34:03 | ai_engine | AI Engine Configuration loaded | context={'grpc_server_address': '0.0.0.0:50052', 'grpc_max_workers': 4, 'device': 'cuda', 'whisper_model_size': 'small', 'compute_type': 'int8', 'sample_rate': 16000, 'silence_threshold': 0.012, 'silence_timeout': 0.6, 'max_audio': 15.0, 'min_audio': 1.0, 'vad_threshold': 0.5, 'log_level': 'INFO'}
+[INFO] 2026-06-09T04:34:03 | ai_engine | Video inference service initialized | context={'mediapipe_available': True, 'seg_model_path': 'selfie_segmenter.tflite', 'seg_model_exists': False, 'load_policy': 'lazy_per_session'}
+[INFO] 2026-06-09T04:34:03 | ai_engine | gRPC server starting | context={'address': '0.0.0.0:50052'}
+[INFO] 2026-06-09T04:35:07 | ai_engine | Stopping...
+[INFO] 2026-06-09T04:35:16 | ai_engine | Loading Silero VAD...
+[INFO] 2026-06-09T04:35:17 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda'}
+[INFO] 2026-06-09T04:35:19 | ai_engine | Whisper ready
+[INFO] 2026-06-09T04:35:19 | ai_engine | AI Engine Configuration loaded | context={'grpc_server_address': '0.0.0.0:50052', 'grpc_max_workers': 4, 'device': 'cuda', 'whisper_model_size': 'small', 'compute_type': 'int8', 'sample_rate': 16000, 'silence_threshold': 0.012, 'silence_timeout': 0.6, 'max_audio': 15.0, 'min_audio': 1.0, 'vad_threshold': 0.5, 'log_level': 'INFO'}
+[INFO] 2026-06-09T04:35:19 | ai_engine | Video inference service initialized | context={'mediapipe_available': True, 'seg_model_path': 'selfie_segmenter.tflite', 'seg_model_exists': False, 'load_policy': 'lazy_per_session'}
+[INFO] 2026-06-09T04:35:19 | ai_engine | gRPC server starting | context={'address': '0.0.0.0:50052'}
+[INFO] 2026-06-09T04:37:32 | ai_engine | Stopping...
+[INFO] 2026-06-09T04:37:39 | ai_engine | Loading Silero VAD...
+[INFO] 2026-06-09T04:37:39 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda'}
+[INFO] 2026-06-09T04:37:42 | ai_engine | Whisper ready
+[INFO] 2026-06-09T04:37:42 | ai_engine | AI Engine Configuration loaded | context={'grpc_server_address': '0.0.0.0:50052', 'grpc_max_workers': 4, 'device': 'cuda', 'whisper_model_size': 'small', 'compute_type': 'int8', 'sample_rate': 16000, 'silence_threshold': 0.012, 'silence_timeout': 0.6, 'max_audio': 15.0, 'min_audio': 1.0, 'vad_threshold': 0.5, 'log_level': 'INFO'}
+[INFO] 2026-06-09T04:37:42 | ai_engine | Video inference service initialized | context={'mediapipe_available': True, 'seg_model_path': 'mcf/model_checkpoints/selfie_segmenter.tflite', 'seg_model_exists': False, 'load_policy': 'lazy_per_session'}
+[INFO] 2026-06-09T04:37:42 | ai_engine | gRPC server starting | context={'address': '0.0.0.0:50052'}
+[INFO] 2026-06-09T04:47:07 | ai_engine | Stopping...
+[INFO] 2026-06-09T04:47:15 | ai_engine | Loading Silero VAD...
+[INFO] 2026-06-09T04:47:15 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda'}
+[INFO] 2026-06-09T04:47:18 | ai_engine | Whisper ready
+[INFO] 2026-06-09T04:47:18 | ai_engine | AI Engine Configuration loaded | context={'grpc_server_address': '0.0.0.0:50052', 'grpc_max_workers': 4, 'device': 'cuda', 'whisper_model_size': 'small', 'compute_type': 'int8', 'sample_rate': 16000, 'silence_threshold': 0.012, 'silence_timeout': 0.6, 'max_audio': 15.0, 'min_audio': 1.0, 'vad_threshold': 0.5, 'log_level': 'INFO'}
+[INFO] 2026-06-09T04:47:18 | ai_engine | Video inference service initialized | context={'mediapipe_available': True, 'seg_model_path': 'mcf/model_checkpoints/selfie_segmenter.tflite', 'seg_model_abs_path': '/teamspace/studios/this_studio/mcf/services/ai_engine/src/mcf/model_checkpoints/selfie_segmenter.tflite', 'seg_model_exists': False, 'cwd': '/teamspace/studios/this_studio/mcf/services/ai_engine/src', 'load_policy': 'lazy_per_session'}
+[INFO] 2026-06-09T04:47:18 | ai_engine | gRPC server starting | context={'address': '0.0.0.0:50052'}
+[INFO] 2026-06-09T04:49:33 | ai_engine | Loading Silero VAD...
+[INFO] 2026-06-09T04:49:33 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda'}
+[INFO] 2026-06-09T04:49:36 | ai_engine | Whisper ready
+[INFO] 2026-06-09T04:49:36 | ai_engine | AI Engine Configuration loaded | context={'grpc_server_address': '0.0.0.0:50052', 'grpc_max_workers': 4, 'device': 'cuda', 'whisper_model_size': 'small', 'compute_type': 'int8', 'sample_rate': 16000, 'silence_threshold': 0.012, 'silence_timeout': 0.6, 'max_audio': 15.0, 'min_audio': 1.0, 'vad_threshold': 0.5, 'log_level': 'INFO'}
+[INFO] 2026-06-09T04:49:36 | ai_engine | Video inference service initialized | context={'mediapipe_available': True, 'seg_model_path': 'mcf/model_checkpoints/selfie_segmenter.tflite', 'seg_model_abs_path': '/teamspace/studios/this_studio/mcf/services/ai_engine/src/mcf/model_checkpoints/selfie_segmenter.tflite', 'seg_model_exists': False, 'cwd': '/teamspace/studios/this_studio/mcf/services/ai_engine/src', 'load_policy': 'lazy_per_session'}
+[INFO] 2026-06-09T04:49:36 | ai_engine | gRPC server starting | context={'address': '0.0.0.0:50052'}
+[INFO] 2026-06-09T04:50:19 | ai_engine | Stopping...
+[INFO] 2026-06-09T04:50:26 | ai_engine | Loading Silero VAD...
+[INFO] 2026-06-09T04:50:27 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda'}
+[INFO] 2026-06-09T04:50:29 | ai_engine | Whisper ready
+[INFO] 2026-06-09T04:50:29 | ai_engine | AI Engine Configuration loaded | context={'grpc_server_address': '0.0.0.0:50052', 'grpc_max_workers': 4, 'device': 'cuda', 'whisper_model_size': 'small', 'compute_type': 'int8', 'sample_rate': 16000, 'silence_threshold': 0.012, 'silence_timeout': 0.6, 'max_audio': 15.0, 'min_audio': 1.0, 'vad_threshold': 0.5, 'log_level': 'INFO'}
+[INFO] 2026-06-09T04:50:29 | ai_engine | Video inference service initialized | context={'mediapipe_available': True, 'seg_model_path': '../../../model_checkpoints/selfie_segmenter.tflite', 'seg_model_abs_path': '/teamspace/studios/this_studio/mcf/model_checkpoints/selfie_segmenter.tflite', 'seg_model_exists': True, 'cwd': '/teamspace/studios/this_studio/mcf/services/ai_engine/src', 'load_policy': 'lazy_per_session'}
+[INFO] 2026-06-09T04:50:29 | ai_engine | gRPC server starting | context={'address': '0.0.0.0:50052'}
+[INFO] 2026-06-09T04:50:47 | ai_engine | Stopping...
+[INFO] 2026-06-09T07:00:06 | ai_engine | Loading Silero VAD...
+[INFO] 2026-06-09T07:00:06 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda'}
+[INFO] 2026-06-09T07:00:09 | ai_engine | Whisper ready
+[INFO] 2026-06-09T07:00:09 | ai_engine | AI Engine Configuration loaded | context={'grpc_server_address': '0.0.0.0:50052', 'grpc_max_workers': 4, 'device': 'cuda', 'whisper_model_size': 'small', 'compute_type': 'int8', 'sample_rate': 16000, 'silence_threshold': 0.012, 'silence_timeout': 0.6, 'max_audio': 15.0, 'min_audio': 1.0, 'vad_threshold': 0.5, 'log_level': 'INFO'}
+[INFO] 2026-06-09T07:00:09 | ai_engine | Video inference service initialized | context={'mediapipe_available': True, 'seg_model_path': '../../../model_checkpoints/selfie_segmenter.tflite', 'seg_model_abs_path': '/teamspace/studios/this_studio/mcf/model_checkpoints/selfie_segmenter.tflite', 'seg_model_exists': True, 'cwd': '/teamspace/studios/this_studio/mcf/services/ai_engine/src', 'load_policy': 'lazy_per_session'}
+[INFO] 2026-06-09T07:00:09 | ai_engine | gRPC server starting | context={'address': '0.0.0.0:50052'}
+[INFO] 2026-06-09T07:29:49 | ai_engine | Stopping...
+[INFO] 2026-06-09T07:30:03 | ai_engine | Loading Silero VAD...
+[INFO] 2026-06-09T07:30:03 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda', 'compute_type': 'int8'}
+[INFO] 2026-06-09T07:30:06 | ai_engine | Whisper ready
+[INFO] 2026-06-09T07:30:06 | ai_engine | MediaPipe status | context={'available': True}
+[INFO] 2026-06-09T07:30:06 | ai_engine | AI Engine Configuration loaded | context={'grpc_server_address': '0.0.0.0:50052', 'grpc_max_workers': 4, 'device': 'cuda', 'whisper_model_size': 'small', 'compute_type': 'int8', 'sample_rate': 16000, 'silence_threshold': 0.012, 'silence_timeout': 0.6, 'max_audio': 15.0, 'min_audio': 1.0, 'vad_threshold': 0.5, 'log_level': 'INFO'}
+[INFO] 2026-06-09T07:30:06 | ai_engine | Video inference service initialized | context={'mediapipe_available': True, 'seg_model_path': 'selfie_segmenter.tflite', 'seg_model_exists': False, 'load_policy': 'lazy_per_session'}
+[INFO] 2026-06-09T07:30:06 | ai_engine | gRPC server starting | context={'address': '0.0.0.0:50052'}
+[INFO] 2026-06-09T07:30:55 | ai_engine | Stopping...
+[INFO] 2026-06-09T07:33:06 | ai_engine | Loading Silero VAD...
+[INFO] 2026-06-09T07:33:06 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda', 'compute_type': 'int8'}
+[INFO] 2026-06-09T07:33:09 | ai_engine | Whisper ready
+[INFO] 2026-06-09T07:33:09 | ai_engine | MediaPipe status | context={'available': True}
+[INFO] 2026-06-09T07:33:09 | ai_engine | AI Engine Configuration loaded | context={'grpc_server_address': '0.0.0.0:50052', 'grpc_max_workers': 4, 'device': 'cuda', 'whisper_model_size': 'small', 'compute_type': 'int8', 'sample_rate': 16000, 'silence_threshold': 0.012, 'silence_timeout': 0.6, 'max_audio': 15.0, 'min_audio': 1.0, 'vad_threshold': 0.5, 'log_level': 'INFO'}
+[INFO] 2026-06-09T07:33:09 | ai_engine | Video inference service initialized | context={'mediapipe_available': True, 'seg_model_path': 'selfie_segmenter.tflite', 'seg_model_exists': False, 'load_policy': 'lazy_per_session'}
+[INFO] 2026-06-09T07:33:09 | ai_engine | gRPC server starting | context={'address': '0.0.0.0:50052'}
+[INFO] 2026-06-09T07:34:04 | ai_engine | Stopping...
+[INFO] 2026-06-09T07:34:12 | ai_engine | Loading Silero VAD...
+[INFO] 2026-06-09T07:34:12 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda', 'compute_type': 'int8'}
+[INFO] 2026-06-09T07:34:14 | ai_engine | Whisper ready
+[INFO] 2026-06-09T07:34:14 | ai_engine | MediaPipe status | context={'available': True}
+[INFO] 2026-06-09T07:34:14 | ai_engine | AI Engine Configuration loaded | context={'grpc_server_address': '0.0.0.0:50052', 'grpc_max_workers': 4, 'device': 'cuda', 'whisper_model_size': 'small', 'compute_type': 'int8', 'sample_rate': 16000, 'silence_threshold': 0.012, 'silence_timeout': 0.6, 'max_audio': 15.0, 'min_audio': 1.0, 'vad_threshold': 0.5, 'log_level': 'INFO'}
+[INFO] 2026-06-09T07:34:14 | ai_engine | Video inference service initialized | context={'mediapipe_available': True, 'seg_model_path': '../model_checkpoints/selfie_segmenter.tflite', 'seg_model_exists': True, 'load_policy': 'lazy_per_session'}
+[INFO] 2026-06-09T07:34:14 | ai_engine | gRPC server starting | context={'address': '0.0.0.0:50052'}
+[INFO] 2026-06-09T07:41:24 | ai_engine | Stopping...
+[INFO] 2026-06-09T07:41:32 | ai_engine | Loading Silero VAD...
+[INFO] 2026-06-09T07:41:32 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda', 'compute_type': 'int8'}
+[INFO] 2026-06-09T07:41:35 | ai_engine | Whisper ready
+[INFO] 2026-06-09T07:41:35 | ai_engine | MediaPipe status | context={'available': False}
+[INFO] 2026-06-09T07:41:35 | ai_engine | AI Engine Configuration loaded | context={'grpc_server_address': '0.0.0.0:50052', 'grpc_max_workers': 4, 'device': 'cuda', 'whisper_model_size': 'small', 'compute_type': 'int8', 'sample_rate': 16000, 'silence_threshold': 0.012, 'silence_timeout': 0.6, 'max_audio': 15.0, 'min_audio': 1.0, 'vad_threshold': 0.5, 'log_level': 'INFO'}
+[INFO] 2026-06-09T07:41:35 | ai_engine | Video inference service initialized | context={'mediapipe_available': False, 'seg_model_path': '../model_checkpoints/selfie_segmenter.tflite', 'seg_model_exists': True, 'load_policy': 'lazy_per_session'}
+[INFO] 2026-06-09T07:41:35 | ai_engine | gRPC server starting | context={'address': '0.0.0.0:50052'}
+[INFO] 2026-06-09T07:56:48 | ai_engine | Stopping...
+[INFO] 2026-06-09T07:56:56 | ai_engine | Loading Silero VAD...
+[INFO] 2026-06-09T07:56:56 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda', 'compute_type': 'int8'}
+[INFO] 2026-06-09T07:56:59 | ai_engine | Whisper ready
+[INFO] 2026-06-09T07:56:59 | ai_engine | MediaPipe status | context={'available': False}
+[INFO] 2026-06-09T07:56:59 | ai_engine | AI Engine Configuration loaded | context={'grpc_server_address': '0.0.0.0:50052', 'grpc_max_workers': 4, 'device': 'cuda', 'whisper_model_size': 'small', 'compute_type': 'int8', 'sample_rate': 16000, 'silence_threshold': 0.012, 'silence_timeout': 0.6, 'max_audio': 15.0, 'min_audio': 1.0, 'vad_threshold': 0.5, 'log_level': 'INFO'}
+[INFO] 2026-06-09T07:56:59 | ai_engine | Video inference service initialized | context={'mediapipe_available': False, 'seg_model_path': '../model_checkpoints/selfie_segmenter.tflite', 'seg_model_exists': True, 'load_policy': 'lazy_per_session'}
+[INFO] 2026-06-09T07:56:59 | ai_engine | gRPC server starting | context={'address': '0.0.0.0:50052'}
+[INFO] 2026-06-09T08:02:34 | ai_engine | Stopping...
+[INFO] 2026-06-09T08:02:42 | ai_engine | Loading Silero VAD...
+[INFO] 2026-06-09T08:02:42 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda', 'compute_type': 'int8'}
+[INFO] 2026-06-09T08:02:45 | ai_engine | Whisper ready
+[INFO] 2026-06-09T08:02:45 | ai_engine | MediaPipe status | context={'available': True}
+[INFO] 2026-06-09T08:02:45 | ai_engine | AI Engine Configuration loaded | context={'grpc_server_address': '0.0.0.0:50052', 'grpc_max_workers': 4, 'device': 'cuda', 'whisper_model_size': 'small', 'compute_type': 'int8', 'sample_rate': 16000, 'silence_threshold': 0.012, 'silence_timeout': 0.6, 'max_audio': 15.0, 'min_audio': 1.0, 'vad_threshold': 0.5, 'log_level': 'INFO'}
+[INFO] 2026-06-09T08:02:45 | ai_engine | Video inference service initialized | context={'mediapipe_available': True, 'seg_model_path': '../model_checkpoints/selfie_segmenter.tflite', 'seg_model_exists': True, 'load_policy': 'lazy_per_session'}
+[INFO] 2026-06-09T08:02:45 | ai_engine | gRPC server starting | context={'address': '0.0.0.0:50052'}
+[INFO] 2026-06-09T08:08:49 | ai_engine | New media stream connected
+[INFO] 2026-06-09T08:08:49 | ai_engine | Session configured | session_id=CALL-TEST-001 | context={'source_language': 'vi', 'target_language': 'en', 'sample_rate': 16000}
+[INFO] 2026-06-09T08:34:25 | ai_engine | Stream closed | session_id=CALL-TEST-001
+[INFO] 2026-06-09T08:34:31 | ai_engine | New media stream connected
+[INFO] 2026-06-09T08:34:31 | ai_engine | Session configured | session_id=CALL-TEST-001 | context={'source_language': 'vi', 'target_language': 'en', 'sample_rate': 16000}
+[INFO] 2026-06-09T08:35:06 | ai_engine | New media stream connected
+[INFO] 2026-06-09T08:35:06 | ai_engine | Loading video model for session | session_id=CALL-VIDEO-TEST
+[INFO] 2026-06-09T08:35:06 | ai_engine | Initializing video segmenter | context={'model_path': '../model_checkpoints/selfie_segmenter.tflite', 'model_exists': True}
+[ERROR] 2026-06-09T08:35:06 | ai_engine | Failed to load Tasks model; fallback to selfie_segmentation
+Traceback (most recent call last):
+  File "/teamspace/studios/this_studio/mcf/services/ai_engine/src/ai_server.py", line 109, in __init__
+    self._task_segmenter = ImageSegmenter.create_from_options(options)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/mediapipe/tasks/python/vision/image_segmenter.py", line 322, in create_from_options
+    lib = mediapipe_c_bindings.load_shared_library(_CTYPES_SIGNATURES)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/mediapipe/tasks/python/core/mediapipe_c_bindings.py", line 83, in load_shared_library
+    raw_lib = load_raw_library()
+              ^^^^^^^^^^^^^^^^^^
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/mediapipe/tasks/python/core/mediapipe_c_bindings.py", line 54, in load_raw_library
+    _shared_lib = ctypes.CDLL(absolute_lib_path)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/ctypes/__init__.py", line 379, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: libGLESv2.so.2: cannot open shared object file: No such file or directory
+[ERROR] 2026-06-09T08:35:06 | ai_engine | Failed to init video model | session_id=CALL-VIDEO-TEST | context={'error': "module 'mediapipe' has no attribute 'solutions'"}
+Traceback (most recent call last):
+  File "/teamspace/studios/this_studio/mcf/services/ai_engine/src/ai_server.py", line 176, in _ensure_video_model
+    self._segmenters[session_id] = SyncSegmenter(self._seg_path)
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/teamspace/studios/this_studio/mcf/services/ai_engine/src/ai_server.py", line 114, in __init__
+    self._solution_segmenter = mp.solutions.selfie_segmentation.SelfieSegmentation(model_selection=1)
+                               ^^^^^^^^^^^^
+AttributeError: module 'mediapipe' has no attribute 'solutions'
+[INFO] 2026-06-09T08:35:06 | ai_engine | EOS | session_id=CALL-VIDEO-TEST
+[INFO] 2026-06-09T08:35:06 | ai_engine | Stream closed | session_id=CALL-VIDEO-TEST
+[INFO] 2026-06-09T08:42:48 | ai_engine | Stopping...
+[ERROR] 2026-06-09T08:42:48 | ai_engine | Stream error | session_id=CALL-TEST-001
+Traceback (most recent call last):
+  File "/teamspace/studios/this_studio/mcf/services/ai_engine/src/ai_server.py", line 245, in ProcessMediaStream
+    logger.info("New media stream connected")
+                   ^^^^^^^^^^^^^^^^
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 542, in __next__
+    return self._next()
+           ^^^^^^^^^^^^
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 534, in _next
+    request = self._look_for_request()
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 516, in _look_for_request
+    _raise_rpc_error(self._state)
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 220, in _raise_rpc_error
+    raise rpc_error
+grpc.RpcError
+[INFO] 2026-06-09T08:42:48 | ai_engine | Stream closed | session_id=CALL-TEST-001
+[INFO] 2026-06-09T08:43:07 | ai_engine | Loading Silero VAD...
+[INFO] 2026-06-09T08:43:07 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda', 'compute_type': 'int8'}
+[INFO] 2026-06-09T08:43:10 | ai_engine | Whisper ready
+[INFO] 2026-06-09T08:43:10 | ai_engine | MediaPipe status | context={'available': True}
+[INFO] 2026-06-09T08:43:10 | ai_engine | AI Engine Configuration loaded | context={'grpc_server_address': '0.0.0.0:50052', 'grpc_max_workers': 4, 'device': 'cuda', 'whisper_model_size': 'small', 'compute_type': 'int8', 'sample_rate': 16000, 'silence_threshold': 0.012, 'silence_timeout': 0.6, 'max_audio': 15.0, 'min_audio': 1.0, 'vad_threshold': 0.5, 'log_level': 'INFO'}
+[INFO] 2026-06-09T08:43:10 | ai_engine | Video inference service initialized | context={'mediapipe_available': True, 'seg_model_path': '../model_checkpoints/selfie_segmenter.tflite', 'seg_model_exists': True, 'load_policy': 'lazy_per_session'}
+[INFO] 2026-06-09T08:43:10 | ai_engine | gRPC server starting | context={'address': '0.0.0.0:50052'}
+[INFO] 2026-06-09T08:43:10 | ai_engine | New media stream connected
+[INFO] 2026-06-09T08:43:10 | ai_engine | Session configured | session_id=CALL-TEST-001 | context={'source_language': 'vi', 'target_language': 'en', 'sample_rate': 16000}
+[INFO] 2026-06-09T08:44:23 | ai_engine | New media stream connected
+[INFO] 2026-06-09T08:44:23 | ai_engine | Loading video model for session | session_id=CALL-VIDEO-TEST
+[INFO] 2026-06-09T08:44:23 | ai_engine | Initializing video segmenter | context={'model_path': '../model_checkpoints/selfie_segmenter.tflite', 'model_exists': True}
+[ERROR] 2026-06-09T08:44:23 | ai_engine | Failed to load Tasks model; fallback to selfie_segmentation
+Traceback (most recent call last):
+  File "/teamspace/studios/this_studio/mcf/services/ai_engine/src/ai_server.py", line 111, in __init__
+    self._task_segmenter = ImageSegmenter.create_from_options(options)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/mediapipe/tasks/python/vision/image_segmenter.py", line 322, in create_from_options
+    lib = mediapipe_c_bindings.load_shared_library(_CTYPES_SIGNATURES)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/mediapipe/tasks/python/core/mediapipe_c_bindings.py", line 83, in load_shared_library
+    raw_lib = load_raw_library()
+              ^^^^^^^^^^^^^^^^^^
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/mediapipe/tasks/python/core/mediapipe_c_bindings.py", line 54, in load_raw_library
+    _shared_lib = ctypes.CDLL(absolute_lib_path)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/ctypes/__init__.py", line 379, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: libGLESv2.so.2: cannot open shared object file: No such file or directory
+[INFO] 2026-06-09T08:44:23 | ai_engine | Video segmentation model loaded successfully | context={'mode': None, 'load_ms': 5.79}
+[INFO] 2026-06-09T08:44:23 | ai_engine | Video model ready for session | session_id=CALL-VIDEO-TEST
+[ERROR] 2026-06-09T08:44:23 | ai_engine | Stream error | session_id=CALL-VIDEO-TEST
+Traceback (most recent call last):
+  File "/teamspace/studios/this_studio/mcf/services/ai_engine/src/ai_server.py", line 269, in ProcessMediaStream
+    out = self._process_video_frame(session_id, meta, jpeg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/teamspace/studios/this_studio/mcf/services/ai_engine/src/ai_server.py", line 217, in _process_video_frame
+    mask = seg.segment(frame) if seg else None
+           ^^^^^^^^^^^^^^^^^^
+  File "/teamspace/studios/this_studio/mcf/services/ai_engine/src/ai_server.py", line 133, in segment
+    result = self._solution_segmenter.process(rgb)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'process'
+[INFO] 2026-06-09T08:44:23 | ai_engine | Video model released | session_id=CALL-VIDEO-TEST
+[INFO] 2026-06-09T08:44:23 | ai_engine | Stream closed | session_id=CALL-VIDEO-TEST
+[INFO] 2026-06-09T08:44:39 | ai_engine | New media stream connected
+[INFO] 2026-06-09T08:44:39 | ai_engine | Loading video model for session | session_id=CALL-VIDEO-TEST
+[INFO] 2026-06-09T08:44:39 | ai_engine | Initializing video segmenter | context={'model_path': '../model_checkpoints/selfie_segmenter.tflite', 'model_exists': True}
+[ERROR] 2026-06-09T08:44:39 | ai_engine | Failed to load Tasks model; fallback to selfie_segmentation
+Traceback (most recent call last):
+  File "/teamspace/studios/this_studio/mcf/services/ai_engine/src/ai_server.py", line 111, in __init__
+    self._task_segmenter = ImageSegmenter.create_from_options(options)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/mediapipe/tasks/python/vision/image_segmenter.py", line 322, in create_from_options
+    lib = mediapipe_c_bindings.load_shared_library(_CTYPES_SIGNATURES)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/mediapipe/tasks/python/core/mediapipe_c_bindings.py", line 83, in load_shared_library
+    raw_lib = load_raw_library()
+              ^^^^^^^^^^^^^^^^^^
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/mediapipe/tasks/python/core/mediapipe_c_bindings.py", line 54, in load_raw_library
+    _shared_lib = ctypes.CDLL(absolute_lib_path)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/ctypes/__init__.py", line 379, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: libGLESv2.so.2: cannot open shared object file: No such file or directory
+[INFO] 2026-06-09T08:44:39 | ai_engine | Video segmentation model loaded successfully | context={'mode': None, 'load_ms': 4.01}
+[INFO] 2026-06-09T08:44:39 | ai_engine | Video model ready for session | session_id=CALL-VIDEO-TEST
+[ERROR] 2026-06-09T08:44:39 | ai_engine | Stream error | session_id=CALL-VIDEO-TEST
+Traceback (most recent call last):
+  File "/teamspace/studios/this_studio/mcf/services/ai_engine/src/ai_server.py", line 269, in ProcessMediaStream
+    out = self._process_video_frame(session_id, meta, jpeg)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/teamspace/studios/this_studio/mcf/services/ai_engine/src/ai_server.py", line 217, in _process_video_frame
+    mask = seg.segment(frame) if seg else None
+           ^^^^^^^^^^^^^^^^^^
+  File "/teamspace/studios/this_studio/mcf/services/ai_engine/src/ai_server.py", line 133, in segment
+    result = self._solution_segmenter.process(rgb)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'process'
+[INFO] 2026-06-09T08:44:39 | ai_engine | Video model released | session_id=CALL-VIDEO-TEST
+[INFO] 2026-06-09T08:44:39 | ai_engine | Stream closed | session_id=CALL-VIDEO-TEST
+[ERROR] 2026-06-09T08:50:26 | ai_engine | Stream error | session_id=CALL-TEST-001
+Traceback (most recent call last):
+  File "/teamspace/studios/this_studio/mcf/services/ai_engine/src/ai_server.py", line 247, in ProcessMediaStream
+    try:
+         
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 542, in __next__
+    return self._next()
+           ^^^^^^^^^^^^
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 534, in _next
+    request = self._look_for_request()
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 516, in _look_for_request
+    _raise_rpc_error(self._state)
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 220, in _raise_rpc_error
+    raise rpc_error
+grpc.RpcError
+[INFO] 2026-06-09T08:50:26 | ai_engine | Stream closed | session_id=CALL-TEST-001
+[INFO] 2026-06-09T08:50:31 | ai_engine | Stopping...
+[INFO] 2026-06-09T08:50:46 | ai_engine | Loading Silero VAD...
+[INFO] 2026-06-09T08:50:46 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda', 'compute_type': 'int8'}
+[INFO] 2026-06-09T08:50:49 | ai_engine | Whisper ready
+[INFO] 2026-06-09T08:50:49 | ai_engine | MediaPipe status | context={'available': True}
+[INFO] 2026-06-09T08:50:49 | ai_engine | AI Engine Configuration loaded | context={'grpc_server_address': '0.0.0.0:50052', 'grpc_max_workers': 4, 'device': 'cuda', 'whisper_model_size': 'small', 'compute_type': 'int8', 'sample_rate': 16000, 'silence_threshold': 0.012, 'silence_timeout': 0.6, 'max_audio': 15.0, 'min_audio': 1.0, 'vad_threshold': 0.5, 'log_level': 'INFO'}
+[INFO] 2026-06-09T08:50:49 | ai_engine | Video inference service initialized | context={'mediapipe_available': True, 'seg_model_path': '../model_checkpoints/selfie_segmenter.tflite', 'seg_model_exists': True, 'load_policy': 'lazy_per_session'}
+[INFO] 2026-06-09T08:50:49 | ai_engine | gRPC server starting | context={'address': '0.0.0.0:50052'}
+[INFO] 2026-06-09T08:50:55 | ai_engine | New media stream connected
+[INFO] 2026-06-09T08:50:55 | ai_engine | Session configured | session_id=CALL-TEST-001 | context={'source_language': 'vi', 'target_language': 'en', 'sample_rate': 16000}
+[INFO] 2026-06-09T08:51:01 | ai_engine | New media stream connected
+[INFO] 2026-06-09T08:51:01 | ai_engine | Loading video model for session | session_id=CALL-VIDEO-TEST
+[INFO] 2026-06-09T08:51:01 | ai_engine | Initializing video segmenter | context={'model_path': '../model_checkpoints/selfie_segmenter.tflite', 'model_exists': True}
+[ERROR] 2026-06-09T08:51:01 | ai_engine | Failed to load Tasks model; fallback to selfie_segmentation
+Traceback (most recent call last):
+  File "/teamspace/studios/this_studio/mcf/services/ai_engine/src/ai_server.py", line 112, in __init__
+    self._task_segmenter = ImageSegmenter.create_from_options(options)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/mediapipe/tasks/python/vision/image_segmenter.py", line 322, in create_from_options
+    lib = mediapipe_c_bindings.load_shared_library(_CTYPES_SIGNATURES)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/mediapipe/tasks/python/core/mediapipe_c_bindings.py", line 83, in load_shared_library
+    raw_lib = load_raw_library()
+              ^^^^^^^^^^^^^^^^^^
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/mediapipe/tasks/python/core/mediapipe_c_bindings.py", line 54, in load_raw_library
+    _shared_lib = ctypes.CDLL(absolute_lib_path)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/ctypes/__init__.py", line 379, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: libGLESv2.so.2: cannot open shared object file: No such file or directory
+[INFO] 2026-06-09T08:51:01 | ai_engine | Video segmentation model loaded successfully | context={'mode': None, 'load_ms': 6.11}
+[INFO] 2026-06-09T08:51:01 | ai_engine | Video model ready for session | session_id=CALL-VIDEO-TEST
+[INFO] 2026-06-09T08:51:01 | ai_engine | Video frame processed | session_id=CALL-VIDEO-TEST | context={'frame_id': 1, 'rtp_timestamp': 123456, 'mask_size': [256, 144], 'rle_runs': 0, 'status': 'segmentation_failed', 'latency_ms': 9.28}
+[INFO] 2026-06-09T08:51:01 | ai_engine | EOS | session_id=CALL-VIDEO-TEST
+[INFO] 2026-06-09T08:51:01 | ai_engine | Video model released | session_id=CALL-VIDEO-TEST
+[INFO] 2026-06-09T08:51:01 | ai_engine | Stream closed | session_id=CALL-VIDEO-TEST
+[INFO] 2026-06-09T08:56:49 | ai_engine | Stopping...
+[ERROR] 2026-06-09T08:56:49 | ai_engine | Stream error | session_id=CALL-TEST-001
+Traceback (most recent call last):
+  File "/teamspace/studios/this_studio/mcf/services/ai_engine/src/ai_server.py", line 248, in ProcessMediaStream
+    "mask_shape": list(mask_u8.shape),
+    ^^^^^^^^^^^^^^^^
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 542, in __next__
+    return self._next()
+           ^^^^^^^^^^^^
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 534, in _next
+    request = self._look_for_request()
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 516, in _look_for_request
+    _raise_rpc_error(self._state)
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 220, in _raise_rpc_error
+    raise rpc_error
+grpc.RpcError
+[INFO] 2026-06-09T08:56:49 | ai_engine | Stream closed | session_id=CALL-TEST-001
+[INFO] 2026-06-09T08:57:05 | ai_engine | Loading Silero VAD...
+[INFO] 2026-06-09T08:57:05 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda', 'compute_type': 'int8'}
+[INFO] 2026-06-09T08:57:08 | ai_engine | Whisper ready
+[INFO] 2026-06-09T08:57:08 | ai_engine | MediaPipe status | context={'available': True}
+[INFO] 2026-06-09T08:57:08 | ai_engine | AI Engine Configuration loaded | context={'grpc_server_address': '0.0.0.0:50052', 'grpc_max_workers': 4, 'device': 'cuda', 'whisper_model_size': 'small', 'compute_type': 'int8', 'sample_rate': 16000, 'silence_threshold': 0.012, 'silence_timeout': 0.6, 'max_audio': 15.0, 'min_audio': 1.0, 'vad_threshold': 0.5, 'log_level': 'INFO'}
+[INFO] 2026-06-09T08:57:08 | ai_engine | Video inference service initialized | context={'mediapipe_available': True, 'seg_model_path': '../model_checkpoints/selfie_segmenter.tflite', 'seg_model_exists': True, 'load_policy': 'lazy_per_session'}
+[INFO] 2026-06-09T08:57:08 | ai_engine | gRPC server starting | context={'address': '0.0.0.0:50052'}
+[INFO] 2026-06-09T08:57:09 | ai_engine | New media stream connected
+[INFO] 2026-06-09T08:57:09 | ai_engine | Session configured | session_id=CALL-TEST-001 | context={'source_language': 'vi', 'target_language': 'en', 'sample_rate': 16000}
+[INFO] 2026-06-09T08:57:18 | ai_engine | New media stream connected
+[INFO] 2026-06-09T08:57:18 | ai_engine | Loading video model for session | session_id=CALL-VIDEO-TEST
+[INFO] 2026-06-09T08:57:18 | ai_engine | Initializing video segmenter | context={'model_path': '../model_checkpoints/selfie_segmenter.tflite', 'model_exists': True}
+[ERROR] 2026-06-09T08:57:18 | ai_engine | Failed to load MediaPipe Tasks ImageSegmenter | context={'model_path': '../model_checkpoints/selfie_segmenter.tflite', 'error': 'libGLESv2.so.2: cannot open shared object file: No such file or directory'}
+Traceback (most recent call last):
+  File "/teamspace/studios/this_studio/mcf/services/ai_engine/src/ai_server.py", line 133, in __init__
+    self._task_segmenter = ImageSegmenter.create_from_options(opts)
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/mediapipe/tasks/python/vision/image_segmenter.py", line 322, in create_from_options
+    lib = mediapipe_c_bindings.load_shared_library(_CTYPES_SIGNATURES)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/mediapipe/tasks/python/core/mediapipe_c_bindings.py", line 83, in load_shared_library
+    raw_lib = load_raw_library()
+              ^^^^^^^^^^^^^^^^^^
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/mediapipe/tasks/python/core/mediapipe_c_bindings.py", line 54, in load_raw_library
+    _shared_lib = ctypes.CDLL(absolute_lib_path)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/ctypes/__init__.py", line 379, in __init__
+    self._handle = _dlopen(self._name, mode)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: libGLESv2.so.2: cannot open shared object file: No such file or directory
+[ERROR] 2026-06-09T08:57:18 | ai_engine | Failed to initialize MediaPipe solutions fallback | context={'error': "module 'mediapipe' has no attribute 'solutions'"}
+[INFO] 2026-06-09T08:57:18 | ai_engine | Video segmentation model loaded successfully | context={'mode': None, 'load_ms': 4.25}
+[INFO] 2026-06-09T08:57:18 | ai_engine | Video model ready for session | session_id=CALL-VIDEO-TEST
+[INFO] 2026-06-09T08:57:18 | ai_engine | Video frame processed | session_id=CALL-VIDEO-TEST | context={'frame_id': 1, 'rtp_timestamp': 123456, 'mask_size': [256, 144], 'rle_runs': 0, 'status': 'segmentation_failed', 'latency_ms': 6.34}
+[INFO] 2026-06-09T08:57:18 | ai_engine | EOS | session_id=CALL-VIDEO-TEST
+[INFO] 2026-06-09T08:57:18 | ai_engine | Video model released | session_id=CALL-VIDEO-TEST
+[INFO] 2026-06-09T08:57:18 | ai_engine | Stream closed | session_id=CALL-VIDEO-TEST
+[INFO] 2026-06-09T08:57:51 | ai_engine | Stopping...
+[ERROR] 2026-06-09T08:57:51 | ai_engine | Stream error | session_id=CALL-TEST-001
+Traceback (most recent call last):
+  File "/teamspace/studios/this_studio/mcf/services/ai_engine/src/ai_server.py", line 375, in ProcessMediaStream
+    for req in request_iterator:
+               ^^^^^^^^^^^^^^^^
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 542, in __next__
+    return self._next()
+           ^^^^^^^^^^^^
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 534, in _next
+    request = self._look_for_request()
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 516, in _look_for_request
+    _raise_rpc_error(self._state)
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 220, in _raise_rpc_error
+    raise rpc_error
+grpc.RpcError
+[INFO] 2026-06-09T08:57:51 | ai_engine | Stream closed | session_id=CALL-TEST-001
+[INFO] 2026-06-09T10:00:20 | ai_engine | Loading Silero VAD...
+[INFO] 2026-06-09T10:00:20 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda', 'compute_type': 'int8'}
+[INFO] 2026-06-09T10:00:22 | ai_engine | Whisper ready
+[INFO] 2026-06-09T10:00:22 | ai_engine | MediaPipe status | context={'available': True}
+[INFO] 2026-06-09T10:00:22 | ai_engine | AI Engine Configuration loaded | context={'grpc_server_address': '0.0.0.0:50052', 'grpc_max_workers': 4, 'device': 'cuda', 'whisper_model_size': 'small', 'compute_type': 'int8', 'sample_rate': 16000, 'silence_threshold': 0.012, 'silence_timeout': 0.6, 'max_audio': 15.0, 'min_audio': 1.0, 'vad_threshold': 0.5, 'log_level': 'INFO'}
+[INFO] 2026-06-09T10:00:22 | ai_engine | Video inference service initialized | context={'mediapipe_available': True, 'seg_model_path': '../model_checkpoints/selfie_segmenter.tflite', 'seg_model_exists': True, 'load_policy': 'lazy_per_session'}
+[INFO] 2026-06-09T10:00:22 | ai_engine | gRPC server starting | context={'address': '0.0.0.0:50052'}
+[INFO] 2026-06-09T10:02:25 | ai_engine | New media stream connected
+[INFO] 2026-06-09T10:02:25 | ai_engine | Session configured | session_id=CALL-TEST-001 | context={'source_language': 'vi', 'target_language': 'en', 'sample_rate': 16000}
+[INFO] 2026-06-09T10:03:48 | ai_engine | New media stream connected
+[INFO] 2026-06-09T10:03:48 | ai_engine | Loading video model for session | session_id=CALL-VIDEO-TEST
+[INFO] 2026-06-09T10:03:48 | ai_engine | Initializing video segmenter | context={'model_path': '../model_checkpoints/selfie_segmenter.tflite', 'model_exists': True}
+[INFO] 2026-06-09T10:03:49 | ai_engine | MediaPipe Tasks ImageSegmenter ready | context={'model_path': '../model_checkpoints/selfie_segmenter.tflite', 'output_confidence_masks': True, 'output_category_mask': False}
+[ERROR] 2026-06-09T10:03:49 | ai_engine | Failed to initialize MediaPipe solutions fallback | context={'error': "module 'mediapipe' has no attribute 'solutions'"}
+[INFO] 2026-06-09T10:03:49 | ai_engine | Video segmentation model loaded successfully | context={'mode': 'tasks.ImageSegmenter', 'load_ms': 795.06}
+[INFO] 2026-06-09T10:03:49 | ai_engine | Video model ready for session | session_id=CALL-VIDEO-TEST
+[INFO] 2026-06-09T10:03:49 | ai_engine | Video frame processed | session_id=CALL-VIDEO-TEST | context={'frame_id': 1, 'rtp_timestamp': 123456, 'mask_size': [256, 144], 'rle_runs': 1, 'status': 'ok', 'latency_ms': 840.56}
+[ERROR] 2026-06-09T10:03:49 | ai_engine | Stream error | session_id=CALL-VIDEO-TEST
+Traceback (most recent call last):
+  File "/teamspace/studios/this_studio/mcf/services/ai_engine/src/ai_server.py", line 375, in ProcessMediaStream
+    for req in request_iterator:
+               ^^^^^^^^^^^^^^^^
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 542, in __next__
+    return self._next()
+           ^^^^^^^^^^^^
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 534, in _next
+    request = self._look_for_request()
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 516, in _look_for_request
+    _raise_rpc_error(self._state)
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 220, in _raise_rpc_error
+    raise rpc_error
+grpc.RpcError
+[INFO] 2026-06-09T10:03:49 | ai_engine | Video model released | session_id=CALL-VIDEO-TEST
+[INFO] 2026-06-09T10:03:49 | ai_engine | Stream closed | session_id=CALL-VIDEO-TEST
+[INFO] 2026-06-09T10:05:29 | ai_engine | Stopping...
+[ERROR] 2026-06-09T10:05:29 | ai_engine | Stream error | session_id=CALL-TEST-001
+Traceback (most recent call last):
+  File "/teamspace/studios/this_studio/mcf/services/ai_engine/src/ai_server.py", line 375, in ProcessMediaStream
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 542, in __next__
+    return self._next()
+           ^^^^^^^^^^^^
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 534, in _next
+    request = self._look_for_request()
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 516, in _look_for_request
+    _raise_rpc_error(self._state)
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 220, in _raise_rpc_error
+    raise rpc_error
+grpc.RpcError
+[INFO] 2026-06-09T10:05:29 | ai_engine | Stream closed | session_id=CALL-TEST-001
+[INFO] 2026-06-09T10:05:37 | ai_engine | Loading Silero VAD...
+[INFO] 2026-06-09T10:05:37 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda', 'compute_type': 'int8'}
+[INFO] 2026-06-09T10:05:39 | ai_engine | Whisper ready
+[INFO] 2026-06-09T10:05:39 | ai_engine | MediaPipe status | context={'available': True}
+[INFO] 2026-06-09T10:05:39 | ai_engine | AI Engine Configuration loaded | context={'grpc_server_address': '0.0.0.0:50052', 'grpc_max_workers': 4, 'device': 'cuda', 'whisper_model_size': 'small', 'compute_type': 'int8', 'sample_rate': 16000, 'silence_threshold': 0.012, 'silence_timeout': 0.6, 'max_audio': 15.0, 'min_audio': 1.0, 'vad_threshold': 0.5, 'log_level': 'INFO'}
+[INFO] 2026-06-09T10:05:39 | ai_engine | Video inference service initialized | context={'mediapipe_available': True, 'seg_model_path': '../model_checkpoints/selfie_segmenter.tflite', 'seg_model_exists': True, 'load_policy': 'lazy_per_session'}
+[INFO] 2026-06-09T10:05:39 | ai_engine | gRPC server starting | context={'address': '0.0.0.0:50052'}
+[INFO] 2026-06-09T10:05:44 | ai_engine | New media stream connected
+[INFO] 2026-06-09T10:05:44 | ai_engine | Session configured | session_id=CALL-TEST-001 | context={'source_language': 'vi', 'target_language': 'en', 'sample_rate': 16000}
+[INFO] 2026-06-09T10:05:54 | ai_engine | New media stream connected
+[INFO] 2026-06-09T10:05:54 | ai_engine | Loading video model for session | session_id=CALL-VIDEO-TEST
+[INFO] 2026-06-09T10:05:54 | ai_engine | Initializing MediaPipe Tasks ImageSegmenter | context={'model_path': '../model_checkpoints/selfie_segmenter.tflite', 'model_exists': True, 'running_mode': 'IMAGE', 'output_confidence_masks': True, 'output_category_mask': False}
+[INFO] 2026-06-09T10:05:54 | ai_engine | MediaPipe Tasks ImageSegmenter loaded successfully | context={'model_path': '../model_checkpoints/selfie_segmenter.tflite', 'mode': 'tasks.ImageSegmenter', 'load_ms': 164.25}
+[INFO] 2026-06-09T10:05:54 | ai_engine | Video model ready for session | session_id=CALL-VIDEO-TEST
+[INFO] 2026-06-09T10:05:54 | ai_engine | Video frame processed | session_id=CALL-VIDEO-TEST | context={'frame_id': 1, 'rtp_timestamp': 123456, 'mask_size': [256, 144], 'rle_runs': 1, 'status': 'ok', 'latency_ms': 190.43}
+[INFO] 2026-06-09T10:05:54 | ai_engine | EOS | session_id=CALL-VIDEO-TEST
+[INFO] 2026-06-09T10:05:54 | ai_engine | Video model released | session_id=CALL-VIDEO-TEST
+[INFO] 2026-06-09T10:05:54 | ai_engine | Stream closed | session_id=CALL-VIDEO-TEST
+[INFO] 2026-06-09T10:10:41 | ai_engine | New media stream connected
+[INFO] 2026-06-09T10:10:41 | ai_engine | Loading video model for session | session_id=CALL-VIDEO-TEST
+[INFO] 2026-06-09T10:10:41 | ai_engine | Initializing MediaPipe Tasks ImageSegmenter | context={'model_path': '../model_checkpoints/selfie_segmenter.tflite', 'model_exists': True, 'running_mode': 'IMAGE', 'output_confidence_masks': True, 'output_category_mask': False}
+[INFO] 2026-06-09T10:10:41 | ai_engine | MediaPipe Tasks ImageSegmenter loaded successfully | context={'model_path': '../model_checkpoints/selfie_segmenter.tflite', 'mode': 'tasks.ImageSegmenter', 'load_ms': 83.6}
+[INFO] 2026-06-09T10:10:41 | ai_engine | Video model ready for session | session_id=CALL-VIDEO-TEST
+[INFO] 2026-06-09T10:10:41 | ai_engine | Video frame processed | session_id=CALL-VIDEO-TEST | context={'frame_id': 1, 'rtp_timestamp': 123456, 'mask_size': [256, 144], 'rle_runs': 1, 'status': 'ok', 'latency_ms': 108.55}
+[INFO] 2026-06-09T10:10:41 | ai_engine | EOS | session_id=CALL-VIDEO-TEST
+[INFO] 2026-06-09T10:10:42 | ai_engine | Video model released | session_id=CALL-VIDEO-TEST
+[INFO] 2026-06-09T10:10:42 | ai_engine | Stream closed | session_id=CALL-VIDEO-TEST
+[INFO] 2026-06-11T08:01:54 | ai_engine | Loading Silero VAD...
+[INFO] 2026-06-11T08:01:54 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda', 'compute_type': 'int8'}
+[INFO] 2026-06-11T08:13:23 | ai_engine | Loading Silero VAD...
+[INFO] 2026-06-11T08:13:23 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda', 'compute_type': 'int8'}
+[INFO] 2026-06-11T08:13:26 | ai_engine | Whisper ready
+[INFO] 2026-06-11T08:13:26 | ai_engine | MediaPipe status | context={'available': True}
+[INFO] 2026-06-11T08:13:26 | ai_engine | AI Engine Configuration loaded | context={'grpc_server_address': '0.0.0.0:50052', 'grpc_max_workers': 4, 'device': 'cuda', 'whisper_model_size': 'small', 'compute_type': 'int8', 'sample_rate': 16000, 'silence_threshold': 0.012, 'silence_timeout': 0.6, 'max_audio': 15.0, 'min_audio': 1.0, 'vad_threshold': 0.5, 'log_level': 'INFO'}
+[INFO] 2026-06-11T08:13:26 | ai_engine | Video inference service initialized | context={'mediapipe_available': True, 'seg_model_path': '../model_checkpoints/selfie_segmenter.tflite', 'seg_model_exists': True, 'load_policy': 'lazy_per_session'}
+[INFO] 2026-06-11T08:13:26 | ai_engine | gRPC server starting | context={'address': '0.0.0.0:50052'}
+[INFO] 2026-06-11T08:13:43 | ai_engine | New media stream connected
+[INFO] 2026-06-11T08:13:43 | ai_engine | Session configured | session_id=CALL-TEST-001 | context={'source_language': 'vi', 'target_language': 'en', 'sample_rate': 16000}
+[INFO] 2026-06-11T08:14:10 | ai_engine | New media stream connected
+[INFO] 2026-06-11T08:14:10 | ai_engine | Loading video model for session | session_id=CALL-VIDEO-TEST
+[INFO] 2026-06-11T08:14:10 | ai_engine | Initializing MediaPipe Tasks ImageSegmenter | context={'model_path': '../model_checkpoints/selfie_segmenter.tflite', 'model_exists': True, 'running_mode': 'IMAGE', 'output_confidence_masks': True, 'output_category_mask': False}
+[INFO] 2026-06-11T08:14:11 | ai_engine | MediaPipe Tasks ImageSegmenter loaded successfully | context={'model_path': '../model_checkpoints/selfie_segmenter.tflite', 'mode': 'tasks.ImageSegmenter', 'load_ms': 965.69}
+[INFO] 2026-06-11T08:14:11 | ai_engine | Video model ready for session | session_id=CALL-VIDEO-TEST
+[INFO] 2026-06-11T08:14:11 | ai_engine | Video frame processed | session_id=CALL-VIDEO-TEST | context={'frame_id': 1, 'rtp_timestamp': 123456, 'mask_size': [256, 144], 'rle_runs': 1, 'status': 'ok', 'latency_ms': 1010.23}
+[ERROR] 2026-06-11T08:14:11 | ai_engine | Stream error | session_id=CALL-VIDEO-TEST
+Traceback (most recent call last):
+  File "/teamspace/studios/this_studio/mcf/services/ai_engine/src/ai_server.py", line 290, in ProcessMediaStream
+    for req in request_iterator:
+               ^^^^^^^^^^^^^^^^
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 542, in __next__
+    return self._next()
+           ^^^^^^^^^^^^
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 534, in _next
+    request = self._look_for_request()
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 516, in _look_for_request
+    _raise_rpc_error(self._state)
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 220, in _raise_rpc_error
+    raise rpc_error
+grpc.RpcError
+[INFO] 2026-06-11T08:14:11 | ai_engine | Video model released | session_id=CALL-VIDEO-TEST
+[INFO] 2026-06-11T08:14:11 | ai_engine | Stream closed | session_id=CALL-VIDEO-TEST
+[INFO] 2026-06-11T08:41:50 | ai_engine | New media stream connected
+[INFO] 2026-06-11T08:41:50 | ai_engine | Loading video model for session | session_id=CALL-PCAP-VIDEO-001
+[INFO] 2026-06-11T08:41:50 | ai_engine | Initializing MediaPipe Tasks ImageSegmenter | context={'model_path': '../model_checkpoints/selfie_segmenter.tflite', 'model_exists': True, 'running_mode': 'IMAGE', 'output_confidence_masks': True, 'output_category_mask': False}
+[INFO] 2026-06-11T08:41:50 | ai_engine | MediaPipe Tasks ImageSegmenter loaded successfully | context={'model_path': '../model_checkpoints/selfie_segmenter.tflite', 'mode': 'tasks.ImageSegmenter', 'load_ms': 86.55}
+[INFO] 2026-06-11T08:41:50 | ai_engine | Video model ready for session | session_id=CALL-PCAP-VIDEO-001
+[INFO] 2026-06-11T08:41:50 | ai_engine | Video frame processed | session_id=CALL-PCAP-VIDEO-001 | context={'frame_id': 1, 'rtp_timestamp': 72222251, 'mask_size': [256, 144], 'rle_runs': 283, 'status': 'ok', 'latency_ms': 112.67}
+[INFO] 2026-06-11T08:41:50 | ai_engine | EOS | session_id=CALL-PCAP-VIDEO-001
+[INFO] 2026-06-11T08:41:50 | ai_engine | Video model released | session_id=CALL-PCAP-VIDEO-001
+[INFO] 2026-06-11T08:41:50 | ai_engine | Stream closed | session_id=CALL-PCAP-VIDEO-001
+[INFO] 2026-06-12T00:41:26 | ai_engine | Loading Silero VAD...
+[INFO] 2026-06-12T00:41:26 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda', 'compute_type': 'int8'}
+[INFO] 2026-06-12T00:41:29 | ai_engine | Whisper ready
+[INFO] 2026-06-12T00:41:29 | ai_engine | MediaPipe status | context={'available': True}
+[INFO] 2026-06-12T00:41:29 | ai_engine | AI Engine Configuration loaded | context={'grpc_server_address': '0.0.0.0:50052', 'grpc_max_workers': 4, 'device': 'cuda', 'whisper_model_size': 'small', 'compute_type': 'int8', 'sample_rate': 16000, 'silence_threshold': 0.012, 'silence_timeout': 0.6, 'max_audio': 15.0, 'min_audio': 1.0, 'vad_threshold': 0.5, 'log_level': 'INFO'}
+[INFO] 2026-06-12T00:41:29 | ai_engine | Video inference service initialized | context={'mediapipe_available': True, 'seg_model_path': '../model_checkpoints/selfie_segmenter.tflite', 'seg_model_exists': True, 'load_policy': 'lazy_per_session'}
+[INFO] 2026-06-12T00:41:29 | ai_engine | gRPC server starting | context={'address': '0.0.0.0:50052'}
+[INFO] 2026-06-12T00:42:06 | ai_engine | New media stream connected
+[INFO] 2026-06-12T00:42:06 | ai_engine | Session configured | session_id=CALL-TEST-001 | context={'source_language': 'vi', 'target_language': 'en', 'sample_rate': 16000}
+[INFO] 2026-06-12T00:44:27 | ai_engine | New media stream connected
+[INFO] 2026-06-12T00:44:27 | ai_engine | Loading video model for session | session_id=CALL-PCAP-VIDEO-001
+[INFO] 2026-06-12T00:44:27 | ai_engine | Initializing MediaPipe Tasks ImageSegmenter | context={'model_path': '../model_checkpoints/selfie_segmenter.tflite', 'model_exists': True, 'running_mode': 'IMAGE', 'output_confidence_masks': True, 'output_category_mask': False}
+[INFO] 2026-06-12T00:44:28 | ai_engine | MediaPipe Tasks ImageSegmenter loaded successfully | context={'model_path': '../model_checkpoints/selfie_segmenter.tflite', 'mode': 'tasks.ImageSegmenter', 'load_ms': 746.57}
+[INFO] 2026-06-12T00:44:28 | ai_engine | Video model ready for session | session_id=CALL-PCAP-VIDEO-001
+[INFO] 2026-06-12T00:44:28 | ai_engine | Video frame processed | session_id=CALL-PCAP-VIDEO-001 | context={'frame_id': 1, 'rtp_timestamp': 72222251, 'mask_size': [256, 144], 'rle_runs': 283, 'status': 'ok', 'latency_ms': 780.21}
+[ERROR] 2026-06-12T00:44:28 | ai_engine | Stream error | session_id=CALL-PCAP-VIDEO-001
+Traceback (most recent call last):
+  File "/teamspace/studios/this_studio/mcf/services/ai_engine/src/ai_server.py", line 290, in ProcessMediaStream
+    for req in request_iterator:
+               ^^^^^^^^^^^^^^^^
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 542, in __next__
+    return self._next()
+           ^^^^^^^^^^^^
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 534, in _next
+    request = self._look_for_request()
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 516, in _look_for_request
+    _raise_rpc_error(self._state)
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 220, in _raise_rpc_error
+    raise rpc_error
+grpc.RpcError
+[INFO] 2026-06-12T00:44:28 | ai_engine | Video model released | session_id=CALL-PCAP-VIDEO-001
+[INFO] 2026-06-12T00:44:28 | ai_engine | Stream closed | session_id=CALL-PCAP-VIDEO-001
+[INFO] 2026-06-15T08:07:26 | ai_engine | Loading Silero VAD (Pip package) to CPU...
+[INFO] 2026-06-15T08:07:27 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda', 'compute_type': 'int8'}
+[INFO] 2026-06-15T08:28:04 | ai_engine | Loading Silero VAD (Pip package) to CPU...
+[INFO] 2026-06-15T08:28:04 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda', 'compute_type': 'int8'}
+[INFO] 2026-06-15T08:28:07 | ai_engine | Whisper model loaded, ready to process streams
+[INFO] 2026-06-15T08:28:07 | ai_engine | AI Engine Configuration loaded | context={'grpc_server_address': '0.0.0.0:50052', 'grpc_max_workers': 4, 'device': 'cuda', 'whisper_model_size': 'small', 'compute_type': 'int8', 'sample_rate': 16000, 'silence_threshold': 0.012, 'silence_timeout': 0.6, 'max_audio': 15.0, 'min_audio': 1.0, 'vad_threshold': 0.5, 'log_level': 'INFO'}
+[INFO] 2026-06-15T08:28:07 | ai_engine | gRPC Server starting | context={'address': '0.0.0.0:50052', 'max_workers': 4}
+[INFO] 2026-06-15T08:30:12 | ai_engine | Stopping gRPC server...
+[INFO] 2026-06-15T10:03:19 | ai_engine | Loading Silero VAD (Pip package) to CPU...
+[INFO] 2026-06-15T10:03:19 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda', 'compute_type': 'int8'}
+[INFO] 2026-06-15T10:03:22 | ai_engine | Whisper model loaded, ready to process streams
+[INFO] 2026-06-15T10:03:22 | ai_engine | AI Engine Configuration loaded | context={'grpc_server_address': '0.0.0.0:50052', 'grpc_max_workers': 4, 'device': 'cuda', 'whisper_model_size': 'small', 'compute_type': 'int8', 'sample_rate': 16000, 'silence_threshold': 0.012, 'silence_timeout': 0.6, 'max_audio': 15.0, 'min_audio': 1.0, 'vad_threshold': 0.5, 'log_level': 'INFO'}
+[INFO] 2026-06-15T10:03:22 | ai_engine | gRPC Server starting | context={'address': '0.0.0.0:50052', 'max_workers': 4}
+[INFO] 2026-06-16T03:50:53 | ai_engine | Loading Silero VAD (Pip package) to CPU...
+[INFO] 2026-06-16T03:50:54 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda', 'compute_type': 'int8'}
+[INFO] 2026-06-16T03:50:56 | ai_engine | Whisper model loaded, ready to process streams
+[INFO] 2026-06-16T03:50:56 | ai_engine | AI Engine Configuration loaded | context={'grpc_server_address': '0.0.0.0:50052', 'grpc_max_workers': 4, 'device': 'cuda', 'whisper_model_size': 'small', 'compute_type': 'int8', 'sample_rate': 16000, 'silence_threshold': 0.012, 'silence_timeout': 0.6, 'max_audio': 15.0, 'min_audio': 1.0, 'vad_threshold': 0.5, 'log_level': 'INFO'}
+[INFO] 2026-06-16T03:50:56 | ai_engine.video | Video AI HTTP server listening address=0.0.0.0:50053 model=/teamspace/studios/this_studio/mcf/services/ai_engine/model_checkpoints/selfie_segmenter.tflite
+[INFO] 2026-06-16T03:50:57 | ai_engine | gRPC Server starting | context={'address': '0.0.0.0:50052', 'max_workers': 4}
+[INFO] 2026-06-16T03:56:17 | ai_engine | Loading Silero VAD (Pip package) to CPU...
+[INFO] 2026-06-16T03:56:17 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda', 'compute_type': 'int8'}
+[INFO] 2026-06-16T03:56:20 | ai_engine | Whisper model loaded, ready to process streams
+[INFO] 2026-06-16T03:56:20 | ai_engine | AI Engine Configuration loaded | context={'grpc_server_address': '0.0.0.0:50052', 'grpc_max_workers': 4, 'device': 'cuda', 'whisper_model_size': 'small', 'compute_type': 'int8', 'sample_rate': 16000, 'silence_threshold': 0.012, 'silence_timeout': 0.6, 'max_audio': 15.0, 'min_audio': 1.0, 'vad_threshold': 0.5, 'log_level': 'INFO'}
+[INFO] 2026-06-16T04:04:08 | ai_engine | Loading Silero VAD (Pip package) to CPU...
+[INFO] 2026-06-16T04:04:08 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda', 'compute_type': 'int8'}
+[INFO] 2026-06-16T04:04:10 | ai_engine | Whisper model loaded, ready to process streams
+[INFO] 2026-06-16T04:04:10 | ai_engine | AI Engine Configuration loaded | context={'grpc_server_address': '0.0.0.0:50052', 'grpc_max_workers': 4, 'device': 'cuda', 'whisper_model_size': 'small', 'compute_type': 'int8', 'sample_rate': 16000, 'silence_threshold': 0.012, 'silence_timeout': 0.6, 'max_audio': 15.0, 'min_audio': 1.0, 'vad_threshold': 0.5, 'log_level': 'INFO'}
+[INFO] 2026-06-16T04:07:17 | ai_engine | Loading Silero VAD (Pip package) to CPU...
+[INFO] 2026-06-16T04:07:17 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda', 'compute_type': 'int8'}
+[INFO] 2026-06-16T04:07:19 | ai_engine | Whisper model loaded, ready to process streams
+[INFO] 2026-06-16T04:07:19 | ai_engine | AI Engine Configuration loaded | context={'grpc_server_address': '0.0.0.0:50052', 'grpc_max_workers': 4, 'device': 'cuda', 'whisper_model_size': 'small', 'compute_type': 'int8', 'sample_rate': 16000, 'silence_threshold': 0.012, 'silence_timeout': 0.6, 'max_audio': 15.0, 'min_audio': 1.0, 'vad_threshold': 0.5, 'log_level': 'INFO'}
+[INFO] 2026-06-16T04:07:19 | ai_engine.video | Video AI HTTP server listening address=0.0.0.0:50053 model=/teamspace/studios/this_studio/mcf/services/ai_engine/model_checkpoints/selfie_segmenter.tflite
+[INFO] 2026-06-16T04:07:19 | ai_engine | gRPC Server starting | context={'address': '0.0.0.0:50052', 'max_workers': 4}
+[INFO] 2026-06-16T04:10:17 | ai_engine | Client connected to bi-directional stream
+[INFO] 2026-06-16T04:10:17 | ai_engine | Session configured | session_id=CALL-TEST-001 | context={'source_language': 'vi', 'target_language': 'en'}
+[INFO] 2026-06-16T04:18:39 | ai_engine | Stream closed | session_id=CALL-TEST-001
+[INFO] 2026-06-16T04:19:13 | ai_engine | Client connected to bi-directional stream
+[INFO] 2026-06-16T04:19:13 | ai_engine | Session configured | session_id=CALL-TEST-001 | context={'source_language': 'vi', 'target_language': 'en'}
+[ERROR] 2026-06-16T04:26:03 | ai_engine | Error processing stream | session_id=CALL-TEST-001
+Traceback (most recent call last):
+  File "/teamspace/studios/this_studio/mcf/services/ai_engine/src/ai_server.py", line 61, in ProcessMediaStream
+    for request in request_iterator:
+                  ^^^^^^^^^^^^^^^^
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 542, in __next__
+    return self._next()
+           ^^^^^^^^^^^^
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 534, in _next
+    request = self._look_for_request()
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 516, in _look_for_request
+    _raise_rpc_error(self._state)
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 220, in _raise_rpc_error
+    raise rpc_error
+grpc.RpcError
+[INFO] 2026-06-16T04:26:03 | ai_engine | Stream closed | session_id=CALL-TEST-001
+[INFO] 2026-06-16T04:26:15 | ai_engine | Client connected to bi-directional stream
+[INFO] 2026-06-16T04:26:15 | ai_engine | Session configured | session_id=CALL-TEST-001 | context={'source_language': 'vi', 'target_language': 'en'}
+[INFO] 2026-06-16T04:26:52 | ai_engine.video | Loading MediaPipe ImageSegmenter model_path=/teamspace/studios/this_studio/mcf/services/ai_engine/model_checkpoints/selfie_segmenter.tflite
+[INFO] 2026-06-16T04:26:52 | ai_engine.video | MediaPipe ImageSegmenter loaded
+[ERROR] 2026-06-16T04:26:52 | ai_engine.video | Video inference failed
+Traceback (most recent call last):
+  File "/teamspace/studios/this_studio/mcf/services/ai_engine/src/video/video_http_server.py", line 146, in do_POST
+    self._json(200, {
+  File "/teamspace/studios/this_studio/mcf/services/ai_engine/src/video/video_http_server.py", line 111, in _json
+    self.wfile.write(payload)
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/socketserver.py", line 845, in write
+    self._sock.sendall(b)
+BrokenPipeError: [Errno 32] Broken pipe
+[INFO] 2026-06-17T07:14:04 | ai_engine | Loading Silero VAD (Pip package) to CPU...
+[INFO] 2026-06-17T07:14:04 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda', 'compute_type': 'int8'}
+[INFO] 2026-06-17T09:40:47 | ai_engine | Loading Silero VAD (Pip package) to CPU...
+[INFO] 2026-06-17T09:40:48 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda', 'compute_type': 'int8'}
+[INFO] 2026-06-18T03:08:44 | ai_engine | Loading Silero VAD (Pip package) to CPU...
+[INFO] 2026-06-18T03:08:44 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda', 'compute_type': 'int8'}
+[INFO] 2026-06-18T03:08:47 | ai_engine | Whisper model loaded, ready to process streams
+[INFO] 2026-06-18T03:08:47 | ai_engine | AI Engine Configuration loaded | context={'grpc_server_address': '0.0.0.0:50052', 'grpc_max_workers': 4, 'device': 'cuda', 'whisper_model_size': 'small', 'compute_type': 'int8', 'sample_rate': 16000, 'silence_threshold': 0.012, 'silence_timeout': 0.6, 'max_audio': 15.0, 'min_audio': 1.0, 'vad_threshold': 0.5, 'log_level': 'INFO'}
+[INFO] 2026-06-18T03:08:47 | ai_engine.video | Video AI HTTP server listening address=0.0.0.0:50053 model=/teamspace/studios/this_studio/mcf/services/ai_engine/model_checkpoints/selfie_segmenter.tflite
+[INFO] 2026-06-18T03:08:47 | ai_engine | gRPC Server starting | context={'address': '0.0.0.0:50052', 'max_workers': 4}
+[INFO] 2026-06-18T03:13:53 | ai_engine | Client connected to bi-directional stream
+[INFO] 2026-06-18T03:13:53 | ai_engine | Session configured | session_id=CALL-TEST-001 | context={'source_language': 'vi', 'target_language': 'en'}
+[INFO] 2026-06-18T03:25:02 | ai_engine | Video client connected to bi-directional gRPC stream
+[INFO] 2026-06-18T03:25:02 | ai_engine | Video session configured | session_id=CALL-VIDEO-GRPC-TEST | context={'stream_id': 'video-0', 'effect_type': 'bg_replace', 'inference_width': 256, 'inference_height': 144, 'inference_fps': 5, 'threshold': 0.5, 'model_path': '/teamspace/studios/this_studio/mcf/services/ai_engine/model_checkpoints/selfie_segmenter.tflite'}
+[INFO] 2026-06-18T03:25:03 | ai_engine.video | Loading MediaPipe ImageSegmenter model_path=/teamspace/studios/this_studio/mcf/services/ai_engine/model_checkpoints/selfie_segmenter.tflite
+[INFO] 2026-06-18T03:25:04 | ai_engine.video | MediaPipe ImageSegmenter loaded
+[INFO] 2026-06-18T03:25:04 | ai_engine | Received video end-of-stream signal | session_id=CALL-VIDEO-GRPC-TEST | context={'stream_id': 'video-0'}
+[INFO] 2026-06-18T03:25:04 | ai_engine | Video stream closed | session_id=CALL-VIDEO-GRPC-TEST | context={'stream_id': 'video-0'}
+[INFO] 2026-06-18T03:29:31 | ai_engine | Video client connected to bi-directional gRPC stream
+[INFO] 2026-06-18T03:29:31 | ai_engine | Video session configured | session_id=CALL-VIDEO-TEST | context={'stream_id': 'video-0', 'effect_type': 'bg_replace', 'inference_width': 256, 'inference_height': 144, 'inference_fps': 5, 'threshold': 0.5, 'model_path': '/teamspace/studios/this_studio/mcf/services/ai_engine/model_checkpoints/selfie_segmenter.tflite'}
+[INFO] 2026-06-18T03:33:11 | ai_engine | Stopping gRPC server...
+[ERROR] 2026-06-18T03:33:11 | ai_engine | Error processing stream | session_id=CALL-TEST-001
+Traceback (most recent call last):
+  File "/teamspace/studios/this_studio/mcf/services/ai_engine/src/ai_server.py", line 106, in ProcessMediaStream
+    for request in request_iterator:
+                  ^^^^^^^^^^^^^^^^
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 542, in __next__
+    return self._next()
+           ^^^^^^^^^^^^
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 534, in _next
+    request = self._look_for_request()
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 516, in _look_for_request
+    _raise_rpc_error(self._state)
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 220, in _raise_rpc_error
+    raise rpc_error
+grpc.RpcError
+[WARNING] 2026-06-18T03:33:12 | ai_engine | Video gRPC stream cancelled | session_id=CALL-VIDEO-TEST
+Traceback (most recent call last):
+  File "/teamspace/studios/this_studio/mcf/services/ai_engine/src/ai_server.py", line 216, in ProcessVideoStream
+    for request in request_iterator:
+                   ^^^^^^^^^^^^^^^^
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 542, in __next__
+    return self._next()
+           ^^^^^^^^^^^^
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 534, in _next
+    request = self._look_for_request()
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 516, in _look_for_request
+    _raise_rpc_error(self._state)
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 220, in _raise_rpc_error
+    raise rpc_error
+grpc.RpcError
+[INFO] 2026-06-18T03:33:12 | ai_engine | Video stream closed | session_id=CALL-VIDEO-TEST | context={'stream_id': 'video-0'}
+[INFO] 2026-06-18T03:33:12 | ai_engine | Stream closed | session_id=CALL-TEST-001
+[INFO] 2026-06-18T03:36:59 | ai_engine | Loading Silero VAD (Pip package) to CPU...
+[INFO] 2026-06-18T03:36:59 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda', 'compute_type': 'int8'}
+[INFO] 2026-06-18T03:37:02 | ai_engine | Whisper model loaded, ready to process streams
+[INFO] 2026-06-18T03:37:02 | ai_engine | AI Engine Configuration loaded | context={'grpc_server_address': '0.0.0.0:50052', 'grpc_max_workers': 4, 'device': 'cuda', 'whisper_model_size': 'small', 'compute_type': 'int8', 'sample_rate': 16000, 'silence_threshold': 0.012, 'silence_timeout': 0.6, 'max_audio': 15.0, 'min_audio': 1.0, 'vad_threshold': 0.5, 'log_level': 'INFO'}
+[INFO] 2026-06-18T03:37:02 | ai_engine.video | Video AI HTTP server listening address=0.0.0.0:50053 model=/teamspace/studios/this_studio/mcf/services/ai_engine/model_checkpoints/selfie_segmenter.tflite
+[INFO] 2026-06-18T03:37:02 | ai_engine | gRPC Server starting | context={'address': '0.0.0.0:50052', 'max_workers': 4}
+[INFO] 2026-06-18T03:37:02 | ai_engine | Client connected to bi-directional stream
+[INFO] 2026-06-18T03:37:02 | ai_engine | Session configured | session_id=CALL-TEST-001 | context={'source_language': 'vi', 'target_language': 'en'}
+[INFO] 2026-06-18T03:37:12 | ai_engine | Video client connected to bi-directional gRPC stream
+[INFO] 2026-06-18T03:37:12 | ai_engine | Video session configured | session_id=CALL-VIDEO-TEST | context={'stream_id': 'video-0', 'effect_type': 'bg_replace', 'inference_width': 256, 'inference_height': 144, 'inference_fps': 5, 'threshold': 0.5, 'model_path': '/teamspace/studios/this_studio/mcf/services/ai_engine/model_checkpoints/selfie_segmenter.tflite'}
+[INFO] 2026-06-18T03:37:13 | ai_engine.video | Loading MediaPipe ImageSegmenter model_path=/teamspace/studios/this_studio/mcf/services/ai_engine/model_checkpoints/selfie_segmenter.tflite
+[INFO] 2026-06-18T03:37:13 | ai_engine.video | MediaPipe ImageSegmenter loaded
