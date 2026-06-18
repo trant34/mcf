@@ -21,8 +21,12 @@ type Config struct {
 
 	// VideoRTPListenAddr string
 	// VideoEffect string  // "bg_blur" | "bg_replace" | "bg_remove"
-	VideoAIEndpoint string
-	VideoAITimeout  time.Duration
+	VideoAITimeout       time.Duration
+	VideoEffect          string
+	VideoInferenceWidth  uint32
+	VideoInferenceHeight uint32
+	VideoInferenceFPS    uint32
+	VideoMaskThreshold   float32
 }
 
 func Load() *Config {
@@ -37,16 +41,30 @@ func Load() *Config {
 		SessionID:        getEnv("SESSION_ID", "CALL-TEST-001"),
 		LogLevel:         logLevel,
 		Logger:           logger,
-		VideoAIEndpoint:  getEnv("VIDEO_AI_ENDPOINT", "http://127.0.0.1:50053/v1/video/infer"),
-		VideoAITimeout:   time.Duration(timeoutMS) * time.Millisecond,
+		// VideoAIEndpoint:  getEnv("VIDEO_AI_ENDPOINT", "http://127.0.0.1:50053/v1/video/infer"),
+		// VideoAITimeout:   time.Duration(timeoutMS) * time.Millisecond,
+		VideoAITimeout:       time.Duration(timeoutMS) * time.Millisecond,
+		VideoEffect:          getEnv("VIDEO_EFFECT", "bg_replace"),
+		VideoInferenceWidth:  uint32(getEnvInt("VIDEO_INFER_WIDTH", 256)),
+		VideoInferenceHeight: uint32(getEnvInt("VIDEO_INFER_HEIGHT", 144)),
+		VideoInferenceFPS:    uint32(getEnvInt("VIDEO_INFER_FPS", 5)),
+		VideoMaskThreshold:   float32(getEnvFloat("VIDEO_MASK_THRESHOLD", 0.5)),
+
 	}
 
 	logger.Info("Configuration loaded",
 		zap.String("http_listen_addr", cfg.HTTPListenAddr),
 		zap.String("rtp_listen_addr", cfg.RTPListenAddr),
 		zap.String("ai_service_addr", cfg.AIServiceAddress),
-		zap.String("video_ai_endpoint", cfg.VideoAIEndpoint),
+		// zap.String("video_ai_endpoint", cfg.VideoAIEndpoint),
+		// zap.Duration("video_ai_timeout", cfg.VideoAITimeout),
 		zap.Duration("video_ai_timeout", cfg.VideoAITimeout),
+		zap.String("video_effect", cfg.VideoEffect),
+		zap.Uint32("video_infer_width", cfg.VideoInferenceWidth),
+		zap.Uint32("video_infer_height", cfg.VideoInferenceHeight),
+		zap.Uint32("video_infer_fps", cfg.VideoInferenceFPS),
+		zap.Float32("video_mask_threshold", cfg.VideoMaskThreshold),
+
 		zap.String("session_id", cfg.SessionID),
 		zap.String("log_level", cfg.LogLevel),
 	)
@@ -98,4 +116,22 @@ func getEnv(key, defaultValue string) string {
 		return value
 	}
 	return defaultValue
+}
+
+func getEnvInt(key string, defaultValue int) int {
+	raw := getEnv(key, strconv.Itoa(defaultValue))
+	value, err := strconv.Atoi(raw)
+	if err != nil {
+		return defaultValue
+	}
+	return value
+}
+
+func getEnvFloat(key string, defaultValue float64) float64 {
+	raw := getEnv(key, strconv.FormatFloat(defaultValue, 'f', -1, 64))
+	value, err := strconv.ParseFloat(raw, 64)
+	if err != nil {
+		return defaultValue
+	}
+	return value
 }

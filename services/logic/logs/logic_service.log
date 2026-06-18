@@ -141,3 +141,28 @@
 2026-06-16T04:26:15.816Z	INFO	gateway/http_gw.go:212	Starting HTTP Gateway server	{"addr": "0.0.0.0:8080"}
 2026-06-16T04:26:15.817Z	INFO	gateway/rtp_gw.go:35	Listening RTP	{"addr": "0.0.0.0:5004", "session_id": "CALL-TEST-001"}
 2026-06-16T04:26:52.479Z	ERROR	gateway/http_gw.go:193	Video inference failed	{"session_id": "CALL-VIDEO-TEST", "frame_id": 1, "error": "Post \"http://127.0.0.1:50053/v1/video/infer\": context deadline exceeded (Client.Timeout exceeded while awaiting headers)"}
+2026-06-17T07:14:41.245Z	INFO	config/config.go:44	Configuration loaded	{"http_listen_addr": "0.0.0.0:8080", "rtp_listen_addr": "0.0.0.0:5004", "ai_service_addr": "127.0.0.1:50052", "video_ai_endpoint": "http://127.0.0.1:50053/v1/video/infer", "video_ai_timeout": "1.5s", "session_id": "CALL-TEST-001", "log_level": "info"}
+2026-06-17T07:14:41.245Z	INFO	mcf-server/main.go:22	=== Starting MCF Server ===
+2026-06-17T07:14:41.246Z	INFO	ai_client/client.go:43	Connecting to AI service	{"address": "127.0.0.1:50052"}
+2026-06-17T07:14:46.248Z	FATAL	mcf-server/main.go:34	Failed to initialize AI client	{"error": "context deadline exceeded"}
+2026-06-18T03:13:52.990Z	INFO	config/config.go:55	Configuration loaded	{"http_listen_addr": "0.0.0.0:8080", "rtp_listen_addr": "0.0.0.0:5004", "ai_service_addr": "127.0.0.1:50052", "video_ai_timeout": "1.5s", "video_effect": "bg_replace", "video_infer_width": 256, "video_infer_height": 144, "video_infer_fps": 5, "video_mask_threshold": 0.5, "session_id": "CALL-TEST-001", "log_level": "info"}
+2026-06-18T03:13:52.993Z	INFO	mcf-server/main.go:23	=== Starting MCF Server ===
+2026-06-18T03:13:52.994Z	INFO	ai_client/client.go:43	Connecting to AI service	{"address": "127.0.0.1:50052"}
+2026-06-18T03:13:53.004Z	INFO	ai_client/client.go:53	Successfully connected to AI service	{"address": "127.0.0.1:50052"}
+2026-06-18T03:13:53.004Z	INFO	gateway/http_gw.go:212	Starting HTTP Gateway server	{"addr": "0.0.0.0:8080"}
+2026-06-18T03:13:53.004Z	INFO	logic_core/session.go:28	Starting session orchestration	{"session_id": "CALL-TEST-001"}
+2026-06-18T03:13:53.005Z	INFO	gateway/rtp_gw.go:35	Listening RTP	{"addr": "0.0.0.0:5004", "session_id": "CALL-TEST-001"}
+2026-06-18T03:29:31.943Z	INFO	ai_client/video_grpc_proxy.go:159	Opened persistent video gRPC stream	{"session_id": "CALL-VIDEO-TEST", "stream_id": "video-0"}
+2026-06-18T03:33:11.993Z	WARN	ai_client/video_grpc_proxy.go:237	Video gRPC session closed	{"session_id": "CALL-VIDEO-TEST", "stream_id": "video-0", "error": "rpc error: code = Unavailable desc = Cancelling all calls"}
+2026-06-18T03:33:11.993Z	ERROR	ai_client/client.go:128	Error receiving text	{"session_id": "CALL-TEST-001", "error": "rpc error: code = Unavailable desc = Cancelling all calls"}
+2026-06-18T03:33:22.012Z	INFO	mcf-server/main.go:89	Received shutdown signal, stopping MCF Server...	{"signal": "interrupt"}
+2026-06-18T03:33:22.013Z	INFO	logic_core/session.go:51	Session orchestration stopping	{"session_id": "CALL-TEST-001"}
+2026-06-18T03:33:23.014Z	INFO	mcf-server/main.go:95	=== MCF Server Stopped Successfully ===
+2026-06-18T03:37:02.895Z	INFO	config/config.go:55	Configuration loaded	{"http_listen_addr": "0.0.0.0:8080", "rtp_listen_addr": "0.0.0.0:5004", "ai_service_addr": "127.0.0.1:50052", "video_ai_timeout": "1.5s", "video_effect": "bg_replace", "video_infer_width": 256, "video_infer_height": 144, "video_infer_fps": 5, "video_mask_threshold": 0.5, "session_id": "CALL-TEST-001", "log_level": "info"}
+2026-06-18T03:37:02.895Z	INFO	mcf-server/main.go:23	=== Starting MCF Server ===
+2026-06-18T03:37:02.895Z	INFO	ai_client/client.go:43	Connecting to AI service	{"address": "127.0.0.1:50052"}
+2026-06-18T03:37:02.898Z	INFO	ai_client/client.go:53	Successfully connected to AI service	{"address": "127.0.0.1:50052"}
+2026-06-18T03:37:02.898Z	INFO	gateway/http_gw.go:212	Starting HTTP Gateway server	{"addr": "0.0.0.0:8080"}
+2026-06-18T03:37:02.899Z	INFO	logic_core/session.go:28	Starting session orchestration	{"session_id": "CALL-TEST-001"}
+2026-06-18T03:37:02.900Z	INFO	gateway/rtp_gw.go:35	Listening RTP	{"addr": "0.0.0.0:5004", "session_id": "CALL-TEST-001"}
+2026-06-18T03:37:12.380Z	INFO	ai_client/video_grpc_proxy.go:159	Opened persistent video gRPC stream	{"session_id": "CALL-VIDEO-TEST", "stream_id": "video-0"}

@@ -79,6 +79,9 @@ message VideoRequest {
     VideoConfig config = 3;
     VideoFrame frame = 4;
   }
+
+  // Added as an optional routing key. Existing clients may leave it empty.
+  string stream_id = 5;
 }
 
 message VideoMask {
@@ -96,4 +99,6 @@ message VideoResponse {
   string session_id = 1;
   VideoMask mask = 2;
   bool is_final = 3;
+  // Echoed by the AI Engine so one session can contain multiple video streams.
+  string stream_id = 4;
 }

@@ -382,7 +382,9 @@ type VideoRequest struct {
 	//
 	//	*VideoRequest_Config
 	//	*VideoRequest_Frame
-	Payload       isVideoRequest_Payload `protobuf_oneof:"payload"`
+	Payload isVideoRequest_Payload `protobuf_oneof:"payload"`
+	// Added as an optional routing key. Existing clients may leave it empty.
+	StreamId      string `protobuf:"bytes,5,opt,name=stream_id,json=streamId,proto3" json:"stream_id,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -454,6 +456,13 @@ func (x *VideoRequest) GetFrame() *VideoFrame {
 		}
 	}
 	return nil
+}
+
+func (x *VideoRequest) GetStreamId() string {
+	if x != nil {
+		return x.StreamId
+	}
+	return ""
 }
 
 type isVideoRequest_Payload interface {
@@ -573,10 +582,12 @@ func (x *VideoMask) GetErrorMessage() string {
 }
 
 type VideoResponse struct {
-	state         protoimpl.MessageState `protogen:"open.v1"`
-	SessionId     string                 `protobuf:"bytes,1,opt,name=session_id,json=sessionId,proto3" json:"session_id,omitempty"`
-	Mask          *VideoMask             `protobuf:"bytes,2,opt,name=mask,proto3" json:"mask,omitempty"`
-	IsFinal       bool                   `protobuf:"varint,3,opt,name=is_final,json=isFinal,proto3" json:"is_final,omitempty"`
+	state     protoimpl.MessageState `protogen:"open.v1"`
+	SessionId string                 `protobuf:"bytes,1,opt,name=session_id,json=sessionId,proto3" json:"session_id,omitempty"`
+	Mask      *VideoMask             `protobuf:"bytes,2,opt,name=mask,proto3" json:"mask,omitempty"`
+	IsFinal   bool                   `protobuf:"varint,3,opt,name=is_final,json=isFinal,proto3" json:"is_final,omitempty"`
+	// Echoed by the AI Engine so one session can contain multiple video streams.
+	StreamId      string `protobuf:"bytes,4,opt,name=stream_id,json=streamId,proto3" json:"stream_id,omitempty"`
 	unknownFields protoimpl.UnknownFields
 	sizeCache     protoimpl.SizeCache
 }
@@ -630,6 +641,13 @@ func (x *VideoResponse) GetIsFinal() bool {
 		return x.IsFinal
 	}
 	return false
+}
+
+func (x *VideoResponse) GetStreamId() string {
+	if x != nil {
+		return x.StreamId
+	}
+	return ""
 }
 
 type MediaRequest_Config struct {
@@ -743,13 +761,14 @@ const file_ai_service_proto_rawDesc = "" +
 	"\x0foriginal_height\x18\x04 \x01(\x05R\x0eoriginalHeight\x12\x1a\n" +
 	"\bencoding\x18\x05 \x01(\tR\bencoding\x12\x1d\n" +
 	"\n" +
-	"image_data\x18\x06 \x01(\fR\timageData\"\xb0\x01\n" +
+	"image_data\x18\x06 \x01(\fR\timageData\"\xcd\x01\n" +
 	"\fVideoRequest\x12\x1d\n" +
 	"\n" +
 	"session_id\x18\x01 \x01(\tR\tsessionId\x12\x15\n" +
 	"\x06is_eos\x18\x02 \x01(\bR\x05isEos\x120\n" +
 	"\x06config\x18\x03 \x01(\v2\x16.mcf.ai.v1.VideoConfigH\x00R\x06config\x12-\n" +
-	"\x05frame\x18\x04 \x01(\v2\x15.mcf.ai.v1.VideoFrameH\x00R\x05frameB\t\n" +
+	"\x05frame\x18\x04 \x01(\v2\x15.mcf.ai.v1.VideoFrameH\x00R\x05frame\x12\x1b\n" +
+	"\tstream_id\x18\x05 \x01(\tR\bstreamIdB\t\n" +
 	"\apayload\"\x86\x02\n" +
 	"\tVideoMask\x12\x19\n" +
 	"\bframe_id\x18\x01 \x01(\x03R\aframeId\x12#\n" +
@@ -763,12 +782,13 @@ const file_ai_service_proto_rawDesc = "" +
 	"\n" +
 	"latency_ms\x18\x06 \x01(\x02R\tlatencyMs\x12\x16\n" +
 	"\x06status\x18\a \x01(\tR\x06status\x12#\n" +
-	"\rerror_message\x18\b \x01(\tR\ferrorMessage\"s\n" +
+	"\rerror_message\x18\b \x01(\tR\ferrorMessage\"\x90\x01\n" +
 	"\rVideoResponse\x12\x1d\n" +
 	"\n" +
 	"session_id\x18\x01 \x01(\tR\tsessionId\x12(\n" +
 	"\x04mask\x18\x02 \x01(\v2\x14.mcf.ai.v1.VideoMaskR\x04mask\x12\x19\n" +
-	"\bis_final\x18\x03 \x01(\bR\aisFinal2\xae\x01\n" +
+	"\bis_final\x18\x03 \x01(\bR\aisFinal\x12\x1b\n" +
+	"\tstream_id\x18\x04 \x01(\tR\bstreamId2\xae\x01\n" +
 	"\x12TranslationService\x12K\n" +
 	"\x12ProcessMediaStream\x12\x17.mcf.ai.v1.MediaRequest\x1a\x18.mcf.ai.v1.MediaResponse(\x010\x01\x12K\n" +
 	"\x12ProcessVideoStream\x12\x17.mcf.ai.v1.VideoRequest\x1a\x18.mcf.ai.v1.VideoResponse(\x010\x01B*Z(mcf/services/logic/internal/pb/api/protob\x06proto3"
