@@ -26,24 +26,15 @@ protoc -I=api/proto \
 ```
 
 # port
+
 8080  → HTTPGW của LOGIC
+
 50052 → gRPC của AI Engine
+
 5004  → RTPGW của LOGIC
+
 5006  → RTP receiver riêng cho MF realtime test
 
-
-```
-export GRPC_SERVER_ADDRESS=0.0.0.0:50052
-export VIDEO_HTTP_ENABLED=true
-export VIDEO_HTTP_ADDRESS=0.0.0.0:50053
-export VIDEO_MODEL_PATH=$PWD/services/ai_engine/model_checkpoints/selfie_segmenter.tflite
-export VIDEO_MASK_THRESHOLD=0.5
-export HTTP_LISTEN_ADDR=0.0.0.0:8080
-export RTP_LISTEN_ADDR=0.0.0.0:5004
-export AI_SERVICE_ADDRESS=127.0.0.1:50052
-export VIDEO_AI_ENDPOINT=http://127.0.0.1:50053/v1/video/infer
-export VIDEO_AI_TIMEOUT_MS=1500
-```
 
 # chạy AI Engine
 ```
@@ -71,8 +62,7 @@ python -u mf_video/mf_v1.py \
   --mcf-url http://127.0.0.1:8080/v1/video/infer \
   --effect bg_replace \
   --background services/ai_engine/model_checkpoints/bg_image.jpg \
-  --output output_ver1.mp4
-```
+  --output output_ver2_grpc.mp4
 
 # replay PCAP
 ```

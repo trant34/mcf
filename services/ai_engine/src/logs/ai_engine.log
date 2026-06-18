@@ -600,3 +600,70 @@ Traceback (most recent call last):
   File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/socketserver.py", line 845, in write
     self._sock.sendall(b)
 BrokenPipeError: [Errno 32] Broken pipe
+[INFO] 2026-06-17T07:14:04 | ai_engine | Loading Silero VAD (Pip package) to CPU...
+[INFO] 2026-06-17T07:14:04 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda', 'compute_type': 'int8'}
+[INFO] 2026-06-17T09:40:47 | ai_engine | Loading Silero VAD (Pip package) to CPU...
+[INFO] 2026-06-17T09:40:48 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda', 'compute_type': 'int8'}
+[INFO] 2026-06-18T03:08:44 | ai_engine | Loading Silero VAD (Pip package) to CPU...
+[INFO] 2026-06-18T03:08:44 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda', 'compute_type': 'int8'}
+[INFO] 2026-06-18T03:08:47 | ai_engine | Whisper model loaded, ready to process streams
+[INFO] 2026-06-18T03:08:47 | ai_engine | AI Engine Configuration loaded | context={'grpc_server_address': '0.0.0.0:50052', 'grpc_max_workers': 4, 'device': 'cuda', 'whisper_model_size': 'small', 'compute_type': 'int8', 'sample_rate': 16000, 'silence_threshold': 0.012, 'silence_timeout': 0.6, 'max_audio': 15.0, 'min_audio': 1.0, 'vad_threshold': 0.5, 'log_level': 'INFO'}
+[INFO] 2026-06-18T03:08:47 | ai_engine.video | Video AI HTTP server listening address=0.0.0.0:50053 model=/teamspace/studios/this_studio/mcf/services/ai_engine/model_checkpoints/selfie_segmenter.tflite
+[INFO] 2026-06-18T03:08:47 | ai_engine | gRPC Server starting | context={'address': '0.0.0.0:50052', 'max_workers': 4}
+[INFO] 2026-06-18T03:13:53 | ai_engine | Client connected to bi-directional stream
+[INFO] 2026-06-18T03:13:53 | ai_engine | Session configured | session_id=CALL-TEST-001 | context={'source_language': 'vi', 'target_language': 'en'}
+[INFO] 2026-06-18T03:25:02 | ai_engine | Video client connected to bi-directional gRPC stream
+[INFO] 2026-06-18T03:25:02 | ai_engine | Video session configured | session_id=CALL-VIDEO-GRPC-TEST | context={'stream_id': 'video-0', 'effect_type': 'bg_replace', 'inference_width': 256, 'inference_height': 144, 'inference_fps': 5, 'threshold': 0.5, 'model_path': '/teamspace/studios/this_studio/mcf/services/ai_engine/model_checkpoints/selfie_segmenter.tflite'}
+[INFO] 2026-06-18T03:25:03 | ai_engine.video | Loading MediaPipe ImageSegmenter model_path=/teamspace/studios/this_studio/mcf/services/ai_engine/model_checkpoints/selfie_segmenter.tflite
+[INFO] 2026-06-18T03:25:04 | ai_engine.video | MediaPipe ImageSegmenter loaded
+[INFO] 2026-06-18T03:25:04 | ai_engine | Received video end-of-stream signal | session_id=CALL-VIDEO-GRPC-TEST | context={'stream_id': 'video-0'}
+[INFO] 2026-06-18T03:25:04 | ai_engine | Video stream closed | session_id=CALL-VIDEO-GRPC-TEST | context={'stream_id': 'video-0'}
+[INFO] 2026-06-18T03:29:31 | ai_engine | Video client connected to bi-directional gRPC stream
+[INFO] 2026-06-18T03:29:31 | ai_engine | Video session configured | session_id=CALL-VIDEO-TEST | context={'stream_id': 'video-0', 'effect_type': 'bg_replace', 'inference_width': 256, 'inference_height': 144, 'inference_fps': 5, 'threshold': 0.5, 'model_path': '/teamspace/studios/this_studio/mcf/services/ai_engine/model_checkpoints/selfie_segmenter.tflite'}
+[INFO] 2026-06-18T03:33:11 | ai_engine | Stopping gRPC server...
+[ERROR] 2026-06-18T03:33:11 | ai_engine | Error processing stream | session_id=CALL-TEST-001
+Traceback (most recent call last):
+  File "/teamspace/studios/this_studio/mcf/services/ai_engine/src/ai_server.py", line 106, in ProcessMediaStream
+    for request in request_iterator:
+                  ^^^^^^^^^^^^^^^^
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 542, in __next__
+    return self._next()
+           ^^^^^^^^^^^^
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 534, in _next
+    request = self._look_for_request()
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 516, in _look_for_request
+    _raise_rpc_error(self._state)
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 220, in _raise_rpc_error
+    raise rpc_error
+grpc.RpcError
+[WARNING] 2026-06-18T03:33:12 | ai_engine | Video gRPC stream cancelled | session_id=CALL-VIDEO-TEST
+Traceback (most recent call last):
+  File "/teamspace/studios/this_studio/mcf/services/ai_engine/src/ai_server.py", line 216, in ProcessVideoStream
+    for request in request_iterator:
+                   ^^^^^^^^^^^^^^^^
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 542, in __next__
+    return self._next()
+           ^^^^^^^^^^^^
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 534, in _next
+    request = self._look_for_request()
+              ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 516, in _look_for_request
+    _raise_rpc_error(self._state)
+  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 220, in _raise_rpc_error
+    raise rpc_error
+grpc.RpcError
+[INFO] 2026-06-18T03:33:12 | ai_engine | Video stream closed | session_id=CALL-VIDEO-TEST | context={'stream_id': 'video-0'}
+[INFO] 2026-06-18T03:33:12 | ai_engine | Stream closed | session_id=CALL-TEST-001
+[INFO] 2026-06-18T03:36:59 | ai_engine | Loading Silero VAD (Pip package) to CPU...
+[INFO] 2026-06-18T03:36:59 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda', 'compute_type': 'int8'}
+[INFO] 2026-06-18T03:37:02 | ai_engine | Whisper model loaded, ready to process streams
+[INFO] 2026-06-18T03:37:02 | ai_engine | AI Engine Configuration loaded | context={'grpc_server_address': '0.0.0.0:50052', 'grpc_max_workers': 4, 'device': 'cuda', 'whisper_model_size': 'small', 'compute_type': 'int8', 'sample_rate': 16000, 'silence_threshold': 0.012, 'silence_timeout': 0.6, 'max_audio': 15.0, 'min_audio': 1.0, 'vad_threshold': 0.5, 'log_level': 'INFO'}
+[INFO] 2026-06-18T03:37:02 | ai_engine.video | Video AI HTTP server listening address=0.0.0.0:50053 model=/teamspace/studios/this_studio/mcf/services/ai_engine/model_checkpoints/selfie_segmenter.tflite
+[INFO] 2026-06-18T03:37:02 | ai_engine | gRPC Server starting | context={'address': '0.0.0.0:50052', 'max_workers': 4}
+[INFO] 2026-06-18T03:37:02 | ai_engine | Client connected to bi-directional stream
+[INFO] 2026-06-18T03:37:02 | ai_engine | Session configured | session_id=CALL-TEST-001 | context={'source_language': 'vi', 'target_language': 'en'}
+[INFO] 2026-06-18T03:37:12 | ai_engine | Video client connected to bi-directional gRPC stream
+[INFO] 2026-06-18T03:37:12 | ai_engine | Video session configured | session_id=CALL-VIDEO-TEST | context={'stream_id': 'video-0', 'effect_type': 'bg_replace', 'inference_width': 256, 'inference_height': 144, 'inference_fps': 5, 'threshold': 0.5, 'model_path': '/teamspace/studios/this_studio/mcf/services/ai_engine/model_checkpoints/selfie_segmenter.tflite'}
+[INFO] 2026-06-18T03:37:13 | ai_engine.video | Loading MediaPipe ImageSegmenter model_path=/teamspace/studios/this_studio/mcf/services/ai_engine/model_checkpoints/selfie_segmenter.tflite
+[INFO] 2026-06-18T03:37:13 | ai_engine.video | MediaPipe ImageSegmenter loaded
