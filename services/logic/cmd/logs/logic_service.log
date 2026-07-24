@@ -1,0 +1,18 @@
+2026-07-24T02:32:10.611Z	INFO	config/config.go:33	Configuration loaded	{"http_listen_addr": "0.0.0.0:8080", "rtp_listen_addr": "0.0.0.0:5004", "ai_service_addr": "127.0.0.1:50052", "session_id": "CALL-TEST-001", "log_level": "info"}
+2026-07-24T02:32:10.613Z	INFO	mcf-server/main.go:21	=== Starting MCF Server ===
+2026-07-24T02:32:10.613Z	INFO	ai_client/client.go:21	Connecting to AI service	{"address": "127.0.0.1:50052"}
+2026-07-24T02:32:10.614Z	INFO	gateway/http_gw.go:71	Starting HTTP Gateway server	{"addr": "0.0.0.0:8080"}
+2026-07-24T02:32:10.616Z	INFO	ai_client/client.go:31	Successfully connected to AI service	{"address": "127.0.0.1:50052"}
+2026-07-24T02:32:10.617Z	INFO	logic_core/session.go:28	Starting session orchestration	{"session_id": "CALL-TEST-001"}
+2026-07-24T02:32:10.618Z	INFO	gateway/rtp_gw.go:35	Listening RTP	{"addr": "0.0.0.0:5004", "session_id": "CALL-TEST-001"}
+2026-07-24T03:01:57.281Z	ERROR	ai_client/client.go:106	Error receiving text	{"session_id": "CALL-TEST-001", "error": "rpc error: code = Unavailable desc = Cancelling all calls"}
+2026-07-24T03:02:08.913Z	INFO	mcf-server/main.go:48	Received shutdown signal, stopping MCF Server...
+2026-07-24T03:02:08.913Z	INFO	logic_core/session.go:51	Session orchestration stopping	{"session_id": "CALL-TEST-001"}
+2026-07-24T03:02:09.914Z	INFO	mcf-server/main.go:51	=== MCF Server Stopped Successfully ===
+2026-07-24T03:02:24.739Z	INFO	config/config.go:55	Configuration loaded	{"http_listen_addr": "0.0.0.0:8080", "rtp_listen_addr": "0.0.0.0:5004", "ai_service_addr": "127.0.0.1:50052", "video_ai_timeout": "1.5s", "video_effect": "bg_replace", "video_infer_width": 256, "video_infer_height": 144, "video_infer_fps": 5, "video_mask_threshold": 0.5, "session_id": "CALL-TEST-001", "log_level": "info"}
+2026-07-24T03:02:24.740Z	INFO	mcf-server/main.go:23	=== Starting MCF Server ===
+2026-07-24T03:02:24.740Z	INFO	ai_client/client.go:43	Connecting to AI service	{"address": "127.0.0.1:50052"}
+2026-07-24T03:02:27.461Z	INFO	ai_client/client.go:53	Successfully connected to AI service	{"address": "127.0.0.1:50052"}
+2026-07-24T03:02:27.461Z	INFO	gateway/http_gw.go:212	Starting HTTP Gateway server	{"addr": "0.0.0.0:8080"}
+2026-07-24T03:02:27.461Z	INFO	logic_core/session.go:28	Starting session orchestration	{"session_id": "CALL-TEST-001"}
+2026-07-24T03:02:27.462Z	INFO	gateway/rtp_gw.go:35	Listening RTP	{"addr": "0.0.0.0:5004", "session_id": "CALL-TEST-001"}

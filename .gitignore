@@ -11,6 +11,8 @@
 huggingface/
 models/
 
+build/
+
 *.wav
 *.mp3
 *.flac

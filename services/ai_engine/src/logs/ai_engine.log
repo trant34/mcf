@@ -667,3 +667,23 @@ grpc.RpcError
 [INFO] 2026-06-18T03:37:12 | ai_engine | Video session configured | session_id=CALL-VIDEO-TEST | context={'stream_id': 'video-0', 'effect_type': 'bg_replace', 'inference_width': 256, 'inference_height': 144, 'inference_fps': 5, 'threshold': 0.5, 'model_path': '/teamspace/studios/this_studio/mcf/services/ai_engine/model_checkpoints/selfie_segmenter.tflite'}
 [INFO] 2026-06-18T03:37:13 | ai_engine.video | Loading MediaPipe ImageSegmenter model_path=/teamspace/studios/this_studio/mcf/services/ai_engine/model_checkpoints/selfie_segmenter.tflite
 [INFO] 2026-06-18T03:37:13 | ai_engine.video | MediaPipe ImageSegmenter loaded
+[INFO] 2026-07-24T03:02:23 | ai_engine | Loading Silero VAD (Pip package) to CPU...
+[INFO] 2026-07-24T03:02:23 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda', 'compute_type': 'int8'}
+[INFO] 2026-07-24T03:02:25 | ai_engine | Whisper model loaded, ready to process streams
+[INFO] 2026-07-24T03:02:25 | ai_engine | AI Engine Configuration loaded | context={'grpc_server_address': '0.0.0.0:50052', 'grpc_max_workers': 4, 'device': 'cuda', 'whisper_model_size': 'small', 'compute_type': 'int8', 'sample_rate': 16000, 'silence_threshold': 0.012, 'silence_timeout': 0.6, 'max_audio': 15.0, 'min_audio': 1.0, 'vad_threshold': 0.5, 'log_level': 'INFO'}
+[INFO] 2026-07-24T03:02:25 | ai_engine.video | Video AI HTTP server listening address=0.0.0.0:50053 model=/teamspace/studios/this_studio/mcf/services/ai_engine/model_checkpoints/selfie_segmenter.tflite
+[INFO] 2026-07-24T03:02:25 | ai_engine | gRPC Server starting | context={'address': '0.0.0.0:50052', 'max_workers': 4}
+[INFO] 2026-07-24T03:02:27 | ai_engine | Client connected to bi-directional stream
+[INFO] 2026-07-24T03:02:27 | ai_engine | Session configured | session_id=CALL-TEST-001 | context={'source_language': 'vi', 'target_language': 'en'}
+[INFO] 2026-07-24T03:07:24 | ai_engine | Loading Silero VAD (Pip package) to CPU...
+[INFO] 2026-07-24T03:07:24 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda', 'compute_type': 'int8'}
+[INFO] 2026-07-24T03:07:29 | ai_engine | Whisper model loaded, ready to process streams
+[INFO] 2026-07-24T03:07:29 | ai_engine | AI Engine Configuration loaded | context={'grpc_server_address': '0.0.0.0:50052', 'grpc_max_workers': 4, 'device': 'cuda', 'whisper_model_size': 'small', 'compute_type': 'int8', 'sample_rate': 16000, 'silence_threshold': 0.012, 'silence_timeout': 0.6, 'max_audio': 15.0, 'min_audio': 1.0, 'vad_threshold': 0.5, 'log_level': 'INFO'}
+[INFO] 2026-07-24T03:07:29 | ai_engine.video | Video AI HTTP server listening address=0.0.0.0:50053 model=/teamspace/studios/this_studio/mcf/services/ai_engine/model_checkpoints/selfie_segmenter.tflite
+[INFO] 2026-07-24T03:07:29 | ai_engine | gRPC Server starting | context={'address': '0.0.0.0:50052', 'max_workers': 4}
+[INFO] 2026-07-24T03:08:42 | ai_engine | Client connected to bi-directional stream
+[INFO] 2026-07-24T03:08:42 | ai_engine | Session configured | session_id=CALL-TEST-001 | context={'source_language': 'vi', 'target_language': 'en'}
+[INFO] 2026-07-24T03:09:55 | ai_engine | Video client connected to bi-directional gRPC stream
+[INFO] 2026-07-24T03:09:55 | ai_engine | Video session configured | session_id=CALL-VIDEO-TEST | context={'stream_id': 'video-0', 'effect_type': 'bg_replace', 'inference_width': 256, 'inference_height': 144, 'inference_fps': 5, 'threshold': 0.5, 'model_path': '/teamspace/studios/this_studio/mcf/services/ai_engine/model_checkpoints/selfie_segmenter.tflite'}
+[INFO] 2026-07-24T03:09:57 | ai_engine.video | Loading MediaPipe ImageSegmenter model_path=/teamspace/studios/this_studio/mcf/services/ai_engine/model_checkpoints/selfie_segmenter.tflite
+[INFO] 2026-07-24T03:09:58 | ai_engine.video | MediaPipe ImageSegmenter loaded

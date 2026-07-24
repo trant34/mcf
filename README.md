@@ -9,7 +9,7 @@ go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
 export PATH="$PATH:$(go env GOPATH)/bin"
 ```
 
-# từ repo root
+# From repo root
 ```
 python -m grpc_tools.protoc -I=api/proto \
   --python_out=services/ai_engine/src/pb \
@@ -17,7 +17,7 @@ python -m grpc_tools.protoc -I=api/proto \
   api/proto/ai_service.proto
 ```
 
-# từ repo root
+# From repo root
 ```
 protoc -I=api/proto \
   --go_out=services/logic/internal/pb/api/proto --go_opt=paths=source_relative \
@@ -36,17 +36,17 @@ protoc -I=api/proto \
 5006  → RTP receiver riêng cho MF realtime test
 
 
-# chạy AI Engine
+# Run AI Engine
 ```
 cd mcf/services/ai_engine/src
 python ai_server.py
 ```
-# chạy MCF server
+# Run MCF server
 ```
 cd mcf/services/logic
 go run cmd/mcf_server/main.go
 ```
-# chạy MF
+# Run MF python
 ```
 python -u mf_video/mf_v1.py \
   --listen-host 127.0.0.1 \
@@ -63,8 +63,38 @@ python -u mf_video/mf_v1.py \
   --effect bg_replace \
   --background services/ai_engine/model_checkpoints/bg_image.jpg \
   --output output_ver2_grpc.mp4
+```
 
-# replay PCAP
+# Run MF cpp
+
+**Install**
+```bash
+sudo apt-get install -y cmake libopencv-dev libcurl4-openssl-dev nlohmann-json3-dev pkg-config ffmpeg
+```
+
+**Build**
+```bash
+cd mf_cpp
+mkdir -p build && cd build
+cmake .. -DCMAKE_BUILD_TYPE=Release
+make -j$(nproc)
+```
+
+**Run MF cpp**
+```bash
+./mf_cpp \
+  --listen-host 127.0.0.1 --listen-port 5006 \
+  --payload-type 114 --ssrc 0x5cccb090 \
+  --width 240 --height 320 --fps 15 \
+  --infer-fps 5 --infer-width 256 --infer-height 144 \
+  --mcf-url http://127.0.0.1:8080/v1/video/infer \
+  --session-id CALL-VIDEO-TEST --stream-id video-0 \
+  --effect bg_replace \
+  --background ../services/ai_engine/model_checkpoints/bg_image.jpg \
+  --output output_test_cpp.mp4
+```
+
+# Replay PCAP
 ```
 cd mcf
 python -u mf_video/pcap_replay.py \
