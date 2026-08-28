@@ -1,25 +1,26 @@
 #pragma once
 #include <atomic>
 #include <cstdint>
+#include <cstring>
 #include <deque>
 #include <mutex>
 #include <string>
 #include <thread>
 #include <vector>
 
-#include <opencv2/opencv.hpp>
-
-#include "latest_queue.hpp"
+#include "cdecoder_latest_queue.hpp"
 
 namespace mf {
 
-struct DecodedFrame {
+struct RawFrame {
     uint32_t rtp_ts;
-    cv::Mat frame; // BGR24, width x height
+    std::vector<uint8_t> data; // bgr24, width * height * 3 bytes, contiguous
 };
 
-// FFmpegDecoder: pipes Annex-B H264 into an `ffmpeg`
-// subprocess and reads raw BGR24 frames back out on a background thread.
+// FFmpegDecoder: pipes Annex-B H264 into an `ffmpeg` subprocess and reads
+// raw BGR24 frames back out on a background thread. See mf_cpp's original
+// ffmpeg_decoder.cpp for the detailed rationale on each step (pipe setup,
+// SIGTERM-then-wait shutdown, EOF-driven reader loop).
 class FFmpegDecoder {
 public:
     FFmpegDecoder(int width, int height, const std::string& ffmpeg_bin, bool debug);
@@ -28,8 +29,7 @@ public:
     void feed(const std::vector<uint8_t>& annexb, uint32_t rtp_timestamp);
     void close();
 
-    // Shared with the main loop, mirrors self.decoder.frames.queue.get_nowait().
-    LatestQueue<DecodedFrame> frames{8};
+    LatestQueue<RawFrame> frames{8};
 
 private:
     void reader_loop();
@@ -39,7 +39,6 @@ private:
     size_t frame_size_;
     std::atomic<bool> running_{true};
 
-    // child process handles
     pid_t pid_ = -1;
     int stdin_fd_ = -1;
     int stdout_fd_ = -1;

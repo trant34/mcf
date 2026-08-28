@@ -12,6 +12,8 @@ from typing import Optional
 import cv2
 import numpy as np
 
+from .mf_callback_client import MFCallbackClient
+
 logger = logging.getLogger("ai_engine.video")
 
 
@@ -82,6 +84,195 @@ class LazySegmenter:
         confidence = result.confidence_masks[0].numpy_view().copy()
         binary = (confidence >= (self.threshold if threshold is None else threshold)).astype(np.uint8)
         return binary, latency_ms
+
+
+class LiveStreamSegmentSession:
+    """One MediaPipe ImageSegmenter instance running in LIVE_STREAM mode,
+    scoped to a single (session_id, stream_id).
+
+    New in v3.1 (rtpgw_design_v3.md section 35), replacing the shared
+    IMAGE-mode `LazySegmenter` for the RTPGW -> AI Engine gRPC path. Two
+    things force one instance per stream instead of one shared global
+    instance:
+
+    1. LIVE_STREAM input timestamps must be monotonically increasing *per
+       segmenter instance* -- interleaving frames from two different RTP
+       streams into one shared segmenter would violate that and MediaPipe
+       raises.
+    2. LIVE_STREAM mode keeps temporal state internally for smoother masks
+       across frames; sharing that state across unrelated calls would be a
+       correctness bug, not just a performance one.
+
+    `segment_async` returns immediately; the result arrives later on a
+    MediaPipe-owned callback thread, so this class also owns pushing the
+    result to MF over HTTP (mf_callback_client.MFCallbackClient) instead of
+    returning it synchronously.
+    """
+
+    def __init__(
+        self,
+        model_path: str,
+        threshold: float,
+        session_id: str,
+        stream_id: str,
+        callback_client: MFCallbackClient,
+        logger_: logging.Logger,
+    ):
+        from mediapipe.tasks import python as mp_python
+        from mediapipe.tasks.python import vision
+
+        self._vision = vision
+        self.threshold = threshold
+        self.session_id = session_id
+        self.stream_id = stream_id
+        self.callback_client = callback_client
+        self.logger = logger_
+
+        self._lock = threading.Lock()
+        self._last_ts_ms = -1
+        self._pending: dict[int, tuple[int, int, float]] = {}  # ts_ms -> (frame_id, rtp_ts, submit_time)
+
+        options = vision.ImageSegmenterOptions(
+            base_options=mp_python.BaseOptions(model_asset_path=str(model_path)),
+            running_mode=vision.RunningMode.LIVE_STREAM,
+            output_category_mask=False,
+            output_confidence_masks=True,
+            result_callback=self._on_result,
+        )
+        self._segmenter = vision.ImageSegmenter.create_from_options(options)
+
+    def submit(self, jpeg: bytes, frame_id: int, rtp_timestamp: int) -> None:
+        """Decode JPEG -> RGB, submit to MediaPipe LIVE_STREAM asynchronously.
+
+        Never blocks on inference; the result (if any) is delivered later to
+        `_on_result` on MediaPipe's internal thread.
+        """
+        from mediapipe import Image, ImageFormat
+
+        arr = np.frombuffer(jpeg, dtype=np.uint8)
+        bgr = cv2.imdecode(arr, cv2.IMREAD_COLOR)
+        if bgr is None:
+            raise ValueError("cannot decode JPEG")
+        rgb = cv2.cvtColor(bgr, cv2.COLOR_BGR2RGB)
+        mp_image = Image(image_format=ImageFormat.SRGB, data=rgb)
+
+        # RTP clock (90kHz) -> ms, per rtpgw_design_v3.md section 17. LIVE_STREAM
+        # requires strictly increasing timestamps per instance, so clamp
+        # forward by 1ms instead of dropping a frame outright if two frames
+        # ever map to the same ms (can happen with a coarse RTP clock delta).
+        ts_ms = max(0, rtp_timestamp // 90)
+        submit_epoch_ms = int(time.time() * 1000)
+        with self._lock:
+            if ts_ms <= self._last_ts_ms:
+                ts_ms = self._last_ts_ms + 1
+            self._last_ts_ms = ts_ms
+            self._pending[ts_ms] = (frame_id, rtp_timestamp, time.perf_counter(), submit_epoch_ms)
+
+        # LATENCY_TRACE T4: about to call segment_async (start of MediaPipe
+        # LIVE_STREAM inference). See rtpgw_design_v3.md section 36.
+        self.logger.info(
+            "LATENCY_TRACE stage=ai_submit stream_id=%s frame_id=%s rtp_ts=%s ts_ms=%s",
+            self.stream_id, frame_id, rtp_timestamp, submit_epoch_ms,
+        )
+
+        self._segmenter.segment_async(mp_image, ts_ms)
+
+    def _on_result(self, result, output_image, timestamp_ms: int) -> None:
+        """MediaPipe result_callback -- runs on MediaPipe's own thread."""
+        with self._lock:
+            pending = self._pending.pop(timestamp_ms, None)
+        if pending:
+            frame_id, rtp_timestamp, submitted_at, submit_epoch_ms = pending
+        else:
+            frame_id, rtp_timestamp, submitted_at, submit_epoch_ms = 0, 0, time.perf_counter(), 0
+        latency_ms = (time.perf_counter() - submitted_at) * 1000.0
+        result_epoch_ms = int(time.time() * 1000)
+
+        # LATENCY_TRACE T5: MediaPipe result_callback fired -- this IS the
+        # pure MediaPipe LIVE_STREAM inference latency (T5 - T4).
+        self.logger.info(
+            "LATENCY_TRACE stage=ai_result stream_id=%s frame_id=%s rtp_ts=%s "
+            "ts_ms=%s inference_latency_ms=%.3f",
+            self.stream_id, frame_id, rtp_timestamp, result_epoch_ms, latency_ms,
+        )
+
+        if not result.confidence_masks:
+            self.logger.warning(
+                "LIVE_STREAM segmentation returned no confidence mask stream_id=%s frame_id=%s",
+                self.stream_id, frame_id,
+            )
+            self.callback_client.push_mask(
+                session_id=self.session_id, stream_id=self.stream_id,
+                frame_id=frame_id, rtp_timestamp=rtp_timestamp,
+                mask_width=0, mask_height=0, rle_counts=[], latency_ms=latency_ms,
+                status="error", error_message="no confidence mask",
+                t_ai_submit_ms=submit_epoch_ms, t_ai_result_ms=result_epoch_ms,
+            )
+            return
+
+        confidence = result.confidence_masks[0].numpy_view()
+        binary = (confidence >= self.threshold).astype(np.uint8)
+        runs = _rle_encode(binary)
+
+        self.callback_client.push_mask(
+            session_id=self.session_id, stream_id=self.stream_id,
+            frame_id=frame_id, rtp_timestamp=rtp_timestamp,
+            mask_width=int(binary.shape[1]), mask_height=int(binary.shape[0]),
+            rle_counts=runs, latency_ms=latency_ms, status="ok",
+            t_ai_submit_ms=submit_epoch_ms, t_ai_result_ms=result_epoch_ms,
+        )
+
+    def close(self) -> None:
+        try:
+            self._segmenter.close()
+        except Exception:
+            self.logger.exception("error closing LIVE_STREAM segmenter stream_id=%s", self.stream_id)
+
+
+class LiveStreamSegmentPool:
+    """Owns one LiveStreamSegmentSession per (session_id, stream_id),
+    created on the video stream's `config` message and torn down on eos /
+    gRPC stream close (see ai_server.py ProcessVideoStream)."""
+
+    def __init__(self, model_path: str, default_threshold: float, mf_callback_url: str, mf_callback_timeout_ms: int):
+        self.model_path = model_path
+        self.default_threshold = default_threshold
+        self.callback_client = MFCallbackClient(url=mf_callback_url, timeout_s=mf_callback_timeout_ms / 1000.0)
+        self._sessions: dict[tuple[str, str], LiveStreamSegmentSession] = {}
+        self._lock = threading.Lock()
+
+    def open(self, session_id: str, stream_id: str, threshold: Optional[float] = None) -> LiveStreamSegmentSession:
+        key = (session_id, stream_id)
+        with self._lock:
+            existing = self._sessions.get(key)
+            if existing is not None:
+                return existing
+            session = LiveStreamSegmentSession(
+                self.model_path,
+                threshold if threshold is not None else self.default_threshold,
+                session_id, stream_id,
+                self.callback_client,
+                logger,
+            )
+            self._sessions[key] = session
+            return session
+
+    def get(self, session_id: str, stream_id: str) -> Optional[LiveStreamSegmentSession]:
+        with self._lock:
+            return self._sessions.get((session_id, stream_id))
+
+    def close(self, session_id: str, stream_id: str) -> None:
+        with self._lock:
+            session = self._sessions.pop((session_id, stream_id), None)
+        if session is not None:
+            session.close()
+
+    def close_all(self) -> None:
+        with self._lock:
+            sessions = list(self._sessions.values())
+            self._sessions.clear()
+        for session in sessions:
+            session.close()
 
 
 class VideoInferenceHTTPServer:
@@ -167,7 +358,14 @@ class VideoInferenceHTTPServer:
 
 
 def start_video_http_server() -> Optional[ThreadingHTTPServer]:
-    enabled = os.getenv("VIDEO_HTTP_ENABLED", "true").lower() in {"1", "true", "yes", "on"}
+    # Deprecated as of v3.1: this synchronous IMAGE-mode HTTP endpoint
+    # (POST /v1/video/infer, blocking request/response) was used when MF
+    # called the AI Engine directly. It is superseded by the RTPGW -> AI
+    # Engine gRPC stream (ai_service.proto) + LiveStreamSegmentPool above,
+    # with results pushed to MF asynchronously over HTTP instead of
+    # returned synchronously. Left disabled by default but still available
+    # for manual/legacy testing (rtpgw_design_v3.md section 35).
+    enabled = os.getenv("VIDEO_HTTP_ENABLED", "false").lower() in {"1", "true", "yes", "on"}
     if not enabled:
         logger.info("Video HTTP inference is disabled")
         return None

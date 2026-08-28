@@ -1,5 +1,6 @@
 # Python grpc tools
 ```
+sudo apt install -y libgrpc++-dev protobuf-compiler-grpc
 python -m pip install --user grpcio grpcio-tools
 ```
 # Go protoc plugins (yêu cầu GOPATH/bin trong PATH)
@@ -90,7 +91,7 @@ make -j$(nproc)
   --mcf-url http://127.0.0.1:8080/v1/video/infer \
   --session-id CALL-VIDEO-TEST --stream-id video-0 \
   --effect bg_replace \
-  --background ../services/ai_engine/model_checkpoints/bg_image.jpg \
+  --background ../../services/ai_engine/model_checkpoints/bg_image.jpg \
   --output output_test_cpp.mp4
 ```
 
@@ -105,3 +106,6 @@ python -u mf_video/pcap_replay.py \
   --target-port 5006 \
   --speed 1.0
 ```
+
+
+python3 scripts/latency_trace.py rtpgw.log ai_engine.log mf_cpp.log

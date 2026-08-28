@@ -1,689 +1,628 @@
-[INFO] 2026-06-09T03:13:27 | ai_engine | Loading Silero VAD (Pip package) to CPU...
-[INFO] 2026-06-09T03:13:27 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda', 'compute_type': 'int8'}
-[INFO] 2026-06-09T03:13:31 | ai_engine | Whisper model loaded, ready to process streams
-[INFO] 2026-06-09T03:13:31 | ai_engine | AI Engine Configuration loaded | context={'grpc_server_address': '0.0.0.0:50052', 'grpc_max_workers': 4, 'device': 'cuda', 'whisper_model_size': 'small', 'compute_type': 'int8', 'sample_rate': 16000, 'silence_threshold': 0.012, 'silence_timeout': 0.6, 'max_audio': 15.0, 'min_audio': 1.0, 'vad_threshold': 0.5, 'log_level': 'INFO'}
-[INFO] 2026-06-09T03:13:31 | ai_engine | gRPC Server starting | context={'address': '0.0.0.0:50052', 'max_workers': 4}
-[INFO] 2026-06-09T03:50:09 | ai_engine | Loading Silero VAD...
-[INFO] 2026-06-09T03:50:09 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda'}
-[INFO] 2026-06-09T03:50:12 | ai_engine | Whisper ready
-[INFO] 2026-06-09T03:50:12 | ai_engine | AI Engine Configuration loaded | context={'grpc_server_address': '0.0.0.0:50052', 'grpc_max_workers': 4, 'device': 'cuda', 'whisper_model_size': 'small', 'compute_type': 'int8', 'sample_rate': 16000, 'silence_threshold': 0.012, 'silence_timeout': 0.6, 'max_audio': 15.0, 'min_audio': 1.0, 'vad_threshold': 0.5, 'log_level': 'INFO'}
-[INFO] 2026-06-09T03:50:12 | ai_engine | gRPC server starting | context={'address': '0.0.0.0:50052'}
-[INFO] 2026-06-09T04:20:55 | ai_engine | Loading Silero VAD...
-[INFO] 2026-06-09T04:20:55 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda'}
-[INFO] 2026-06-09T04:21:34 | ai_engine | Loading Silero VAD...
-[INFO] 2026-06-09T04:21:34 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda'}
-[INFO] 2026-06-09T04:29:38 | ai_engine | Loading Silero VAD...
-[INFO] 2026-06-09T04:29:38 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda'}
-[INFO] 2026-06-09T04:29:40 | ai_engine | Whisper ready
-[INFO] 2026-06-09T04:29:40 | ai_engine | AI Engine Configuration loaded | context={'grpc_server_address': '0.0.0.0:50052', 'grpc_max_workers': 4, 'device': 'cuda', 'whisper_model_size': 'small', 'compute_type': 'int8', 'sample_rate': 16000, 'silence_threshold': 0.012, 'silence_timeout': 0.6, 'max_audio': 15.0, 'min_audio': 1.0, 'vad_threshold': 0.5, 'log_level': 'INFO'}
-[INFO] 2026-06-09T04:29:40 | ai_engine | gRPC server starting | context={'address': '0.0.0.0:50052'}
-[INFO] 2026-06-09T04:33:57 | ai_engine | Loading Silero VAD...
-[INFO] 2026-06-09T04:33:58 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda'}
-[INFO] 2026-06-09T04:34:03 | ai_engine | Whisper ready
-[INFO] 2026-06-09T04:34:03 | ai_engine | AI Engine Configuration loaded | context={'grpc_server_address': '0.0.0.0:50052', 'grpc_max_workers': 4, 'device': 'cuda', 'whisper_model_size': 'small', 'compute_type': 'int8', 'sample_rate': 16000, 'silence_threshold': 0.012, 'silence_timeout': 0.6, 'max_audio': 15.0, 'min_audio': 1.0, 'vad_threshold': 0.5, 'log_level': 'INFO'}
-[INFO] 2026-06-09T04:34:03 | ai_engine | Video inference service initialized | context={'mediapipe_available': True, 'seg_model_path': 'selfie_segmenter.tflite', 'seg_model_exists': False, 'load_policy': 'lazy_per_session'}
-[INFO] 2026-06-09T04:34:03 | ai_engine | gRPC server starting | context={'address': '0.0.0.0:50052'}
-[INFO] 2026-06-09T04:35:07 | ai_engine | Stopping...
-[INFO] 2026-06-09T04:35:16 | ai_engine | Loading Silero VAD...
-[INFO] 2026-06-09T04:35:17 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda'}
-[INFO] 2026-06-09T04:35:19 | ai_engine | Whisper ready
-[INFO] 2026-06-09T04:35:19 | ai_engine | AI Engine Configuration loaded | context={'grpc_server_address': '0.0.0.0:50052', 'grpc_max_workers': 4, 'device': 'cuda', 'whisper_model_size': 'small', 'compute_type': 'int8', 'sample_rate': 16000, 'silence_threshold': 0.012, 'silence_timeout': 0.6, 'max_audio': 15.0, 'min_audio': 1.0, 'vad_threshold': 0.5, 'log_level': 'INFO'}
-[INFO] 2026-06-09T04:35:19 | ai_engine | Video inference service initialized | context={'mediapipe_available': True, 'seg_model_path': 'selfie_segmenter.tflite', 'seg_model_exists': False, 'load_policy': 'lazy_per_session'}
-[INFO] 2026-06-09T04:35:19 | ai_engine | gRPC server starting | context={'address': '0.0.0.0:50052'}
-[INFO] 2026-06-09T04:37:32 | ai_engine | Stopping...
-[INFO] 2026-06-09T04:37:39 | ai_engine | Loading Silero VAD...
-[INFO] 2026-06-09T04:37:39 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda'}
-[INFO] 2026-06-09T04:37:42 | ai_engine | Whisper ready
-[INFO] 2026-06-09T04:37:42 | ai_engine | AI Engine Configuration loaded | context={'grpc_server_address': '0.0.0.0:50052', 'grpc_max_workers': 4, 'device': 'cuda', 'whisper_model_size': 'small', 'compute_type': 'int8', 'sample_rate': 16000, 'silence_threshold': 0.012, 'silence_timeout': 0.6, 'max_audio': 15.0, 'min_audio': 1.0, 'vad_threshold': 0.5, 'log_level': 'INFO'}
-[INFO] 2026-06-09T04:37:42 | ai_engine | Video inference service initialized | context={'mediapipe_available': True, 'seg_model_path': 'mcf/model_checkpoints/selfie_segmenter.tflite', 'seg_model_exists': False, 'load_policy': 'lazy_per_session'}
-[INFO] 2026-06-09T04:37:42 | ai_engine | gRPC server starting | context={'address': '0.0.0.0:50052'}
-[INFO] 2026-06-09T04:47:07 | ai_engine | Stopping...
-[INFO] 2026-06-09T04:47:15 | ai_engine | Loading Silero VAD...
-[INFO] 2026-06-09T04:47:15 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda'}
-[INFO] 2026-06-09T04:47:18 | ai_engine | Whisper ready
-[INFO] 2026-06-09T04:47:18 | ai_engine | AI Engine Configuration loaded | context={'grpc_server_address': '0.0.0.0:50052', 'grpc_max_workers': 4, 'device': 'cuda', 'whisper_model_size': 'small', 'compute_type': 'int8', 'sample_rate': 16000, 'silence_threshold': 0.012, 'silence_timeout': 0.6, 'max_audio': 15.0, 'min_audio': 1.0, 'vad_threshold': 0.5, 'log_level': 'INFO'}
-[INFO] 2026-06-09T04:47:18 | ai_engine | Video inference service initialized | context={'mediapipe_available': True, 'seg_model_path': 'mcf/model_checkpoints/selfie_segmenter.tflite', 'seg_model_abs_path': '/teamspace/studios/this_studio/mcf/services/ai_engine/src/mcf/model_checkpoints/selfie_segmenter.tflite', 'seg_model_exists': False, 'cwd': '/teamspace/studios/this_studio/mcf/services/ai_engine/src', 'load_policy': 'lazy_per_session'}
-[INFO] 2026-06-09T04:47:18 | ai_engine | gRPC server starting | context={'address': '0.0.0.0:50052'}
-[INFO] 2026-06-09T04:49:33 | ai_engine | Loading Silero VAD...
-[INFO] 2026-06-09T04:49:33 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda'}
-[INFO] 2026-06-09T04:49:36 | ai_engine | Whisper ready
-[INFO] 2026-06-09T04:49:36 | ai_engine | AI Engine Configuration loaded | context={'grpc_server_address': '0.0.0.0:50052', 'grpc_max_workers': 4, 'device': 'cuda', 'whisper_model_size': 'small', 'compute_type': 'int8', 'sample_rate': 16000, 'silence_threshold': 0.012, 'silence_timeout': 0.6, 'max_audio': 15.0, 'min_audio': 1.0, 'vad_threshold': 0.5, 'log_level': 'INFO'}
-[INFO] 2026-06-09T04:49:36 | ai_engine | Video inference service initialized | context={'mediapipe_available': True, 'seg_model_path': 'mcf/model_checkpoints/selfie_segmenter.tflite', 'seg_model_abs_path': '/teamspace/studios/this_studio/mcf/services/ai_engine/src/mcf/model_checkpoints/selfie_segmenter.tflite', 'seg_model_exists': False, 'cwd': '/teamspace/studios/this_studio/mcf/services/ai_engine/src', 'load_policy': 'lazy_per_session'}
-[INFO] 2026-06-09T04:49:36 | ai_engine | gRPC server starting | context={'address': '0.0.0.0:50052'}
-[INFO] 2026-06-09T04:50:19 | ai_engine | Stopping...
-[INFO] 2026-06-09T04:50:26 | ai_engine | Loading Silero VAD...
-[INFO] 2026-06-09T04:50:27 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda'}
-[INFO] 2026-06-09T04:50:29 | ai_engine | Whisper ready
-[INFO] 2026-06-09T04:50:29 | ai_engine | AI Engine Configuration loaded | context={'grpc_server_address': '0.0.0.0:50052', 'grpc_max_workers': 4, 'device': 'cuda', 'whisper_model_size': 'small', 'compute_type': 'int8', 'sample_rate': 16000, 'silence_threshold': 0.012, 'silence_timeout': 0.6, 'max_audio': 15.0, 'min_audio': 1.0, 'vad_threshold': 0.5, 'log_level': 'INFO'}
-[INFO] 2026-06-09T04:50:29 | ai_engine | Video inference service initialized | context={'mediapipe_available': True, 'seg_model_path': '../../../model_checkpoints/selfie_segmenter.tflite', 'seg_model_abs_path': '/teamspace/studios/this_studio/mcf/model_checkpoints/selfie_segmenter.tflite', 'seg_model_exists': True, 'cwd': '/teamspace/studios/this_studio/mcf/services/ai_engine/src', 'load_policy': 'lazy_per_session'}
-[INFO] 2026-06-09T04:50:29 | ai_engine | gRPC server starting | context={'address': '0.0.0.0:50052'}
-[INFO] 2026-06-09T04:50:47 | ai_engine | Stopping...
-[INFO] 2026-06-09T07:00:06 | ai_engine | Loading Silero VAD...
-[INFO] 2026-06-09T07:00:06 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda'}
-[INFO] 2026-06-09T07:00:09 | ai_engine | Whisper ready
-[INFO] 2026-06-09T07:00:09 | ai_engine | AI Engine Configuration loaded | context={'grpc_server_address': '0.0.0.0:50052', 'grpc_max_workers': 4, 'device': 'cuda', 'whisper_model_size': 'small', 'compute_type': 'int8', 'sample_rate': 16000, 'silence_threshold': 0.012, 'silence_timeout': 0.6, 'max_audio': 15.0, 'min_audio': 1.0, 'vad_threshold': 0.5, 'log_level': 'INFO'}
-[INFO] 2026-06-09T07:00:09 | ai_engine | Video inference service initialized | context={'mediapipe_available': True, 'seg_model_path': '../../../model_checkpoints/selfie_segmenter.tflite', 'seg_model_abs_path': '/teamspace/studios/this_studio/mcf/model_checkpoints/selfie_segmenter.tflite', 'seg_model_exists': True, 'cwd': '/teamspace/studios/this_studio/mcf/services/ai_engine/src', 'load_policy': 'lazy_per_session'}
-[INFO] 2026-06-09T07:00:09 | ai_engine | gRPC server starting | context={'address': '0.0.0.0:50052'}
-[INFO] 2026-06-09T07:29:49 | ai_engine | Stopping...
-[INFO] 2026-06-09T07:30:03 | ai_engine | Loading Silero VAD...
-[INFO] 2026-06-09T07:30:03 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda', 'compute_type': 'int8'}
-[INFO] 2026-06-09T07:30:06 | ai_engine | Whisper ready
-[INFO] 2026-06-09T07:30:06 | ai_engine | MediaPipe status | context={'available': True}
-[INFO] 2026-06-09T07:30:06 | ai_engine | AI Engine Configuration loaded | context={'grpc_server_address': '0.0.0.0:50052', 'grpc_max_workers': 4, 'device': 'cuda', 'whisper_model_size': 'small', 'compute_type': 'int8', 'sample_rate': 16000, 'silence_threshold': 0.012, 'silence_timeout': 0.6, 'max_audio': 15.0, 'min_audio': 1.0, 'vad_threshold': 0.5, 'log_level': 'INFO'}
-[INFO] 2026-06-09T07:30:06 | ai_engine | Video inference service initialized | context={'mediapipe_available': True, 'seg_model_path': 'selfie_segmenter.tflite', 'seg_model_exists': False, 'load_policy': 'lazy_per_session'}
-[INFO] 2026-06-09T07:30:06 | ai_engine | gRPC server starting | context={'address': '0.0.0.0:50052'}
-[INFO] 2026-06-09T07:30:55 | ai_engine | Stopping...
-[INFO] 2026-06-09T07:33:06 | ai_engine | Loading Silero VAD...
-[INFO] 2026-06-09T07:33:06 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda', 'compute_type': 'int8'}
-[INFO] 2026-06-09T07:33:09 | ai_engine | Whisper ready
-[INFO] 2026-06-09T07:33:09 | ai_engine | MediaPipe status | context={'available': True}
-[INFO] 2026-06-09T07:33:09 | ai_engine | AI Engine Configuration loaded | context={'grpc_server_address': '0.0.0.0:50052', 'grpc_max_workers': 4, 'device': 'cuda', 'whisper_model_size': 'small', 'compute_type': 'int8', 'sample_rate': 16000, 'silence_threshold': 0.012, 'silence_timeout': 0.6, 'max_audio': 15.0, 'min_audio': 1.0, 'vad_threshold': 0.5, 'log_level': 'INFO'}
-[INFO] 2026-06-09T07:33:09 | ai_engine | Video inference service initialized | context={'mediapipe_available': True, 'seg_model_path': 'selfie_segmenter.tflite', 'seg_model_exists': False, 'load_policy': 'lazy_per_session'}
-[INFO] 2026-06-09T07:33:09 | ai_engine | gRPC server starting | context={'address': '0.0.0.0:50052'}
-[INFO] 2026-06-09T07:34:04 | ai_engine | Stopping...
-[INFO] 2026-06-09T07:34:12 | ai_engine | Loading Silero VAD...
-[INFO] 2026-06-09T07:34:12 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda', 'compute_type': 'int8'}
-[INFO] 2026-06-09T07:34:14 | ai_engine | Whisper ready
-[INFO] 2026-06-09T07:34:14 | ai_engine | MediaPipe status | context={'available': True}
-[INFO] 2026-06-09T07:34:14 | ai_engine | AI Engine Configuration loaded | context={'grpc_server_address': '0.0.0.0:50052', 'grpc_max_workers': 4, 'device': 'cuda', 'whisper_model_size': 'small', 'compute_type': 'int8', 'sample_rate': 16000, 'silence_threshold': 0.012, 'silence_timeout': 0.6, 'max_audio': 15.0, 'min_audio': 1.0, 'vad_threshold': 0.5, 'log_level': 'INFO'}
-[INFO] 2026-06-09T07:34:14 | ai_engine | Video inference service initialized | context={'mediapipe_available': True, 'seg_model_path': '../model_checkpoints/selfie_segmenter.tflite', 'seg_model_exists': True, 'load_policy': 'lazy_per_session'}
-[INFO] 2026-06-09T07:34:14 | ai_engine | gRPC server starting | context={'address': '0.0.0.0:50052'}
-[INFO] 2026-06-09T07:41:24 | ai_engine | Stopping...
-[INFO] 2026-06-09T07:41:32 | ai_engine | Loading Silero VAD...
-[INFO] 2026-06-09T07:41:32 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda', 'compute_type': 'int8'}
-[INFO] 2026-06-09T07:41:35 | ai_engine | Whisper ready
-[INFO] 2026-06-09T07:41:35 | ai_engine | MediaPipe status | context={'available': False}
-[INFO] 2026-06-09T07:41:35 | ai_engine | AI Engine Configuration loaded | context={'grpc_server_address': '0.0.0.0:50052', 'grpc_max_workers': 4, 'device': 'cuda', 'whisper_model_size': 'small', 'compute_type': 'int8', 'sample_rate': 16000, 'silence_threshold': 0.012, 'silence_timeout': 0.6, 'max_audio': 15.0, 'min_audio': 1.0, 'vad_threshold': 0.5, 'log_level': 'INFO'}
-[INFO] 2026-06-09T07:41:35 | ai_engine | Video inference service initialized | context={'mediapipe_available': False, 'seg_model_path': '../model_checkpoints/selfie_segmenter.tflite', 'seg_model_exists': True, 'load_policy': 'lazy_per_session'}
-[INFO] 2026-06-09T07:41:35 | ai_engine | gRPC server starting | context={'address': '0.0.0.0:50052'}
-[INFO] 2026-06-09T07:56:48 | ai_engine | Stopping...
-[INFO] 2026-06-09T07:56:56 | ai_engine | Loading Silero VAD...
-[INFO] 2026-06-09T07:56:56 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda', 'compute_type': 'int8'}
-[INFO] 2026-06-09T07:56:59 | ai_engine | Whisper ready
-[INFO] 2026-06-09T07:56:59 | ai_engine | MediaPipe status | context={'available': False}
-[INFO] 2026-06-09T07:56:59 | ai_engine | AI Engine Configuration loaded | context={'grpc_server_address': '0.0.0.0:50052', 'grpc_max_workers': 4, 'device': 'cuda', 'whisper_model_size': 'small', 'compute_type': 'int8', 'sample_rate': 16000, 'silence_threshold': 0.012, 'silence_timeout': 0.6, 'max_audio': 15.0, 'min_audio': 1.0, 'vad_threshold': 0.5, 'log_level': 'INFO'}
-[INFO] 2026-06-09T07:56:59 | ai_engine | Video inference service initialized | context={'mediapipe_available': False, 'seg_model_path': '../model_checkpoints/selfie_segmenter.tflite', 'seg_model_exists': True, 'load_policy': 'lazy_per_session'}
-[INFO] 2026-06-09T07:56:59 | ai_engine | gRPC server starting | context={'address': '0.0.0.0:50052'}
-[INFO] 2026-06-09T08:02:34 | ai_engine | Stopping...
-[INFO] 2026-06-09T08:02:42 | ai_engine | Loading Silero VAD...
-[INFO] 2026-06-09T08:02:42 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda', 'compute_type': 'int8'}
-[INFO] 2026-06-09T08:02:45 | ai_engine | Whisper ready
-[INFO] 2026-06-09T08:02:45 | ai_engine | MediaPipe status | context={'available': True}
-[INFO] 2026-06-09T08:02:45 | ai_engine | AI Engine Configuration loaded | context={'grpc_server_address': '0.0.0.0:50052', 'grpc_max_workers': 4, 'device': 'cuda', 'whisper_model_size': 'small', 'compute_type': 'int8', 'sample_rate': 16000, 'silence_threshold': 0.012, 'silence_timeout': 0.6, 'max_audio': 15.0, 'min_audio': 1.0, 'vad_threshold': 0.5, 'log_level': 'INFO'}
-[INFO] 2026-06-09T08:02:45 | ai_engine | Video inference service initialized | context={'mediapipe_available': True, 'seg_model_path': '../model_checkpoints/selfie_segmenter.tflite', 'seg_model_exists': True, 'load_policy': 'lazy_per_session'}
-[INFO] 2026-06-09T08:02:45 | ai_engine | gRPC server starting | context={'address': '0.0.0.0:50052'}
-[INFO] 2026-06-09T08:08:49 | ai_engine | New media stream connected
-[INFO] 2026-06-09T08:08:49 | ai_engine | Session configured | session_id=CALL-TEST-001 | context={'source_language': 'vi', 'target_language': 'en', 'sample_rate': 16000}
-[INFO] 2026-06-09T08:34:25 | ai_engine | Stream closed | session_id=CALL-TEST-001
-[INFO] 2026-06-09T08:34:31 | ai_engine | New media stream connected
-[INFO] 2026-06-09T08:34:31 | ai_engine | Session configured | session_id=CALL-TEST-001 | context={'source_language': 'vi', 'target_language': 'en', 'sample_rate': 16000}
-[INFO] 2026-06-09T08:35:06 | ai_engine | New media stream connected
-[INFO] 2026-06-09T08:35:06 | ai_engine | Loading video model for session | session_id=CALL-VIDEO-TEST
-[INFO] 2026-06-09T08:35:06 | ai_engine | Initializing video segmenter | context={'model_path': '../model_checkpoints/selfie_segmenter.tflite', 'model_exists': True}
-[ERROR] 2026-06-09T08:35:06 | ai_engine | Failed to load Tasks model; fallback to selfie_segmentation
-Traceback (most recent call last):
-  File "/teamspace/studios/this_studio/mcf/services/ai_engine/src/ai_server.py", line 109, in __init__
-    self._task_segmenter = ImageSegmenter.create_from_options(options)
-                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/mediapipe/tasks/python/vision/image_segmenter.py", line 322, in create_from_options
-    lib = mediapipe_c_bindings.load_shared_library(_CTYPES_SIGNATURES)
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/mediapipe/tasks/python/core/mediapipe_c_bindings.py", line 83, in load_shared_library
-    raw_lib = load_raw_library()
-              ^^^^^^^^^^^^^^^^^^
-  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/mediapipe/tasks/python/core/mediapipe_c_bindings.py", line 54, in load_raw_library
-    _shared_lib = ctypes.CDLL(absolute_lib_path)
-                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/ctypes/__init__.py", line 379, in __init__
-    self._handle = _dlopen(self._name, mode)
-                   ^^^^^^^^^^^^^^^^^^^^^^^^^
-OSError: libGLESv2.so.2: cannot open shared object file: No such file or directory
-[ERROR] 2026-06-09T08:35:06 | ai_engine | Failed to init video model | session_id=CALL-VIDEO-TEST | context={'error': "module 'mediapipe' has no attribute 'solutions'"}
-Traceback (most recent call last):
-  File "/teamspace/studios/this_studio/mcf/services/ai_engine/src/ai_server.py", line 176, in _ensure_video_model
-    self._segmenters[session_id] = SyncSegmenter(self._seg_path)
-                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/teamspace/studios/this_studio/mcf/services/ai_engine/src/ai_server.py", line 114, in __init__
-    self._solution_segmenter = mp.solutions.selfie_segmentation.SelfieSegmentation(model_selection=1)
-                               ^^^^^^^^^^^^
-AttributeError: module 'mediapipe' has no attribute 'solutions'
-[INFO] 2026-06-09T08:35:06 | ai_engine | EOS | session_id=CALL-VIDEO-TEST
-[INFO] 2026-06-09T08:35:06 | ai_engine | Stream closed | session_id=CALL-VIDEO-TEST
-[INFO] 2026-06-09T08:42:48 | ai_engine | Stopping...
-[ERROR] 2026-06-09T08:42:48 | ai_engine | Stream error | session_id=CALL-TEST-001
-Traceback (most recent call last):
-  File "/teamspace/studios/this_studio/mcf/services/ai_engine/src/ai_server.py", line 245, in ProcessMediaStream
-    logger.info("New media stream connected")
-                   ^^^^^^^^^^^^^^^^
-  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 542, in __next__
-    return self._next()
-           ^^^^^^^^^^^^
-  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 534, in _next
-    request = self._look_for_request()
-              ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 516, in _look_for_request
-    _raise_rpc_error(self._state)
-  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 220, in _raise_rpc_error
-    raise rpc_error
-grpc.RpcError
-[INFO] 2026-06-09T08:42:48 | ai_engine | Stream closed | session_id=CALL-TEST-001
-[INFO] 2026-06-09T08:43:07 | ai_engine | Loading Silero VAD...
-[INFO] 2026-06-09T08:43:07 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda', 'compute_type': 'int8'}
-[INFO] 2026-06-09T08:43:10 | ai_engine | Whisper ready
-[INFO] 2026-06-09T08:43:10 | ai_engine | MediaPipe status | context={'available': True}
-[INFO] 2026-06-09T08:43:10 | ai_engine | AI Engine Configuration loaded | context={'grpc_server_address': '0.0.0.0:50052', 'grpc_max_workers': 4, 'device': 'cuda', 'whisper_model_size': 'small', 'compute_type': 'int8', 'sample_rate': 16000, 'silence_threshold': 0.012, 'silence_timeout': 0.6, 'max_audio': 15.0, 'min_audio': 1.0, 'vad_threshold': 0.5, 'log_level': 'INFO'}
-[INFO] 2026-06-09T08:43:10 | ai_engine | Video inference service initialized | context={'mediapipe_available': True, 'seg_model_path': '../model_checkpoints/selfie_segmenter.tflite', 'seg_model_exists': True, 'load_policy': 'lazy_per_session'}
-[INFO] 2026-06-09T08:43:10 | ai_engine | gRPC server starting | context={'address': '0.0.0.0:50052'}
-[INFO] 2026-06-09T08:43:10 | ai_engine | New media stream connected
-[INFO] 2026-06-09T08:43:10 | ai_engine | Session configured | session_id=CALL-TEST-001 | context={'source_language': 'vi', 'target_language': 'en', 'sample_rate': 16000}
-[INFO] 2026-06-09T08:44:23 | ai_engine | New media stream connected
-[INFO] 2026-06-09T08:44:23 | ai_engine | Loading video model for session | session_id=CALL-VIDEO-TEST
-[INFO] 2026-06-09T08:44:23 | ai_engine | Initializing video segmenter | context={'model_path': '../model_checkpoints/selfie_segmenter.tflite', 'model_exists': True}
-[ERROR] 2026-06-09T08:44:23 | ai_engine | Failed to load Tasks model; fallback to selfie_segmentation
-Traceback (most recent call last):
-  File "/teamspace/studios/this_studio/mcf/services/ai_engine/src/ai_server.py", line 111, in __init__
-    self._task_segmenter = ImageSegmenter.create_from_options(options)
-                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/mediapipe/tasks/python/vision/image_segmenter.py", line 322, in create_from_options
-    lib = mediapipe_c_bindings.load_shared_library(_CTYPES_SIGNATURES)
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/mediapipe/tasks/python/core/mediapipe_c_bindings.py", line 83, in load_shared_library
-    raw_lib = load_raw_library()
-              ^^^^^^^^^^^^^^^^^^
-  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/mediapipe/tasks/python/core/mediapipe_c_bindings.py", line 54, in load_raw_library
-    _shared_lib = ctypes.CDLL(absolute_lib_path)
-                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/ctypes/__init__.py", line 379, in __init__
-    self._handle = _dlopen(self._name, mode)
-                   ^^^^^^^^^^^^^^^^^^^^^^^^^
-OSError: libGLESv2.so.2: cannot open shared object file: No such file or directory
-[INFO] 2026-06-09T08:44:23 | ai_engine | Video segmentation model loaded successfully | context={'mode': None, 'load_ms': 5.79}
-[INFO] 2026-06-09T08:44:23 | ai_engine | Video model ready for session | session_id=CALL-VIDEO-TEST
-[ERROR] 2026-06-09T08:44:23 | ai_engine | Stream error | session_id=CALL-VIDEO-TEST
-Traceback (most recent call last):
-  File "/teamspace/studios/this_studio/mcf/services/ai_engine/src/ai_server.py", line 269, in ProcessMediaStream
-    out = self._process_video_frame(session_id, meta, jpeg)
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/teamspace/studios/this_studio/mcf/services/ai_engine/src/ai_server.py", line 217, in _process_video_frame
-    mask = seg.segment(frame) if seg else None
-           ^^^^^^^^^^^^^^^^^^
-  File "/teamspace/studios/this_studio/mcf/services/ai_engine/src/ai_server.py", line 133, in segment
-    result = self._solution_segmenter.process(rgb)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-AttributeError: 'NoneType' object has no attribute 'process'
-[INFO] 2026-06-09T08:44:23 | ai_engine | Video model released | session_id=CALL-VIDEO-TEST
-[INFO] 2026-06-09T08:44:23 | ai_engine | Stream closed | session_id=CALL-VIDEO-TEST
-[INFO] 2026-06-09T08:44:39 | ai_engine | New media stream connected
-[INFO] 2026-06-09T08:44:39 | ai_engine | Loading video model for session | session_id=CALL-VIDEO-TEST
-[INFO] 2026-06-09T08:44:39 | ai_engine | Initializing video segmenter | context={'model_path': '../model_checkpoints/selfie_segmenter.tflite', 'model_exists': True}
-[ERROR] 2026-06-09T08:44:39 | ai_engine | Failed to load Tasks model; fallback to selfie_segmentation
-Traceback (most recent call last):
-  File "/teamspace/studios/this_studio/mcf/services/ai_engine/src/ai_server.py", line 111, in __init__
-    self._task_segmenter = ImageSegmenter.create_from_options(options)
-                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/mediapipe/tasks/python/vision/image_segmenter.py", line 322, in create_from_options
-    lib = mediapipe_c_bindings.load_shared_library(_CTYPES_SIGNATURES)
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/mediapipe/tasks/python/core/mediapipe_c_bindings.py", line 83, in load_shared_library
-    raw_lib = load_raw_library()
-              ^^^^^^^^^^^^^^^^^^
-  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/mediapipe/tasks/python/core/mediapipe_c_bindings.py", line 54, in load_raw_library
-    _shared_lib = ctypes.CDLL(absolute_lib_path)
-                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/ctypes/__init__.py", line 379, in __init__
-    self._handle = _dlopen(self._name, mode)
-                   ^^^^^^^^^^^^^^^^^^^^^^^^^
-OSError: libGLESv2.so.2: cannot open shared object file: No such file or directory
-[INFO] 2026-06-09T08:44:39 | ai_engine | Video segmentation model loaded successfully | context={'mode': None, 'load_ms': 4.01}
-[INFO] 2026-06-09T08:44:39 | ai_engine | Video model ready for session | session_id=CALL-VIDEO-TEST
-[ERROR] 2026-06-09T08:44:39 | ai_engine | Stream error | session_id=CALL-VIDEO-TEST
-Traceback (most recent call last):
-  File "/teamspace/studios/this_studio/mcf/services/ai_engine/src/ai_server.py", line 269, in ProcessMediaStream
-    out = self._process_video_frame(session_id, meta, jpeg)
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/teamspace/studios/this_studio/mcf/services/ai_engine/src/ai_server.py", line 217, in _process_video_frame
-    mask = seg.segment(frame) if seg else None
-           ^^^^^^^^^^^^^^^^^^
-  File "/teamspace/studios/this_studio/mcf/services/ai_engine/src/ai_server.py", line 133, in segment
-    result = self._solution_segmenter.process(rgb)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-AttributeError: 'NoneType' object has no attribute 'process'
-[INFO] 2026-06-09T08:44:39 | ai_engine | Video model released | session_id=CALL-VIDEO-TEST
-[INFO] 2026-06-09T08:44:39 | ai_engine | Stream closed | session_id=CALL-VIDEO-TEST
-[ERROR] 2026-06-09T08:50:26 | ai_engine | Stream error | session_id=CALL-TEST-001
-Traceback (most recent call last):
-  File "/teamspace/studios/this_studio/mcf/services/ai_engine/src/ai_server.py", line 247, in ProcessMediaStream
-    try:
-         
-  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 542, in __next__
-    return self._next()
-           ^^^^^^^^^^^^
-  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 534, in _next
-    request = self._look_for_request()
-              ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 516, in _look_for_request
-    _raise_rpc_error(self._state)
-  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 220, in _raise_rpc_error
-    raise rpc_error
-grpc.RpcError
-[INFO] 2026-06-09T08:50:26 | ai_engine | Stream closed | session_id=CALL-TEST-001
-[INFO] 2026-06-09T08:50:31 | ai_engine | Stopping...
-[INFO] 2026-06-09T08:50:46 | ai_engine | Loading Silero VAD...
-[INFO] 2026-06-09T08:50:46 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda', 'compute_type': 'int8'}
-[INFO] 2026-06-09T08:50:49 | ai_engine | Whisper ready
-[INFO] 2026-06-09T08:50:49 | ai_engine | MediaPipe status | context={'available': True}
-[INFO] 2026-06-09T08:50:49 | ai_engine | AI Engine Configuration loaded | context={'grpc_server_address': '0.0.0.0:50052', 'grpc_max_workers': 4, 'device': 'cuda', 'whisper_model_size': 'small', 'compute_type': 'int8', 'sample_rate': 16000, 'silence_threshold': 0.012, 'silence_timeout': 0.6, 'max_audio': 15.0, 'min_audio': 1.0, 'vad_threshold': 0.5, 'log_level': 'INFO'}
-[INFO] 2026-06-09T08:50:49 | ai_engine | Video inference service initialized | context={'mediapipe_available': True, 'seg_model_path': '../model_checkpoints/selfie_segmenter.tflite', 'seg_model_exists': True, 'load_policy': 'lazy_per_session'}
-[INFO] 2026-06-09T08:50:49 | ai_engine | gRPC server starting | context={'address': '0.0.0.0:50052'}
-[INFO] 2026-06-09T08:50:55 | ai_engine | New media stream connected
-[INFO] 2026-06-09T08:50:55 | ai_engine | Session configured | session_id=CALL-TEST-001 | context={'source_language': 'vi', 'target_language': 'en', 'sample_rate': 16000}
-[INFO] 2026-06-09T08:51:01 | ai_engine | New media stream connected
-[INFO] 2026-06-09T08:51:01 | ai_engine | Loading video model for session | session_id=CALL-VIDEO-TEST
-[INFO] 2026-06-09T08:51:01 | ai_engine | Initializing video segmenter | context={'model_path': '../model_checkpoints/selfie_segmenter.tflite', 'model_exists': True}
-[ERROR] 2026-06-09T08:51:01 | ai_engine | Failed to load Tasks model; fallback to selfie_segmentation
-Traceback (most recent call last):
-  File "/teamspace/studios/this_studio/mcf/services/ai_engine/src/ai_server.py", line 112, in __init__
-    self._task_segmenter = ImageSegmenter.create_from_options(options)
-                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/mediapipe/tasks/python/vision/image_segmenter.py", line 322, in create_from_options
-    lib = mediapipe_c_bindings.load_shared_library(_CTYPES_SIGNATURES)
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/mediapipe/tasks/python/core/mediapipe_c_bindings.py", line 83, in load_shared_library
-    raw_lib = load_raw_library()
-              ^^^^^^^^^^^^^^^^^^
-  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/mediapipe/tasks/python/core/mediapipe_c_bindings.py", line 54, in load_raw_library
-    _shared_lib = ctypes.CDLL(absolute_lib_path)
-                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/ctypes/__init__.py", line 379, in __init__
-    self._handle = _dlopen(self._name, mode)
-                   ^^^^^^^^^^^^^^^^^^^^^^^^^
-OSError: libGLESv2.so.2: cannot open shared object file: No such file or directory
-[INFO] 2026-06-09T08:51:01 | ai_engine | Video segmentation model loaded successfully | context={'mode': None, 'load_ms': 6.11}
-[INFO] 2026-06-09T08:51:01 | ai_engine | Video model ready for session | session_id=CALL-VIDEO-TEST
-[INFO] 2026-06-09T08:51:01 | ai_engine | Video frame processed | session_id=CALL-VIDEO-TEST | context={'frame_id': 1, 'rtp_timestamp': 123456, 'mask_size': [256, 144], 'rle_runs': 0, 'status': 'segmentation_failed', 'latency_ms': 9.28}
-[INFO] 2026-06-09T08:51:01 | ai_engine | EOS | session_id=CALL-VIDEO-TEST
-[INFO] 2026-06-09T08:51:01 | ai_engine | Video model released | session_id=CALL-VIDEO-TEST
-[INFO] 2026-06-09T08:51:01 | ai_engine | Stream closed | session_id=CALL-VIDEO-TEST
-[INFO] 2026-06-09T08:56:49 | ai_engine | Stopping...
-[ERROR] 2026-06-09T08:56:49 | ai_engine | Stream error | session_id=CALL-TEST-001
-Traceback (most recent call last):
-  File "/teamspace/studios/this_studio/mcf/services/ai_engine/src/ai_server.py", line 248, in ProcessMediaStream
-    "mask_shape": list(mask_u8.shape),
-    ^^^^^^^^^^^^^^^^
-  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 542, in __next__
-    return self._next()
-           ^^^^^^^^^^^^
-  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 534, in _next
-    request = self._look_for_request()
-              ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 516, in _look_for_request
-    _raise_rpc_error(self._state)
-  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 220, in _raise_rpc_error
-    raise rpc_error
-grpc.RpcError
-[INFO] 2026-06-09T08:56:49 | ai_engine | Stream closed | session_id=CALL-TEST-001
-[INFO] 2026-06-09T08:57:05 | ai_engine | Loading Silero VAD...
-[INFO] 2026-06-09T08:57:05 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda', 'compute_type': 'int8'}
-[INFO] 2026-06-09T08:57:08 | ai_engine | Whisper ready
-[INFO] 2026-06-09T08:57:08 | ai_engine | MediaPipe status | context={'available': True}
-[INFO] 2026-06-09T08:57:08 | ai_engine | AI Engine Configuration loaded | context={'grpc_server_address': '0.0.0.0:50052', 'grpc_max_workers': 4, 'device': 'cuda', 'whisper_model_size': 'small', 'compute_type': 'int8', 'sample_rate': 16000, 'silence_threshold': 0.012, 'silence_timeout': 0.6, 'max_audio': 15.0, 'min_audio': 1.0, 'vad_threshold': 0.5, 'log_level': 'INFO'}
-[INFO] 2026-06-09T08:57:08 | ai_engine | Video inference service initialized | context={'mediapipe_available': True, 'seg_model_path': '../model_checkpoints/selfie_segmenter.tflite', 'seg_model_exists': True, 'load_policy': 'lazy_per_session'}
-[INFO] 2026-06-09T08:57:08 | ai_engine | gRPC server starting | context={'address': '0.0.0.0:50052'}
-[INFO] 2026-06-09T08:57:09 | ai_engine | New media stream connected
-[INFO] 2026-06-09T08:57:09 | ai_engine | Session configured | session_id=CALL-TEST-001 | context={'source_language': 'vi', 'target_language': 'en', 'sample_rate': 16000}
-[INFO] 2026-06-09T08:57:18 | ai_engine | New media stream connected
-[INFO] 2026-06-09T08:57:18 | ai_engine | Loading video model for session | session_id=CALL-VIDEO-TEST
-[INFO] 2026-06-09T08:57:18 | ai_engine | Initializing video segmenter | context={'model_path': '../model_checkpoints/selfie_segmenter.tflite', 'model_exists': True}
-[ERROR] 2026-06-09T08:57:18 | ai_engine | Failed to load MediaPipe Tasks ImageSegmenter | context={'model_path': '../model_checkpoints/selfie_segmenter.tflite', 'error': 'libGLESv2.so.2: cannot open shared object file: No such file or directory'}
-Traceback (most recent call last):
-  File "/teamspace/studios/this_studio/mcf/services/ai_engine/src/ai_server.py", line 133, in __init__
-    self._task_segmenter = ImageSegmenter.create_from_options(opts)
-                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/mediapipe/tasks/python/vision/image_segmenter.py", line 322, in create_from_options
-    lib = mediapipe_c_bindings.load_shared_library(_CTYPES_SIGNATURES)
-          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/mediapipe/tasks/python/core/mediapipe_c_bindings.py", line 83, in load_shared_library
-    raw_lib = load_raw_library()
-              ^^^^^^^^^^^^^^^^^^
-  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/mediapipe/tasks/python/core/mediapipe_c_bindings.py", line 54, in load_raw_library
-    _shared_lib = ctypes.CDLL(absolute_lib_path)
-                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/ctypes/__init__.py", line 379, in __init__
-    self._handle = _dlopen(self._name, mode)
-                   ^^^^^^^^^^^^^^^^^^^^^^^^^
-OSError: libGLESv2.so.2: cannot open shared object file: No such file or directory
-[ERROR] 2026-06-09T08:57:18 | ai_engine | Failed to initialize MediaPipe solutions fallback | context={'error': "module 'mediapipe' has no attribute 'solutions'"}
-[INFO] 2026-06-09T08:57:18 | ai_engine | Video segmentation model loaded successfully | context={'mode': None, 'load_ms': 4.25}
-[INFO] 2026-06-09T08:57:18 | ai_engine | Video model ready for session | session_id=CALL-VIDEO-TEST
-[INFO] 2026-06-09T08:57:18 | ai_engine | Video frame processed | session_id=CALL-VIDEO-TEST | context={'frame_id': 1, 'rtp_timestamp': 123456, 'mask_size': [256, 144], 'rle_runs': 0, 'status': 'segmentation_failed', 'latency_ms': 6.34}
-[INFO] 2026-06-09T08:57:18 | ai_engine | EOS | session_id=CALL-VIDEO-TEST
-[INFO] 2026-06-09T08:57:18 | ai_engine | Video model released | session_id=CALL-VIDEO-TEST
-[INFO] 2026-06-09T08:57:18 | ai_engine | Stream closed | session_id=CALL-VIDEO-TEST
-[INFO] 2026-06-09T08:57:51 | ai_engine | Stopping...
-[ERROR] 2026-06-09T08:57:51 | ai_engine | Stream error | session_id=CALL-TEST-001
-Traceback (most recent call last):
-  File "/teamspace/studios/this_studio/mcf/services/ai_engine/src/ai_server.py", line 375, in ProcessMediaStream
-    for req in request_iterator:
-               ^^^^^^^^^^^^^^^^
-  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 542, in __next__
-    return self._next()
-           ^^^^^^^^^^^^
-  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 534, in _next
-    request = self._look_for_request()
-              ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 516, in _look_for_request
-    _raise_rpc_error(self._state)
-  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 220, in _raise_rpc_error
-    raise rpc_error
-grpc.RpcError
-[INFO] 2026-06-09T08:57:51 | ai_engine | Stream closed | session_id=CALL-TEST-001
-[INFO] 2026-06-09T10:00:20 | ai_engine | Loading Silero VAD...
-[INFO] 2026-06-09T10:00:20 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda', 'compute_type': 'int8'}
-[INFO] 2026-06-09T10:00:22 | ai_engine | Whisper ready
-[INFO] 2026-06-09T10:00:22 | ai_engine | MediaPipe status | context={'available': True}
-[INFO] 2026-06-09T10:00:22 | ai_engine | AI Engine Configuration loaded | context={'grpc_server_address': '0.0.0.0:50052', 'grpc_max_workers': 4, 'device': 'cuda', 'whisper_model_size': 'small', 'compute_type': 'int8', 'sample_rate': 16000, 'silence_threshold': 0.012, 'silence_timeout': 0.6, 'max_audio': 15.0, 'min_audio': 1.0, 'vad_threshold': 0.5, 'log_level': 'INFO'}
-[INFO] 2026-06-09T10:00:22 | ai_engine | Video inference service initialized | context={'mediapipe_available': True, 'seg_model_path': '../model_checkpoints/selfie_segmenter.tflite', 'seg_model_exists': True, 'load_policy': 'lazy_per_session'}
-[INFO] 2026-06-09T10:00:22 | ai_engine | gRPC server starting | context={'address': '0.0.0.0:50052'}
-[INFO] 2026-06-09T10:02:25 | ai_engine | New media stream connected
-[INFO] 2026-06-09T10:02:25 | ai_engine | Session configured | session_id=CALL-TEST-001 | context={'source_language': 'vi', 'target_language': 'en', 'sample_rate': 16000}
-[INFO] 2026-06-09T10:03:48 | ai_engine | New media stream connected
-[INFO] 2026-06-09T10:03:48 | ai_engine | Loading video model for session | session_id=CALL-VIDEO-TEST
-[INFO] 2026-06-09T10:03:48 | ai_engine | Initializing video segmenter | context={'model_path': '../model_checkpoints/selfie_segmenter.tflite', 'model_exists': True}
-[INFO] 2026-06-09T10:03:49 | ai_engine | MediaPipe Tasks ImageSegmenter ready | context={'model_path': '../model_checkpoints/selfie_segmenter.tflite', 'output_confidence_masks': True, 'output_category_mask': False}
-[ERROR] 2026-06-09T10:03:49 | ai_engine | Failed to initialize MediaPipe solutions fallback | context={'error': "module 'mediapipe' has no attribute 'solutions'"}
-[INFO] 2026-06-09T10:03:49 | ai_engine | Video segmentation model loaded successfully | context={'mode': 'tasks.ImageSegmenter', 'load_ms': 795.06}
-[INFO] 2026-06-09T10:03:49 | ai_engine | Video model ready for session | session_id=CALL-VIDEO-TEST
-[INFO] 2026-06-09T10:03:49 | ai_engine | Video frame processed | session_id=CALL-VIDEO-TEST | context={'frame_id': 1, 'rtp_timestamp': 123456, 'mask_size': [256, 144], 'rle_runs': 1, 'status': 'ok', 'latency_ms': 840.56}
-[ERROR] 2026-06-09T10:03:49 | ai_engine | Stream error | session_id=CALL-VIDEO-TEST
-Traceback (most recent call last):
-  File "/teamspace/studios/this_studio/mcf/services/ai_engine/src/ai_server.py", line 375, in ProcessMediaStream
-    for req in request_iterator:
-               ^^^^^^^^^^^^^^^^
-  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 542, in __next__
-    return self._next()
-           ^^^^^^^^^^^^
-  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 534, in _next
-    request = self._look_for_request()
-              ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 516, in _look_for_request
-    _raise_rpc_error(self._state)
-  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 220, in _raise_rpc_error
-    raise rpc_error
-grpc.RpcError
-[INFO] 2026-06-09T10:03:49 | ai_engine | Video model released | session_id=CALL-VIDEO-TEST
-[INFO] 2026-06-09T10:03:49 | ai_engine | Stream closed | session_id=CALL-VIDEO-TEST
-[INFO] 2026-06-09T10:05:29 | ai_engine | Stopping...
-[ERROR] 2026-06-09T10:05:29 | ai_engine | Stream error | session_id=CALL-TEST-001
-Traceback (most recent call last):
-  File "/teamspace/studios/this_studio/mcf/services/ai_engine/src/ai_server.py", line 375, in ProcessMediaStream
-  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 542, in __next__
-    return self._next()
-           ^^^^^^^^^^^^
-  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 534, in _next
-    request = self._look_for_request()
-              ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 516, in _look_for_request
-    _raise_rpc_error(self._state)
-  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 220, in _raise_rpc_error
-    raise rpc_error
-grpc.RpcError
-[INFO] 2026-06-09T10:05:29 | ai_engine | Stream closed | session_id=CALL-TEST-001
-[INFO] 2026-06-09T10:05:37 | ai_engine | Loading Silero VAD...
-[INFO] 2026-06-09T10:05:37 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda', 'compute_type': 'int8'}
-[INFO] 2026-06-09T10:05:39 | ai_engine | Whisper ready
-[INFO] 2026-06-09T10:05:39 | ai_engine | MediaPipe status | context={'available': True}
-[INFO] 2026-06-09T10:05:39 | ai_engine | AI Engine Configuration loaded | context={'grpc_server_address': '0.0.0.0:50052', 'grpc_max_workers': 4, 'device': 'cuda', 'whisper_model_size': 'small', 'compute_type': 'int8', 'sample_rate': 16000, 'silence_threshold': 0.012, 'silence_timeout': 0.6, 'max_audio': 15.0, 'min_audio': 1.0, 'vad_threshold': 0.5, 'log_level': 'INFO'}
-[INFO] 2026-06-09T10:05:39 | ai_engine | Video inference service initialized | context={'mediapipe_available': True, 'seg_model_path': '../model_checkpoints/selfie_segmenter.tflite', 'seg_model_exists': True, 'load_policy': 'lazy_per_session'}
-[INFO] 2026-06-09T10:05:39 | ai_engine | gRPC server starting | context={'address': '0.0.0.0:50052'}
-[INFO] 2026-06-09T10:05:44 | ai_engine | New media stream connected
-[INFO] 2026-06-09T10:05:44 | ai_engine | Session configured | session_id=CALL-TEST-001 | context={'source_language': 'vi', 'target_language': 'en', 'sample_rate': 16000}
-[INFO] 2026-06-09T10:05:54 | ai_engine | New media stream connected
-[INFO] 2026-06-09T10:05:54 | ai_engine | Loading video model for session | session_id=CALL-VIDEO-TEST
-[INFO] 2026-06-09T10:05:54 | ai_engine | Initializing MediaPipe Tasks ImageSegmenter | context={'model_path': '../model_checkpoints/selfie_segmenter.tflite', 'model_exists': True, 'running_mode': 'IMAGE', 'output_confidence_masks': True, 'output_category_mask': False}
-[INFO] 2026-06-09T10:05:54 | ai_engine | MediaPipe Tasks ImageSegmenter loaded successfully | context={'model_path': '../model_checkpoints/selfie_segmenter.tflite', 'mode': 'tasks.ImageSegmenter', 'load_ms': 164.25}
-[INFO] 2026-06-09T10:05:54 | ai_engine | Video model ready for session | session_id=CALL-VIDEO-TEST
-[INFO] 2026-06-09T10:05:54 | ai_engine | Video frame processed | session_id=CALL-VIDEO-TEST | context={'frame_id': 1, 'rtp_timestamp': 123456, 'mask_size': [256, 144], 'rle_runs': 1, 'status': 'ok', 'latency_ms': 190.43}
-[INFO] 2026-06-09T10:05:54 | ai_engine | EOS | session_id=CALL-VIDEO-TEST
-[INFO] 2026-06-09T10:05:54 | ai_engine | Video model released | session_id=CALL-VIDEO-TEST
-[INFO] 2026-06-09T10:05:54 | ai_engine | Stream closed | session_id=CALL-VIDEO-TEST
-[INFO] 2026-06-09T10:10:41 | ai_engine | New media stream connected
-[INFO] 2026-06-09T10:10:41 | ai_engine | Loading video model for session | session_id=CALL-VIDEO-TEST
-[INFO] 2026-06-09T10:10:41 | ai_engine | Initializing MediaPipe Tasks ImageSegmenter | context={'model_path': '../model_checkpoints/selfie_segmenter.tflite', 'model_exists': True, 'running_mode': 'IMAGE', 'output_confidence_masks': True, 'output_category_mask': False}
-[INFO] 2026-06-09T10:10:41 | ai_engine | MediaPipe Tasks ImageSegmenter loaded successfully | context={'model_path': '../model_checkpoints/selfie_segmenter.tflite', 'mode': 'tasks.ImageSegmenter', 'load_ms': 83.6}
-[INFO] 2026-06-09T10:10:41 | ai_engine | Video model ready for session | session_id=CALL-VIDEO-TEST
-[INFO] 2026-06-09T10:10:41 | ai_engine | Video frame processed | session_id=CALL-VIDEO-TEST | context={'frame_id': 1, 'rtp_timestamp': 123456, 'mask_size': [256, 144], 'rle_runs': 1, 'status': 'ok', 'latency_ms': 108.55}
-[INFO] 2026-06-09T10:10:41 | ai_engine | EOS | session_id=CALL-VIDEO-TEST
-[INFO] 2026-06-09T10:10:42 | ai_engine | Video model released | session_id=CALL-VIDEO-TEST
-[INFO] 2026-06-09T10:10:42 | ai_engine | Stream closed | session_id=CALL-VIDEO-TEST
-[INFO] 2026-06-11T08:01:54 | ai_engine | Loading Silero VAD...
-[INFO] 2026-06-11T08:01:54 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda', 'compute_type': 'int8'}
-[INFO] 2026-06-11T08:13:23 | ai_engine | Loading Silero VAD...
-[INFO] 2026-06-11T08:13:23 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda', 'compute_type': 'int8'}
-[INFO] 2026-06-11T08:13:26 | ai_engine | Whisper ready
-[INFO] 2026-06-11T08:13:26 | ai_engine | MediaPipe status | context={'available': True}
-[INFO] 2026-06-11T08:13:26 | ai_engine | AI Engine Configuration loaded | context={'grpc_server_address': '0.0.0.0:50052', 'grpc_max_workers': 4, 'device': 'cuda', 'whisper_model_size': 'small', 'compute_type': 'int8', 'sample_rate': 16000, 'silence_threshold': 0.012, 'silence_timeout': 0.6, 'max_audio': 15.0, 'min_audio': 1.0, 'vad_threshold': 0.5, 'log_level': 'INFO'}
-[INFO] 2026-06-11T08:13:26 | ai_engine | Video inference service initialized | context={'mediapipe_available': True, 'seg_model_path': '../model_checkpoints/selfie_segmenter.tflite', 'seg_model_exists': True, 'load_policy': 'lazy_per_session'}
-[INFO] 2026-06-11T08:13:26 | ai_engine | gRPC server starting | context={'address': '0.0.0.0:50052'}
-[INFO] 2026-06-11T08:13:43 | ai_engine | New media stream connected
-[INFO] 2026-06-11T08:13:43 | ai_engine | Session configured | session_id=CALL-TEST-001 | context={'source_language': 'vi', 'target_language': 'en', 'sample_rate': 16000}
-[INFO] 2026-06-11T08:14:10 | ai_engine | New media stream connected
-[INFO] 2026-06-11T08:14:10 | ai_engine | Loading video model for session | session_id=CALL-VIDEO-TEST
-[INFO] 2026-06-11T08:14:10 | ai_engine | Initializing MediaPipe Tasks ImageSegmenter | context={'model_path': '../model_checkpoints/selfie_segmenter.tflite', 'model_exists': True, 'running_mode': 'IMAGE', 'output_confidence_masks': True, 'output_category_mask': False}
-[INFO] 2026-06-11T08:14:11 | ai_engine | MediaPipe Tasks ImageSegmenter loaded successfully | context={'model_path': '../model_checkpoints/selfie_segmenter.tflite', 'mode': 'tasks.ImageSegmenter', 'load_ms': 965.69}
-[INFO] 2026-06-11T08:14:11 | ai_engine | Video model ready for session | session_id=CALL-VIDEO-TEST
-[INFO] 2026-06-11T08:14:11 | ai_engine | Video frame processed | session_id=CALL-VIDEO-TEST | context={'frame_id': 1, 'rtp_timestamp': 123456, 'mask_size': [256, 144], 'rle_runs': 1, 'status': 'ok', 'latency_ms': 1010.23}
-[ERROR] 2026-06-11T08:14:11 | ai_engine | Stream error | session_id=CALL-VIDEO-TEST
-Traceback (most recent call last):
-  File "/teamspace/studios/this_studio/mcf/services/ai_engine/src/ai_server.py", line 290, in ProcessMediaStream
-    for req in request_iterator:
-               ^^^^^^^^^^^^^^^^
-  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 542, in __next__
-    return self._next()
-           ^^^^^^^^^^^^
-  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 534, in _next
-    request = self._look_for_request()
-              ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 516, in _look_for_request
-    _raise_rpc_error(self._state)
-  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 220, in _raise_rpc_error
-    raise rpc_error
-grpc.RpcError
-[INFO] 2026-06-11T08:14:11 | ai_engine | Video model released | session_id=CALL-VIDEO-TEST
-[INFO] 2026-06-11T08:14:11 | ai_engine | Stream closed | session_id=CALL-VIDEO-TEST
-[INFO] 2026-06-11T08:41:50 | ai_engine | New media stream connected
-[INFO] 2026-06-11T08:41:50 | ai_engine | Loading video model for session | session_id=CALL-PCAP-VIDEO-001
-[INFO] 2026-06-11T08:41:50 | ai_engine | Initializing MediaPipe Tasks ImageSegmenter | context={'model_path': '../model_checkpoints/selfie_segmenter.tflite', 'model_exists': True, 'running_mode': 'IMAGE', 'output_confidence_masks': True, 'output_category_mask': False}
-[INFO] 2026-06-11T08:41:50 | ai_engine | MediaPipe Tasks ImageSegmenter loaded successfully | context={'model_path': '../model_checkpoints/selfie_segmenter.tflite', 'mode': 'tasks.ImageSegmenter', 'load_ms': 86.55}
-[INFO] 2026-06-11T08:41:50 | ai_engine | Video model ready for session | session_id=CALL-PCAP-VIDEO-001
-[INFO] 2026-06-11T08:41:50 | ai_engine | Video frame processed | session_id=CALL-PCAP-VIDEO-001 | context={'frame_id': 1, 'rtp_timestamp': 72222251, 'mask_size': [256, 144], 'rle_runs': 283, 'status': 'ok', 'latency_ms': 112.67}
-[INFO] 2026-06-11T08:41:50 | ai_engine | EOS | session_id=CALL-PCAP-VIDEO-001
-[INFO] 2026-06-11T08:41:50 | ai_engine | Video model released | session_id=CALL-PCAP-VIDEO-001
-[INFO] 2026-06-11T08:41:50 | ai_engine | Stream closed | session_id=CALL-PCAP-VIDEO-001
-[INFO] 2026-06-12T00:41:26 | ai_engine | Loading Silero VAD...
-[INFO] 2026-06-12T00:41:26 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda', 'compute_type': 'int8'}
-[INFO] 2026-06-12T00:41:29 | ai_engine | Whisper ready
-[INFO] 2026-06-12T00:41:29 | ai_engine | MediaPipe status | context={'available': True}
-[INFO] 2026-06-12T00:41:29 | ai_engine | AI Engine Configuration loaded | context={'grpc_server_address': '0.0.0.0:50052', 'grpc_max_workers': 4, 'device': 'cuda', 'whisper_model_size': 'small', 'compute_type': 'int8', 'sample_rate': 16000, 'silence_threshold': 0.012, 'silence_timeout': 0.6, 'max_audio': 15.0, 'min_audio': 1.0, 'vad_threshold': 0.5, 'log_level': 'INFO'}
-[INFO] 2026-06-12T00:41:29 | ai_engine | Video inference service initialized | context={'mediapipe_available': True, 'seg_model_path': '../model_checkpoints/selfie_segmenter.tflite', 'seg_model_exists': True, 'load_policy': 'lazy_per_session'}
-[INFO] 2026-06-12T00:41:29 | ai_engine | gRPC server starting | context={'address': '0.0.0.0:50052'}
-[INFO] 2026-06-12T00:42:06 | ai_engine | New media stream connected
-[INFO] 2026-06-12T00:42:06 | ai_engine | Session configured | session_id=CALL-TEST-001 | context={'source_language': 'vi', 'target_language': 'en', 'sample_rate': 16000}
-[INFO] 2026-06-12T00:44:27 | ai_engine | New media stream connected
-[INFO] 2026-06-12T00:44:27 | ai_engine | Loading video model for session | session_id=CALL-PCAP-VIDEO-001
-[INFO] 2026-06-12T00:44:27 | ai_engine | Initializing MediaPipe Tasks ImageSegmenter | context={'model_path': '../model_checkpoints/selfie_segmenter.tflite', 'model_exists': True, 'running_mode': 'IMAGE', 'output_confidence_masks': True, 'output_category_mask': False}
-[INFO] 2026-06-12T00:44:28 | ai_engine | MediaPipe Tasks ImageSegmenter loaded successfully | context={'model_path': '../model_checkpoints/selfie_segmenter.tflite', 'mode': 'tasks.ImageSegmenter', 'load_ms': 746.57}
-[INFO] 2026-06-12T00:44:28 | ai_engine | Video model ready for session | session_id=CALL-PCAP-VIDEO-001
-[INFO] 2026-06-12T00:44:28 | ai_engine | Video frame processed | session_id=CALL-PCAP-VIDEO-001 | context={'frame_id': 1, 'rtp_timestamp': 72222251, 'mask_size': [256, 144], 'rle_runs': 283, 'status': 'ok', 'latency_ms': 780.21}
-[ERROR] 2026-06-12T00:44:28 | ai_engine | Stream error | session_id=CALL-PCAP-VIDEO-001
-Traceback (most recent call last):
-  File "/teamspace/studios/this_studio/mcf/services/ai_engine/src/ai_server.py", line 290, in ProcessMediaStream
-    for req in request_iterator:
-               ^^^^^^^^^^^^^^^^
-  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 542, in __next__
-    return self._next()
-           ^^^^^^^^^^^^
-  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 534, in _next
-    request = self._look_for_request()
-              ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 516, in _look_for_request
-    _raise_rpc_error(self._state)
-  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 220, in _raise_rpc_error
-    raise rpc_error
-grpc.RpcError
-[INFO] 2026-06-12T00:44:28 | ai_engine | Video model released | session_id=CALL-PCAP-VIDEO-001
-[INFO] 2026-06-12T00:44:28 | ai_engine | Stream closed | session_id=CALL-PCAP-VIDEO-001
-[INFO] 2026-06-15T08:07:26 | ai_engine | Loading Silero VAD (Pip package) to CPU...
-[INFO] 2026-06-15T08:07:27 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda', 'compute_type': 'int8'}
-[INFO] 2026-06-15T08:28:04 | ai_engine | Loading Silero VAD (Pip package) to CPU...
-[INFO] 2026-06-15T08:28:04 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda', 'compute_type': 'int8'}
-[INFO] 2026-06-15T08:28:07 | ai_engine | Whisper model loaded, ready to process streams
-[INFO] 2026-06-15T08:28:07 | ai_engine | AI Engine Configuration loaded | context={'grpc_server_address': '0.0.0.0:50052', 'grpc_max_workers': 4, 'device': 'cuda', 'whisper_model_size': 'small', 'compute_type': 'int8', 'sample_rate': 16000, 'silence_threshold': 0.012, 'silence_timeout': 0.6, 'max_audio': 15.0, 'min_audio': 1.0, 'vad_threshold': 0.5, 'log_level': 'INFO'}
-[INFO] 2026-06-15T08:28:07 | ai_engine | gRPC Server starting | context={'address': '0.0.0.0:50052', 'max_workers': 4}
-[INFO] 2026-06-15T08:30:12 | ai_engine | Stopping gRPC server...
-[INFO] 2026-06-15T10:03:19 | ai_engine | Loading Silero VAD (Pip package) to CPU...
-[INFO] 2026-06-15T10:03:19 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda', 'compute_type': 'int8'}
-[INFO] 2026-06-15T10:03:22 | ai_engine | Whisper model loaded, ready to process streams
-[INFO] 2026-06-15T10:03:22 | ai_engine | AI Engine Configuration loaded | context={'grpc_server_address': '0.0.0.0:50052', 'grpc_max_workers': 4, 'device': 'cuda', 'whisper_model_size': 'small', 'compute_type': 'int8', 'sample_rate': 16000, 'silence_threshold': 0.012, 'silence_timeout': 0.6, 'max_audio': 15.0, 'min_audio': 1.0, 'vad_threshold': 0.5, 'log_level': 'INFO'}
-[INFO] 2026-06-15T10:03:22 | ai_engine | gRPC Server starting | context={'address': '0.0.0.0:50052', 'max_workers': 4}
-[INFO] 2026-06-16T03:50:53 | ai_engine | Loading Silero VAD (Pip package) to CPU...
-[INFO] 2026-06-16T03:50:54 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda', 'compute_type': 'int8'}
-[INFO] 2026-06-16T03:50:56 | ai_engine | Whisper model loaded, ready to process streams
-[INFO] 2026-06-16T03:50:56 | ai_engine | AI Engine Configuration loaded | context={'grpc_server_address': '0.0.0.0:50052', 'grpc_max_workers': 4, 'device': 'cuda', 'whisper_model_size': 'small', 'compute_type': 'int8', 'sample_rate': 16000, 'silence_threshold': 0.012, 'silence_timeout': 0.6, 'max_audio': 15.0, 'min_audio': 1.0, 'vad_threshold': 0.5, 'log_level': 'INFO'}
-[INFO] 2026-06-16T03:50:56 | ai_engine.video | Video AI HTTP server listening address=0.0.0.0:50053 model=/teamspace/studios/this_studio/mcf/services/ai_engine/model_checkpoints/selfie_segmenter.tflite
-[INFO] 2026-06-16T03:50:57 | ai_engine | gRPC Server starting | context={'address': '0.0.0.0:50052', 'max_workers': 4}
-[INFO] 2026-06-16T03:56:17 | ai_engine | Loading Silero VAD (Pip package) to CPU...
-[INFO] 2026-06-16T03:56:17 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda', 'compute_type': 'int8'}
-[INFO] 2026-06-16T03:56:20 | ai_engine | Whisper model loaded, ready to process streams
-[INFO] 2026-06-16T03:56:20 | ai_engine | AI Engine Configuration loaded | context={'grpc_server_address': '0.0.0.0:50052', 'grpc_max_workers': 4, 'device': 'cuda', 'whisper_model_size': 'small', 'compute_type': 'int8', 'sample_rate': 16000, 'silence_threshold': 0.012, 'silence_timeout': 0.6, 'max_audio': 15.0, 'min_audio': 1.0, 'vad_threshold': 0.5, 'log_level': 'INFO'}
-[INFO] 2026-06-16T04:04:08 | ai_engine | Loading Silero VAD (Pip package) to CPU...
-[INFO] 2026-06-16T04:04:08 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda', 'compute_type': 'int8'}
-[INFO] 2026-06-16T04:04:10 | ai_engine | Whisper model loaded, ready to process streams
-[INFO] 2026-06-16T04:04:10 | ai_engine | AI Engine Configuration loaded | context={'grpc_server_address': '0.0.0.0:50052', 'grpc_max_workers': 4, 'device': 'cuda', 'whisper_model_size': 'small', 'compute_type': 'int8', 'sample_rate': 16000, 'silence_threshold': 0.012, 'silence_timeout': 0.6, 'max_audio': 15.0, 'min_audio': 1.0, 'vad_threshold': 0.5, 'log_level': 'INFO'}
-[INFO] 2026-06-16T04:07:17 | ai_engine | Loading Silero VAD (Pip package) to CPU...
-[INFO] 2026-06-16T04:07:17 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda', 'compute_type': 'int8'}
-[INFO] 2026-06-16T04:07:19 | ai_engine | Whisper model loaded, ready to process streams
-[INFO] 2026-06-16T04:07:19 | ai_engine | AI Engine Configuration loaded | context={'grpc_server_address': '0.0.0.0:50052', 'grpc_max_workers': 4, 'device': 'cuda', 'whisper_model_size': 'small', 'compute_type': 'int8', 'sample_rate': 16000, 'silence_threshold': 0.012, 'silence_timeout': 0.6, 'max_audio': 15.0, 'min_audio': 1.0, 'vad_threshold': 0.5, 'log_level': 'INFO'}
-[INFO] 2026-06-16T04:07:19 | ai_engine.video | Video AI HTTP server listening address=0.0.0.0:50053 model=/teamspace/studios/this_studio/mcf/services/ai_engine/model_checkpoints/selfie_segmenter.tflite
-[INFO] 2026-06-16T04:07:19 | ai_engine | gRPC Server starting | context={'address': '0.0.0.0:50052', 'max_workers': 4}
-[INFO] 2026-06-16T04:10:17 | ai_engine | Client connected to bi-directional stream
-[INFO] 2026-06-16T04:10:17 | ai_engine | Session configured | session_id=CALL-TEST-001 | context={'source_language': 'vi', 'target_language': 'en'}
-[INFO] 2026-06-16T04:18:39 | ai_engine | Stream closed | session_id=CALL-TEST-001
-[INFO] 2026-06-16T04:19:13 | ai_engine | Client connected to bi-directional stream
-[INFO] 2026-06-16T04:19:13 | ai_engine | Session configured | session_id=CALL-TEST-001 | context={'source_language': 'vi', 'target_language': 'en'}
-[ERROR] 2026-06-16T04:26:03 | ai_engine | Error processing stream | session_id=CALL-TEST-001
-Traceback (most recent call last):
-  File "/teamspace/studios/this_studio/mcf/services/ai_engine/src/ai_server.py", line 61, in ProcessMediaStream
-    for request in request_iterator:
-                  ^^^^^^^^^^^^^^^^
-  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 542, in __next__
-    return self._next()
-           ^^^^^^^^^^^^
-  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 534, in _next
-    request = self._look_for_request()
-              ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 516, in _look_for_request
-    _raise_rpc_error(self._state)
-  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 220, in _raise_rpc_error
-    raise rpc_error
-grpc.RpcError
-[INFO] 2026-06-16T04:26:03 | ai_engine | Stream closed | session_id=CALL-TEST-001
-[INFO] 2026-06-16T04:26:15 | ai_engine | Client connected to bi-directional stream
-[INFO] 2026-06-16T04:26:15 | ai_engine | Session configured | session_id=CALL-TEST-001 | context={'source_language': 'vi', 'target_language': 'en'}
-[INFO] 2026-06-16T04:26:52 | ai_engine.video | Loading MediaPipe ImageSegmenter model_path=/teamspace/studios/this_studio/mcf/services/ai_engine/model_checkpoints/selfie_segmenter.tflite
-[INFO] 2026-06-16T04:26:52 | ai_engine.video | MediaPipe ImageSegmenter loaded
-[ERROR] 2026-06-16T04:26:52 | ai_engine.video | Video inference failed
-Traceback (most recent call last):
-  File "/teamspace/studios/this_studio/mcf/services/ai_engine/src/video/video_http_server.py", line 146, in do_POST
-    self._json(200, {
-  File "/teamspace/studios/this_studio/mcf/services/ai_engine/src/video/video_http_server.py", line 111, in _json
-    self.wfile.write(payload)
-  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/socketserver.py", line 845, in write
-    self._sock.sendall(b)
-BrokenPipeError: [Errno 32] Broken pipe
-[INFO] 2026-06-17T07:14:04 | ai_engine | Loading Silero VAD (Pip package) to CPU...
-[INFO] 2026-06-17T07:14:04 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda', 'compute_type': 'int8'}
-[INFO] 2026-06-17T09:40:47 | ai_engine | Loading Silero VAD (Pip package) to CPU...
-[INFO] 2026-06-17T09:40:48 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda', 'compute_type': 'int8'}
-[INFO] 2026-06-18T03:08:44 | ai_engine | Loading Silero VAD (Pip package) to CPU...
-[INFO] 2026-06-18T03:08:44 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda', 'compute_type': 'int8'}
-[INFO] 2026-06-18T03:08:47 | ai_engine | Whisper model loaded, ready to process streams
-[INFO] 2026-06-18T03:08:47 | ai_engine | AI Engine Configuration loaded | context={'grpc_server_address': '0.0.0.0:50052', 'grpc_max_workers': 4, 'device': 'cuda', 'whisper_model_size': 'small', 'compute_type': 'int8', 'sample_rate': 16000, 'silence_threshold': 0.012, 'silence_timeout': 0.6, 'max_audio': 15.0, 'min_audio': 1.0, 'vad_threshold': 0.5, 'log_level': 'INFO'}
-[INFO] 2026-06-18T03:08:47 | ai_engine.video | Video AI HTTP server listening address=0.0.0.0:50053 model=/teamspace/studios/this_studio/mcf/services/ai_engine/model_checkpoints/selfie_segmenter.tflite
-[INFO] 2026-06-18T03:08:47 | ai_engine | gRPC Server starting | context={'address': '0.0.0.0:50052', 'max_workers': 4}
-[INFO] 2026-06-18T03:13:53 | ai_engine | Client connected to bi-directional stream
-[INFO] 2026-06-18T03:13:53 | ai_engine | Session configured | session_id=CALL-TEST-001 | context={'source_language': 'vi', 'target_language': 'en'}
-[INFO] 2026-06-18T03:25:02 | ai_engine | Video client connected to bi-directional gRPC stream
-[INFO] 2026-06-18T03:25:02 | ai_engine | Video session configured | session_id=CALL-VIDEO-GRPC-TEST | context={'stream_id': 'video-0', 'effect_type': 'bg_replace', 'inference_width': 256, 'inference_height': 144, 'inference_fps': 5, 'threshold': 0.5, 'model_path': '/teamspace/studios/this_studio/mcf/services/ai_engine/model_checkpoints/selfie_segmenter.tflite'}
-[INFO] 2026-06-18T03:25:03 | ai_engine.video | Loading MediaPipe ImageSegmenter model_path=/teamspace/studios/this_studio/mcf/services/ai_engine/model_checkpoints/selfie_segmenter.tflite
-[INFO] 2026-06-18T03:25:04 | ai_engine.video | MediaPipe ImageSegmenter loaded
-[INFO] 2026-06-18T03:25:04 | ai_engine | Received video end-of-stream signal | session_id=CALL-VIDEO-GRPC-TEST | context={'stream_id': 'video-0'}
-[INFO] 2026-06-18T03:25:04 | ai_engine | Video stream closed | session_id=CALL-VIDEO-GRPC-TEST | context={'stream_id': 'video-0'}
-[INFO] 2026-06-18T03:29:31 | ai_engine | Video client connected to bi-directional gRPC stream
-[INFO] 2026-06-18T03:29:31 | ai_engine | Video session configured | session_id=CALL-VIDEO-TEST | context={'stream_id': 'video-0', 'effect_type': 'bg_replace', 'inference_width': 256, 'inference_height': 144, 'inference_fps': 5, 'threshold': 0.5, 'model_path': '/teamspace/studios/this_studio/mcf/services/ai_engine/model_checkpoints/selfie_segmenter.tflite'}
-[INFO] 2026-06-18T03:33:11 | ai_engine | Stopping gRPC server...
-[ERROR] 2026-06-18T03:33:11 | ai_engine | Error processing stream | session_id=CALL-TEST-001
-Traceback (most recent call last):
-  File "/teamspace/studios/this_studio/mcf/services/ai_engine/src/ai_server.py", line 106, in ProcessMediaStream
-    for request in request_iterator:
-                  ^^^^^^^^^^^^^^^^
-  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 542, in __next__
-    return self._next()
-           ^^^^^^^^^^^^
-  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 534, in _next
-    request = self._look_for_request()
-              ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 516, in _look_for_request
-    _raise_rpc_error(self._state)
-  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 220, in _raise_rpc_error
-    raise rpc_error
-grpc.RpcError
-[WARNING] 2026-06-18T03:33:12 | ai_engine | Video gRPC stream cancelled | session_id=CALL-VIDEO-TEST
-Traceback (most recent call last):
-  File "/teamspace/studios/this_studio/mcf/services/ai_engine/src/ai_server.py", line 216, in ProcessVideoStream
-    for request in request_iterator:
-                   ^^^^^^^^^^^^^^^^
-  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 542, in __next__
-    return self._next()
-           ^^^^^^^^^^^^
-  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 534, in _next
-    request = self._look_for_request()
-              ^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 516, in _look_for_request
-    _raise_rpc_error(self._state)
-  File "/home/zeus/miniconda3/envs/cloudspace/lib/python3.12/site-packages/grpc/_server.py", line 220, in _raise_rpc_error
-    raise rpc_error
-grpc.RpcError
-[INFO] 2026-06-18T03:33:12 | ai_engine | Video stream closed | session_id=CALL-VIDEO-TEST | context={'stream_id': 'video-0'}
-[INFO] 2026-06-18T03:33:12 | ai_engine | Stream closed | session_id=CALL-TEST-001
-[INFO] 2026-06-18T03:36:59 | ai_engine | Loading Silero VAD (Pip package) to CPU...
-[INFO] 2026-06-18T03:36:59 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda', 'compute_type': 'int8'}
-[INFO] 2026-06-18T03:37:02 | ai_engine | Whisper model loaded, ready to process streams
-[INFO] 2026-06-18T03:37:02 | ai_engine | AI Engine Configuration loaded | context={'grpc_server_address': '0.0.0.0:50052', 'grpc_max_workers': 4, 'device': 'cuda', 'whisper_model_size': 'small', 'compute_type': 'int8', 'sample_rate': 16000, 'silence_threshold': 0.012, 'silence_timeout': 0.6, 'max_audio': 15.0, 'min_audio': 1.0, 'vad_threshold': 0.5, 'log_level': 'INFO'}
-[INFO] 2026-06-18T03:37:02 | ai_engine.video | Video AI HTTP server listening address=0.0.0.0:50053 model=/teamspace/studios/this_studio/mcf/services/ai_engine/model_checkpoints/selfie_segmenter.tflite
-[INFO] 2026-06-18T03:37:02 | ai_engine | gRPC Server starting | context={'address': '0.0.0.0:50052', 'max_workers': 4}
-[INFO] 2026-06-18T03:37:02 | ai_engine | Client connected to bi-directional stream
-[INFO] 2026-06-18T03:37:02 | ai_engine | Session configured | session_id=CALL-TEST-001 | context={'source_language': 'vi', 'target_language': 'en'}
-[INFO] 2026-06-18T03:37:12 | ai_engine | Video client connected to bi-directional gRPC stream
-[INFO] 2026-06-18T03:37:12 | ai_engine | Video session configured | session_id=CALL-VIDEO-TEST | context={'stream_id': 'video-0', 'effect_type': 'bg_replace', 'inference_width': 256, 'inference_height': 144, 'inference_fps': 5, 'threshold': 0.5, 'model_path': '/teamspace/studios/this_studio/mcf/services/ai_engine/model_checkpoints/selfie_segmenter.tflite'}
-[INFO] 2026-06-18T03:37:13 | ai_engine.video | Loading MediaPipe ImageSegmenter model_path=/teamspace/studios/this_studio/mcf/services/ai_engine/model_checkpoints/selfie_segmenter.tflite
-[INFO] 2026-06-18T03:37:13 | ai_engine.video | MediaPipe ImageSegmenter loaded
-[INFO] 2026-07-24T03:02:23 | ai_engine | Loading Silero VAD (Pip package) to CPU...
-[INFO] 2026-07-24T03:02:23 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda', 'compute_type': 'int8'}
-[INFO] 2026-07-24T03:02:25 | ai_engine | Whisper model loaded, ready to process streams
-[INFO] 2026-07-24T03:02:25 | ai_engine | AI Engine Configuration loaded | context={'grpc_server_address': '0.0.0.0:50052', 'grpc_max_workers': 4, 'device': 'cuda', 'whisper_model_size': 'small', 'compute_type': 'int8', 'sample_rate': 16000, 'silence_threshold': 0.012, 'silence_timeout': 0.6, 'max_audio': 15.0, 'min_audio': 1.0, 'vad_threshold': 0.5, 'log_level': 'INFO'}
-[INFO] 2026-07-24T03:02:25 | ai_engine.video | Video AI HTTP server listening address=0.0.0.0:50053 model=/teamspace/studios/this_studio/mcf/services/ai_engine/model_checkpoints/selfie_segmenter.tflite
-[INFO] 2026-07-24T03:02:25 | ai_engine | gRPC Server starting | context={'address': '0.0.0.0:50052', 'max_workers': 4}
-[INFO] 2026-07-24T03:02:27 | ai_engine | Client connected to bi-directional stream
-[INFO] 2026-07-24T03:02:27 | ai_engine | Session configured | session_id=CALL-TEST-001 | context={'source_language': 'vi', 'target_language': 'en'}
-[INFO] 2026-07-24T03:07:24 | ai_engine | Loading Silero VAD (Pip package) to CPU...
-[INFO] 2026-07-24T03:07:24 | ai_engine | Loading Whisper model | context={'model_size': 'small', 'device': 'cuda', 'compute_type': 'int8'}
-[INFO] 2026-07-24T03:07:29 | ai_engine | Whisper model loaded, ready to process streams
-[INFO] 2026-07-24T03:07:29 | ai_engine | AI Engine Configuration loaded | context={'grpc_server_address': '0.0.0.0:50052', 'grpc_max_workers': 4, 'device': 'cuda', 'whisper_model_size': 'small', 'compute_type': 'int8', 'sample_rate': 16000, 'silence_threshold': 0.012, 'silence_timeout': 0.6, 'max_audio': 15.0, 'min_audio': 1.0, 'vad_threshold': 0.5, 'log_level': 'INFO'}
-[INFO] 2026-07-24T03:07:29 | ai_engine.video | Video AI HTTP server listening address=0.0.0.0:50053 model=/teamspace/studios/this_studio/mcf/services/ai_engine/model_checkpoints/selfie_segmenter.tflite
-[INFO] 2026-07-24T03:07:29 | ai_engine | gRPC Server starting | context={'address': '0.0.0.0:50052', 'max_workers': 4}
-[INFO] 2026-07-24T03:08:42 | ai_engine | Client connected to bi-directional stream
-[INFO] 2026-07-24T03:08:42 | ai_engine | Session configured | session_id=CALL-TEST-001 | context={'source_language': 'vi', 'target_language': 'en'}
-[INFO] 2026-07-24T03:09:55 | ai_engine | Video client connected to bi-directional gRPC stream
-[INFO] 2026-07-24T03:09:55 | ai_engine | Video session configured | session_id=CALL-VIDEO-TEST | context={'stream_id': 'video-0', 'effect_type': 'bg_replace', 'inference_width': 256, 'inference_height': 144, 'inference_fps': 5, 'threshold': 0.5, 'model_path': '/teamspace/studios/this_studio/mcf/services/ai_engine/model_checkpoints/selfie_segmenter.tflite'}
-[INFO] 2026-07-24T03:09:57 | ai_engine.video | Loading MediaPipe ImageSegmenter model_path=/teamspace/studios/this_studio/mcf/services/ai_engine/model_checkpoints/selfie_segmenter.tflite
-[INFO] 2026-07-24T03:09:58 | ai_engine.video | MediaPipe ImageSegmenter loaded
+[INFO] 2026-08-28T09:40:11 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=1 rtp_ts=71830385 ts_ms=1787910011418
+[INFO] 2026-08-28T09:40:11 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=1 rtp_ts=71830385 ts_ms=1787910011420
+[INFO] 2026-08-28T09:40:11 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=1 rtp_ts=71830385 ts_ms=1787910011436 inference_latency_ms=16.790
+[INFO] 2026-08-28T09:40:11 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=1 rtp_ts=71830385 ts_ms=1787910011441
+[INFO] 2026-08-28T09:40:11 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=2 rtp_ts=71975046 ts_ms=1787910011656
+[INFO] 2026-08-28T09:40:11 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=2 rtp_ts=71975046 ts_ms=1787910011658
+[INFO] 2026-08-28T09:40:11 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=2 rtp_ts=71975046 ts_ms=1787910011666 inference_latency_ms=8.744
+[INFO] 2026-08-28T09:40:11 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=2 rtp_ts=71975046 ts_ms=1787910011670
+[INFO] 2026-08-28T09:40:11 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=3 rtp_ts=71999184 ts_ms=1787910011892
+[INFO] 2026-08-28T09:40:11 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=3 rtp_ts=71999184 ts_ms=1787910011893
+[INFO] 2026-08-28T09:40:11 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=3 rtp_ts=71999184 ts_ms=1787910011904 inference_latency_ms=11.461
+[INFO] 2026-08-28T09:40:11 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=3 rtp_ts=71999184 ts_ms=1787910011909
+[INFO] 2026-08-28T09:40:12 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=4 rtp_ts=72023157 ts_ms=1787910012182
+[INFO] 2026-08-28T09:40:12 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=4 rtp_ts=72023157 ts_ms=1787910012182
+[INFO] 2026-08-28T09:40:12 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=4 rtp_ts=72023157 ts_ms=1787910012193 inference_latency_ms=10.646
+[INFO] 2026-08-28T09:40:12 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=4 rtp_ts=72023157 ts_ms=1787910012197
+[INFO] 2026-08-28T09:40:12 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=5 rtp_ts=72047459 ts_ms=1787910012535
+[INFO] 2026-08-28T09:40:12 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=5 rtp_ts=72047459 ts_ms=1787910012536
+[INFO] 2026-08-28T09:40:12 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=5 rtp_ts=72047459 ts_ms=1787910012556 inference_latency_ms=20.292
+[INFO] 2026-08-28T09:40:12 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=5 rtp_ts=72047459 ts_ms=1787910012563
+[INFO] 2026-08-28T09:40:12 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=6 rtp_ts=72071432 ts_ms=1787910012774
+[INFO] 2026-08-28T09:40:12 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=6 rtp_ts=72071432 ts_ms=1787910012775
+[INFO] 2026-08-28T09:40:12 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=6 rtp_ts=72071432 ts_ms=1787910012783 inference_latency_ms=8.219
+[INFO] 2026-08-28T09:40:12 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=6 rtp_ts=72071432 ts_ms=1787910012787
+[INFO] 2026-08-28T09:40:13 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=7 rtp_ts=72101727 ts_ms=1787910013058
+[INFO] 2026-08-28T09:40:13 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=7 rtp_ts=72101727 ts_ms=1787910013059
+[INFO] 2026-08-28T09:40:13 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=7 rtp_ts=72101727 ts_ms=1787910013068 inference_latency_ms=8.808
+[INFO] 2026-08-28T09:40:13 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=7 rtp_ts=72101727 ts_ms=1787910013071
+[INFO] 2026-08-28T09:40:13 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=8 rtp_ts=72125701 ts_ms=1787910013293
+[INFO] 2026-08-28T09:40:13 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=8 rtp_ts=72125701 ts_ms=1787910013294
+[INFO] 2026-08-28T09:40:13 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=8 rtp_ts=72125701 ts_ms=1787910013308 inference_latency_ms=14.898
+[INFO] 2026-08-28T09:40:13 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=8 rtp_ts=72125701 ts_ms=1787910013313
+[INFO] 2026-08-28T09:40:13 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=9 rtp_ts=72143681 ts_ms=1787910013537
+[INFO] 2026-08-28T09:40:13 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=9 rtp_ts=72143681 ts_ms=1787910013539
+[INFO] 2026-08-28T09:40:13 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=9 rtp_ts=72143681 ts_ms=1787910013554 inference_latency_ms=14.423
+[INFO] 2026-08-28T09:40:13 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=9 rtp_ts=72143681 ts_ms=1787910013557
+[INFO] 2026-08-28T09:40:13 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=10 rtp_ts=72167983 ts_ms=1787910013822
+[INFO] 2026-08-28T09:40:13 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=10 rtp_ts=72167983 ts_ms=1787910013823
+[INFO] 2026-08-28T09:40:13 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=10 rtp_ts=72167983 ts_ms=1787910013834 inference_latency_ms=11.317
+[INFO] 2026-08-28T09:40:13 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=10 rtp_ts=72167983 ts_ms=1787910013840
+[INFO] 2026-08-28T09:40:14 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=11 rtp_ts=72191956 ts_ms=1787910014059
+[INFO] 2026-08-28T09:40:14 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=11 rtp_ts=72191956 ts_ms=1787910014061
+[INFO] 2026-08-28T09:40:14 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=11 rtp_ts=72191956 ts_ms=1787910014073 inference_latency_ms=12.050
+[INFO] 2026-08-28T09:40:14 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=11 rtp_ts=72191956 ts_ms=1787910014076
+[INFO] 2026-08-28T09:40:14 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=12 rtp_ts=72216094 ts_ms=1787910014339
+[INFO] 2026-08-28T09:40:14 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=12 rtp_ts=72216094 ts_ms=1787910014340
+[INFO] 2026-08-28T09:40:14 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=12 rtp_ts=72216094 ts_ms=1787910014353 inference_latency_ms=13.063
+[INFO] 2026-08-28T09:40:14 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=12 rtp_ts=72216094 ts_ms=1787910014356
+[INFO] 2026-08-28T09:40:14 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=13 rtp_ts=72240231 ts_ms=1787910014584
+[INFO] 2026-08-28T09:40:14 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=13 rtp_ts=72240231 ts_ms=1787910014585
+[INFO] 2026-08-28T09:40:14 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=13 rtp_ts=72240231 ts_ms=1787910014599 inference_latency_ms=14.209
+[INFO] 2026-08-28T09:40:14 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=13 rtp_ts=72240231 ts_ms=1787910014603
+[INFO] 2026-08-28T09:40:14 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=14 rtp_ts=72264205 ts_ms=1787910014891
+[INFO] 2026-08-28T09:40:14 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=14 rtp_ts=72264205 ts_ms=1787910014892
+[INFO] 2026-08-28T09:40:14 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=14 rtp_ts=72264205 ts_ms=1787910014903 inference_latency_ms=11.291
+[INFO] 2026-08-28T09:40:14 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=14 rtp_ts=72264205 ts_ms=1787910014908
+[INFO] 2026-08-28T09:40:15 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=15 rtp_ts=72288506 ts_ms=1787910015112
+[INFO] 2026-08-28T09:40:15 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=15 rtp_ts=72288506 ts_ms=1787910015113
+[INFO] 2026-08-28T09:40:15 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=15 rtp_ts=72288506 ts_ms=1787910015130 inference_latency_ms=17.160
+[INFO] 2026-08-28T09:40:15 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=15 rtp_ts=72288506 ts_ms=1787910015135
+[INFO] 2026-08-28T09:40:15 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=16 rtp_ts=72306487 ts_ms=1787910015341
+[INFO] 2026-08-28T09:40:15 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=16 rtp_ts=72306487 ts_ms=1787910015342
+[INFO] 2026-08-28T09:40:15 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=16 rtp_ts=72306487 ts_ms=1787910015353 inference_latency_ms=10.569
+[INFO] 2026-08-28T09:40:15 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=16 rtp_ts=72306487 ts_ms=1787910015356
+[INFO] 2026-08-28T09:40:15 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=17 rtp_ts=72330460 ts_ms=1787910015621
+[INFO] 2026-08-28T09:40:15 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=17 rtp_ts=72330460 ts_ms=1787910015621
+[INFO] 2026-08-28T09:40:15 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=17 rtp_ts=72330460 ts_ms=1787910015636 inference_latency_ms=14.456
+[INFO] 2026-08-28T09:40:15 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=17 rtp_ts=72330460 ts_ms=1787910015642
+[INFO] 2026-08-28T09:40:15 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=18 rtp_ts=72348768 ts_ms=1787910015820
+[INFO] 2026-08-28T09:40:15 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=18 rtp_ts=72348768 ts_ms=1787910015821
+[INFO] 2026-08-28T09:40:15 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=18 rtp_ts=72348768 ts_ms=1787910015831 inference_latency_ms=10.271
+[INFO] 2026-08-28T09:40:15 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=18 rtp_ts=72348768 ts_ms=1787910015837
+[INFO] 2026-08-28T09:40:16 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=19 rtp_ts=72372742 ts_ms=1787910016061
+[INFO] 2026-08-28T09:40:16 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=19 rtp_ts=72372742 ts_ms=1787910016061
+[INFO] 2026-08-28T09:40:16 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=19 rtp_ts=72372742 ts_ms=1787910016074 inference_latency_ms=12.553
+[INFO] 2026-08-28T09:40:16 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=19 rtp_ts=72372742 ts_ms=1787910016078
+[INFO] 2026-08-28T09:40:16 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=20 rtp_ts=72390722 ts_ms=1787910016304
+[INFO] 2026-08-28T09:40:16 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=20 rtp_ts=72390722 ts_ms=1787910016305
+[INFO] 2026-08-28T09:40:16 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=20 rtp_ts=72390722 ts_ms=1787910016316 inference_latency_ms=11.139
+[INFO] 2026-08-28T09:40:16 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=20 rtp_ts=72390722 ts_ms=1787910016321
+[INFO] 2026-08-28T09:40:16 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=21 rtp_ts=72409030 ts_ms=1787910016505
+[INFO] 2026-08-28T09:40:16 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=21 rtp_ts=72409030 ts_ms=1787910016505
+[INFO] 2026-08-28T09:40:16 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=21 rtp_ts=72409030 ts_ms=1787910016521 inference_latency_ms=15.785
+[INFO] 2026-08-28T09:40:16 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=21 rtp_ts=72409030 ts_ms=1787910016526
+[INFO] 2026-08-28T09:40:16 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=22 rtp_ts=72433004 ts_ms=1787910016715
+[INFO] 2026-08-28T09:40:16 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=22 rtp_ts=72433004 ts_ms=1787910016716
+[INFO] 2026-08-28T09:40:16 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=22 rtp_ts=72433004 ts_ms=1787910016727 inference_latency_ms=10.759
+[INFO] 2026-08-28T09:40:16 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=22 rtp_ts=72433004 ts_ms=1787910016733
+[INFO] 2026-08-28T09:40:16 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=23 rtp_ts=72450984 ts_ms=1787910016936
+[INFO] 2026-08-28T09:40:16 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=23 rtp_ts=72450984 ts_ms=1787910016937
+[INFO] 2026-08-28T09:40:16 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=23 rtp_ts=72450984 ts_ms=1787910016949 inference_latency_ms=11.556
+[INFO] 2026-08-28T09:40:16 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=23 rtp_ts=72450984 ts_ms=1787910016953
+[INFO] 2026-08-28T09:40:17 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=24 rtp_ts=72475286 ts_ms=1787910017154
+[INFO] 2026-08-28T09:40:17 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=24 rtp_ts=72475286 ts_ms=1787910017155
+[INFO] 2026-08-28T09:40:17 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=24 rtp_ts=72475286 ts_ms=1787910017165 inference_latency_ms=9.729
+[INFO] 2026-08-28T09:40:17 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=24 rtp_ts=72475286 ts_ms=1787910017168
+[INFO] 2026-08-28T09:40:17 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=25 rtp_ts=72493266 ts_ms=1787910017392
+[INFO] 2026-08-28T09:40:17 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=25 rtp_ts=72493266 ts_ms=1787910017392
+[INFO] 2026-08-28T09:40:17 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=25 rtp_ts=72493266 ts_ms=1787910017407 inference_latency_ms=14.699
+[INFO] 2026-08-28T09:40:17 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=25 rtp_ts=72493266 ts_ms=1787910017415
+[INFO] 2026-08-28T09:40:17 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=26 rtp_ts=72511246 ts_ms=1787910017617
+[INFO] 2026-08-28T09:40:17 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=26 rtp_ts=72511246 ts_ms=1787910017618
+[INFO] 2026-08-28T09:40:17 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=26 rtp_ts=72511246 ts_ms=1787910017634 inference_latency_ms=15.122
+[INFO] 2026-08-28T09:40:17 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=26 rtp_ts=72511246 ts_ms=1787910017638
+[INFO] 2026-08-28T09:40:17 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=27 rtp_ts=72529554 ts_ms=1787910017829
+[INFO] 2026-08-28T09:40:17 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=27 rtp_ts=72529554 ts_ms=1787910017830
+[INFO] 2026-08-28T09:40:17 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=27 rtp_ts=72529554 ts_ms=1787910017840 inference_latency_ms=10.774
+[INFO] 2026-08-28T09:40:17 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=27 rtp_ts=72529554 ts_ms=1787910017846
+[INFO] 2026-08-28T09:40:18 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=28 rtp_ts=72553528 ts_ms=1787910018053
+[INFO] 2026-08-28T09:40:18 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=28 rtp_ts=72553528 ts_ms=1787910018054
+[INFO] 2026-08-28T09:40:18 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=28 rtp_ts=72553528 ts_ms=1787910018066 inference_latency_ms=12.050
+[INFO] 2026-08-28T09:40:18 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=28 rtp_ts=72553528 ts_ms=1787910018070
+[INFO] 2026-08-28T09:40:18 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=29 rtp_ts=72571508 ts_ms=1787910018312
+[INFO] 2026-08-28T09:40:18 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=29 rtp_ts=72571508 ts_ms=1787910018313
+[INFO] 2026-08-28T09:40:18 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=29 rtp_ts=72571508 ts_ms=1787910018340 inference_latency_ms=26.956
+[INFO] 2026-08-28T09:40:18 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=29 rtp_ts=72571508 ts_ms=1787910018349
+[INFO] 2026-08-28T09:40:18 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=30 rtp_ts=72595809 ts_ms=1787910018596
+[INFO] 2026-08-28T09:40:18 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=30 rtp_ts=72595809 ts_ms=1787910018597
+[INFO] 2026-08-28T09:40:18 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=30 rtp_ts=72595809 ts_ms=1787910018613 inference_latency_ms=15.872
+[INFO] 2026-08-28T09:40:18 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=30 rtp_ts=72595809 ts_ms=1787910018618
+[INFO] 2026-08-28T09:40:18 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=31 rtp_ts=72625776 ts_ms=1787910018900
+[INFO] 2026-08-28T09:40:18 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=31 rtp_ts=72625776 ts_ms=1787910018901
+[INFO] 2026-08-28T09:40:18 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=31 rtp_ts=72625776 ts_ms=1787910018915 inference_latency_ms=13.638
+[INFO] 2026-08-28T09:40:18 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=31 rtp_ts=72625776 ts_ms=1787910018926
+[INFO] 2026-08-28T09:40:19 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=32 rtp_ts=72650078 ts_ms=1787910019185
+[INFO] 2026-08-28T09:40:19 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=32 rtp_ts=72650078 ts_ms=1787910019186
+[INFO] 2026-08-28T09:40:19 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=32 rtp_ts=72650078 ts_ms=1787910019204 inference_latency_ms=18.118
+[INFO] 2026-08-28T09:40:19 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=32 rtp_ts=72650078 ts_ms=1787910019210
+[INFO] 2026-08-28T09:40:19 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=33 rtp_ts=72674051 ts_ms=1787910019418
+[INFO] 2026-08-28T09:40:19 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=33 rtp_ts=72674051 ts_ms=1787910019419
+[INFO] 2026-08-28T09:40:19 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=33 rtp_ts=72674051 ts_ms=1787910019431 inference_latency_ms=12.127
+[INFO] 2026-08-28T09:40:19 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=33 rtp_ts=72674051 ts_ms=1787910019437
+[INFO] 2026-08-28T09:40:19 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=34 rtp_ts=72692032 ts_ms=1787910019621
+[INFO] 2026-08-28T09:40:19 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=34 rtp_ts=72692032 ts_ms=1787910019622
+[INFO] 2026-08-28T09:40:19 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=34 rtp_ts=72692032 ts_ms=1787910019635 inference_latency_ms=12.566
+[INFO] 2026-08-28T09:40:19 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=34 rtp_ts=72692032 ts_ms=1787910019641
+[INFO] 2026-08-28T09:40:19 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=35 rtp_ts=72716333 ts_ms=1787910019896
+[INFO] 2026-08-28T09:40:19 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=35 rtp_ts=72716333 ts_ms=1787910019897
+[INFO] 2026-08-28T09:40:19 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=35 rtp_ts=72716333 ts_ms=1787910019910 inference_latency_ms=13.414
+[INFO] 2026-08-28T09:40:19 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=35 rtp_ts=72716333 ts_ms=1787910019915
+[INFO] 2026-08-28T09:40:20 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=36 rtp_ts=72734313 ts_ms=1787910020099
+[INFO] 2026-08-28T09:40:20 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=36 rtp_ts=72734313 ts_ms=1787910020100
+[INFO] 2026-08-28T09:40:20 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=36 rtp_ts=72734313 ts_ms=1787910020117 inference_latency_ms=16.821
+[INFO] 2026-08-28T09:40:20 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=36 rtp_ts=72734313 ts_ms=1787910020122
+[INFO] 2026-08-28T09:40:20 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=37 rtp_ts=72758451 ts_ms=1787910020378
+[INFO] 2026-08-28T09:40:20 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=37 rtp_ts=72758451 ts_ms=1787910020379
+[INFO] 2026-08-28T09:40:20 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=37 rtp_ts=72758451 ts_ms=1787910020390 inference_latency_ms=11.008
+[INFO] 2026-08-28T09:40:20 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=37 rtp_ts=72758451 ts_ms=1787910020395
+[INFO] 2026-08-28T09:40:20 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=38 rtp_ts=72782588 ts_ms=1787910020613
+[INFO] 2026-08-28T09:40:20 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=38 rtp_ts=72782588 ts_ms=1787910020613
+[INFO] 2026-08-28T09:40:20 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=38 rtp_ts=72782588 ts_ms=1787910020626 inference_latency_ms=12.821
+[INFO] 2026-08-28T09:40:20 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=38 rtp_ts=72782588 ts_ms=1787910020631
+[INFO] 2026-08-28T09:40:20 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=39 rtp_ts=72800569 ts_ms=1787910020823
+[INFO] 2026-08-28T09:40:20 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=39 rtp_ts=72800569 ts_ms=1787910020825
+[INFO] 2026-08-28T09:40:20 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=39 rtp_ts=72800569 ts_ms=1787910020836 inference_latency_ms=10.924
+[INFO] 2026-08-28T09:40:20 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=39 rtp_ts=72800569 ts_ms=1787910020840
+[INFO] 2026-08-28T09:40:21 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=40 rtp_ts=72818713 ts_ms=1787910021033
+[INFO] 2026-08-28T09:40:21 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=40 rtp_ts=72818713 ts_ms=1787910021034
+[INFO] 2026-08-28T09:40:21 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=40 rtp_ts=72818713 ts_ms=1787910021046 inference_latency_ms=12.636
+[INFO] 2026-08-28T09:40:21 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=40 rtp_ts=72818713 ts_ms=1787910021049
+[INFO] 2026-08-28T09:40:21 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=41 rtp_ts=72842850 ts_ms=1787910021302
+[INFO] 2026-08-28T09:40:21 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=41 rtp_ts=72842850 ts_ms=1787910021304
+[INFO] 2026-08-28T09:40:21 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=41 rtp_ts=72842850 ts_ms=1787910021321 inference_latency_ms=17.038
+[INFO] 2026-08-28T09:40:21 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=41 rtp_ts=72842850 ts_ms=1787910021332
+[INFO] 2026-08-28T09:40:21 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=42 rtp_ts=72866824 ts_ms=1787910021574
+[INFO] 2026-08-28T09:40:21 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=42 rtp_ts=72866824 ts_ms=1787910021574
+[INFO] 2026-08-28T09:40:21 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=42 rtp_ts=72866824 ts_ms=1787910021584 inference_latency_ms=9.317
+[INFO] 2026-08-28T09:40:21 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=42 rtp_ts=72866824 ts_ms=1787910021588
+[INFO] 2026-08-28T09:40:21 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=43 rtp_ts=72885132 ts_ms=1787910021790
+[INFO] 2026-08-28T09:40:21 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=43 rtp_ts=72885132 ts_ms=1787910021790
+[INFO] 2026-08-28T09:40:21 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=43 rtp_ts=72885132 ts_ms=1787910021802 inference_latency_ms=11.965
+[INFO] 2026-08-28T09:40:21 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=43 rtp_ts=72885132 ts_ms=1787910021806
+[INFO] 2026-08-28T09:40:22 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=44 rtp_ts=72909106 ts_ms=1787910022057
+[INFO] 2026-08-28T09:40:22 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=44 rtp_ts=72909106 ts_ms=1787910022059
+[INFO] 2026-08-28T09:40:22 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=44 rtp_ts=72909106 ts_ms=1787910022075 inference_latency_ms=15.941
+[INFO] 2026-08-28T09:40:22 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=44 rtp_ts=72909106 ts_ms=1787910022084
+[INFO] 2026-08-28T09:40:22 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=45 rtp_ts=72933079 ts_ms=1787910022302
+[INFO] 2026-08-28T09:40:22 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=45 rtp_ts=72933079 ts_ms=1787910022303
+[INFO] 2026-08-28T09:40:22 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=45 rtp_ts=72933079 ts_ms=1787910022315 inference_latency_ms=11.700
+[INFO] 2026-08-28T09:40:22 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=45 rtp_ts=72933079 ts_ms=1787910022320
+[INFO] 2026-08-28T09:40:22 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=46 rtp_ts=72957381 ts_ms=1787910022577
+[INFO] 2026-08-28T09:40:22 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=46 rtp_ts=72957381 ts_ms=1787910022578
+[INFO] 2026-08-28T09:40:22 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=46 rtp_ts=72957381 ts_ms=1787910022586 inference_latency_ms=8.307
+[INFO] 2026-08-28T09:40:22 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=46 rtp_ts=72957381 ts_ms=1787910022591
+[INFO] 2026-08-28T09:40:22 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=47 rtp_ts=72975361 ts_ms=1787910022801
+[INFO] 2026-08-28T09:40:22 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=47 rtp_ts=72975361 ts_ms=1787910022801
+[INFO] 2026-08-28T09:40:22 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=47 rtp_ts=72975361 ts_ms=1787910022816 inference_latency_ms=14.898
+[INFO] 2026-08-28T09:40:22 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=47 rtp_ts=72975361 ts_ms=1787910022822
+[INFO] 2026-08-28T09:40:23 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=48 rtp_ts=72999499 ts_ms=1787910023011
+[INFO] 2026-08-28T09:40:23 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=48 rtp_ts=72999499 ts_ms=1787910023012
+[INFO] 2026-08-28T09:40:23 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=48 rtp_ts=72999499 ts_ms=1787910023035 inference_latency_ms=23.524
+[INFO] 2026-08-28T09:40:23 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=48 rtp_ts=72999499 ts_ms=1787910023040
+[INFO] 2026-08-28T09:40:23 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=49 rtp_ts=73017643 ts_ms=1787910023207
+[INFO] 2026-08-28T09:40:23 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=49 rtp_ts=73017643 ts_ms=1787910023208
+[INFO] 2026-08-28T09:40:23 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=49 rtp_ts=73017643 ts_ms=1787910023221 inference_latency_ms=13.404
+[INFO] 2026-08-28T09:40:23 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=49 rtp_ts=73017643 ts_ms=1787910023225
+[INFO] 2026-08-28T09:40:23 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=50 rtp_ts=73035623 ts_ms=1787910023457
+[INFO] 2026-08-28T09:40:23 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=50 rtp_ts=73035623 ts_ms=1787910023458
+[INFO] 2026-08-28T09:40:23 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=50 rtp_ts=73035623 ts_ms=1787910023467 inference_latency_ms=9.258
+[INFO] 2026-08-28T09:40:23 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=50 rtp_ts=73035623 ts_ms=1787910023470
+[INFO] 2026-08-28T09:40:23 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=51 rtp_ts=73059760 ts_ms=1787910023738
+[INFO] 2026-08-28T09:40:23 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=51 rtp_ts=73059760 ts_ms=1787910023738
+[INFO] 2026-08-28T09:40:23 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=51 rtp_ts=73059760 ts_ms=1787910023750 inference_latency_ms=11.454
+[INFO] 2026-08-28T09:40:23 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=51 rtp_ts=73059760 ts_ms=1787910023754
+[INFO] 2026-08-28T09:40:23 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=52 rtp_ts=73083898 ts_ms=1787910023980
+[INFO] 2026-08-28T09:40:23 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=52 rtp_ts=73083898 ts_ms=1787910023981
+[INFO] 2026-08-28T09:40:23 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=52 rtp_ts=73083898 ts_ms=1787910023993 inference_latency_ms=11.040
+[INFO] 2026-08-28T09:40:23 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=52 rtp_ts=73083898 ts_ms=1787910023998
+[INFO] 2026-08-28T09:40:24 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=53 rtp_ts=73107872 ts_ms=1787910024217
+[INFO] 2026-08-28T09:40:24 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=53 rtp_ts=73107872 ts_ms=1787910024221
+[INFO] 2026-08-28T09:40:24 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=53 rtp_ts=73107872 ts_ms=1787910024231 inference_latency_ms=10.708
+[INFO] 2026-08-28T09:40:24 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=53 rtp_ts=73107872 ts_ms=1787910024236
+[INFO] 2026-08-28T09:40:24 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=54 rtp_ts=73126180 ts_ms=1787910024497
+[INFO] 2026-08-28T09:40:24 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=54 rtp_ts=73126180 ts_ms=1787910024498
+[INFO] 2026-08-28T09:40:24 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=54 rtp_ts=73126180 ts_ms=1787910024515 inference_latency_ms=16.744
+[INFO] 2026-08-28T09:40:24 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=54 rtp_ts=73126180 ts_ms=1787910024522
+[INFO] 2026-08-28T09:40:24 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=55 rtp_ts=73156147 ts_ms=1787910024770
+[INFO] 2026-08-28T09:40:24 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=55 rtp_ts=73156147 ts_ms=1787910024771
+[INFO] 2026-08-28T09:40:24 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=55 rtp_ts=73156147 ts_ms=1787910024782 inference_latency_ms=11.809
+[INFO] 2026-08-28T09:40:24 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=55 rtp_ts=73156147 ts_ms=1787910024787
+[INFO] 2026-08-28T09:40:25 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=56 rtp_ts=73180284 ts_ms=1787910025076
+[INFO] 2026-08-28T09:40:25 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=56 rtp_ts=73180284 ts_ms=1787910025077
+[INFO] 2026-08-28T09:40:25 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=56 rtp_ts=73180284 ts_ms=1787910025100 inference_latency_ms=23.210
+[INFO] 2026-08-28T09:40:25 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=56 rtp_ts=73180284 ts_ms=1787910025108
+[INFO] 2026-08-28T09:40:25 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=57 rtp_ts=73204422 ts_ms=1787910025279
+[INFO] 2026-08-28T09:40:25 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=57 rtp_ts=73204422 ts_ms=1787910025280
+[INFO] 2026-08-28T09:40:25 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=57 rtp_ts=73204422 ts_ms=1787910025290 inference_latency_ms=10.381
+[INFO] 2026-08-28T09:40:25 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=57 rtp_ts=73204422 ts_ms=1787910025299
+[INFO] 2026-08-28T09:40:25 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=58 rtp_ts=73228395 ts_ms=1787910025586
+[INFO] 2026-08-28T09:40:25 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=58 rtp_ts=73228395 ts_ms=1787910025589
+[INFO] 2026-08-28T09:40:25 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=58 rtp_ts=73228395 ts_ms=1787910025601 inference_latency_ms=11.248
+[INFO] 2026-08-28T09:40:25 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=58 rtp_ts=73228395 ts_ms=1787910025606
+[INFO] 2026-08-28T09:40:25 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=59 rtp_ts=73252697 ts_ms=1787910025861
+[INFO] 2026-08-28T09:40:25 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=59 rtp_ts=73252697 ts_ms=1787910025863
+[INFO] 2026-08-28T09:40:25 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=59 rtp_ts=73252697 ts_ms=1787910025876 inference_latency_ms=13.754
+[INFO] 2026-08-28T09:40:25 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=59 rtp_ts=73252697 ts_ms=1787910025882
+[INFO] 2026-08-28T09:40:26 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=60 rtp_ts=73276671 ts_ms=1787910026137
+[INFO] 2026-08-28T09:40:26 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=60 rtp_ts=73276671 ts_ms=1787910026138
+[INFO] 2026-08-28T09:40:26 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=60 rtp_ts=73276671 ts_ms=1787910026149 inference_latency_ms=11.513
+[INFO] 2026-08-28T09:40:26 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=60 rtp_ts=73276671 ts_ms=1787910026160
+[INFO] 2026-08-28T09:40:26 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=61 rtp_ts=73300808 ts_ms=1787910026413
+[INFO] 2026-08-28T09:40:26 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=61 rtp_ts=73300808 ts_ms=1787910026414
+[INFO] 2026-08-28T09:40:26 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=61 rtp_ts=73300808 ts_ms=1787910026427 inference_latency_ms=13.701
+[INFO] 2026-08-28T09:40:26 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=61 rtp_ts=73300808 ts_ms=1787910026436
+[INFO] 2026-08-28T09:40:26 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=62 rtp_ts=73318952 ts_ms=1787910026619
+[INFO] 2026-08-28T09:40:26 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=62 rtp_ts=73318952 ts_ms=1787910026622
+[INFO] 2026-08-28T09:40:26 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=62 rtp_ts=73318952 ts_ms=1787910026644 inference_latency_ms=21.914
+[INFO] 2026-08-28T09:40:26 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=62 rtp_ts=73318952 ts_ms=1787910026649
+[INFO] 2026-08-28T09:40:26 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=63 rtp_ts=73342926 ts_ms=1787910026856
+[INFO] 2026-08-28T09:40:26 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=63 rtp_ts=73342926 ts_ms=1787910026857
+[INFO] 2026-08-28T09:40:26 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=63 rtp_ts=73342926 ts_ms=1787910026867 inference_latency_ms=9.802
+[INFO] 2026-08-28T09:40:26 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=63 rtp_ts=73342926 ts_ms=1787910026872
+[INFO] 2026-08-28T09:40:27 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=64 rtp_ts=73361070 ts_ms=1787910027083
+[INFO] 2026-08-28T09:40:27 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=64 rtp_ts=73361070 ts_ms=1787910027084
+[INFO] 2026-08-28T09:40:27 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=64 rtp_ts=73361070 ts_ms=1787910027095 inference_latency_ms=10.722
+[INFO] 2026-08-28T09:40:27 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=64 rtp_ts=73361070 ts_ms=1787910027099
+[INFO] 2026-08-28T09:40:27 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=65 rtp_ts=73385208 ts_ms=1787910027337
+[INFO] 2026-08-28T09:40:27 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=65 rtp_ts=73385208 ts_ms=1787910027339
+[INFO] 2026-08-28T09:40:27 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=65 rtp_ts=73385208 ts_ms=1787910027356 inference_latency_ms=16.695
+[INFO] 2026-08-28T09:40:27 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=65 rtp_ts=73385208 ts_ms=1787910027359
+[INFO] 2026-08-28T09:40:27 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=66 rtp_ts=73403188 ts_ms=1787910027544
+[INFO] 2026-08-28T09:40:27 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=66 rtp_ts=73403188 ts_ms=1787910027545
+[INFO] 2026-08-28T09:40:27 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=66 rtp_ts=73403188 ts_ms=1787910027562 inference_latency_ms=16.754
+[INFO] 2026-08-28T09:40:27 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=66 rtp_ts=73403188 ts_ms=1787910027569
+[INFO] 2026-08-28T09:40:27 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=67 rtp_ts=73427490 ts_ms=1787910027783
+[INFO] 2026-08-28T09:40:27 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=67 rtp_ts=73427490 ts_ms=1787910027783
+[INFO] 2026-08-28T09:40:27 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=67 rtp_ts=73427490 ts_ms=1787910027793 inference_latency_ms=9.506
+[INFO] 2026-08-28T09:40:27 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=67 rtp_ts=73427490 ts_ms=1787910027797
+[INFO] 2026-08-28T09:40:28 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=68 rtp_ts=73451463 ts_ms=1787910028069
+[INFO] 2026-08-28T09:40:28 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=68 rtp_ts=73451463 ts_ms=1787910028070
+[INFO] 2026-08-28T09:40:28 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=68 rtp_ts=73451463 ts_ms=1787910028077 inference_latency_ms=7.768
+[INFO] 2026-08-28T09:40:28 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=68 rtp_ts=73451463 ts_ms=1787910028081
+[INFO] 2026-08-28T09:40:28 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=69 rtp_ts=73475436 ts_ms=1787910028334
+[INFO] 2026-08-28T09:40:28 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=69 rtp_ts=73475436 ts_ms=1787910028335
+[INFO] 2026-08-28T09:40:28 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=69 rtp_ts=73475436 ts_ms=1787910028364 inference_latency_ms=29.637
+[INFO] 2026-08-28T09:40:28 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=69 rtp_ts=73475436 ts_ms=1787910028369
+[INFO] 2026-08-28T09:40:28 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=70 rtp_ts=73499738 ts_ms=1787910028574
+[INFO] 2026-08-28T09:40:28 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=70 rtp_ts=73499738 ts_ms=1787910028575
+[INFO] 2026-08-28T09:40:28 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=70 rtp_ts=73499738 ts_ms=1787910028583 inference_latency_ms=8.285
+[INFO] 2026-08-28T09:40:28 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=70 rtp_ts=73499738 ts_ms=1787910028586
+[INFO] 2026-08-28T09:40:28 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=71 rtp_ts=73517718 ts_ms=1787910028809
+[INFO] 2026-08-28T09:40:28 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=71 rtp_ts=73517718 ts_ms=1787910028811
+[INFO] 2026-08-28T09:40:28 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=71 rtp_ts=73517718 ts_ms=1787910028823 inference_latency_ms=11.033
+[INFO] 2026-08-28T09:40:28 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=71 rtp_ts=73517718 ts_ms=1787910028829
+[INFO] 2026-08-28T09:40:29 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=72 rtp_ts=73535698 ts_ms=1787910029019
+[INFO] 2026-08-28T09:40:29 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=72 rtp_ts=73535698 ts_ms=1787910029020
+[INFO] 2026-08-28T09:40:29 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=72 rtp_ts=73535698 ts_ms=1787910029034 inference_latency_ms=13.647
+[INFO] 2026-08-28T09:40:29 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=72 rtp_ts=73535698 ts_ms=1787910029039
+[INFO] 2026-08-28T09:40:29 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=73 rtp_ts=73560000 ts_ms=1787910029300
+[INFO] 2026-08-28T09:40:29 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=73 rtp_ts=73560000 ts_ms=1787910029301
+[INFO] 2026-08-28T09:40:29 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=73 rtp_ts=73560000 ts_ms=1787910029324 inference_latency_ms=22.728
+[INFO] 2026-08-28T09:40:29 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=73 rtp_ts=73560000 ts_ms=1787910029329
+[INFO] 2026-08-28T09:40:29 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=74 rtp_ts=73583973 ts_ms=1787910029535
+[INFO] 2026-08-28T09:40:29 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=74 rtp_ts=73583973 ts_ms=1787910029538
+[INFO] 2026-08-28T09:40:29 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=74 rtp_ts=73583973 ts_ms=1787910029552 inference_latency_ms=13.759
+[INFO] 2026-08-28T09:40:29 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=74 rtp_ts=73583973 ts_ms=1787910029556
+[INFO] 2026-08-28T09:40:29 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=75 rtp_ts=73608275 ts_ms=1787910029808
+[INFO] 2026-08-28T09:40:29 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=75 rtp_ts=73608275 ts_ms=1787910029809
+[INFO] 2026-08-28T09:40:29 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=75 rtp_ts=73608275 ts_ms=1787910029819 inference_latency_ms=10.475
+[INFO] 2026-08-28T09:40:29 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=75 rtp_ts=73608275 ts_ms=1787910029826
+[INFO] 2026-08-28T09:40:30 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=76 rtp_ts=73632249 ts_ms=1787910030043
+[INFO] 2026-08-28T09:40:30 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=76 rtp_ts=73632249 ts_ms=1787910030044
+[INFO] 2026-08-28T09:40:30 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=76 rtp_ts=73632249 ts_ms=1787910030059 inference_latency_ms=14.844
+[INFO] 2026-08-28T09:40:30 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=76 rtp_ts=73632249 ts_ms=1787910030063
+[INFO] 2026-08-28T09:40:30 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=77 rtp_ts=73650229 ts_ms=1787910030296
+[INFO] 2026-08-28T09:40:30 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=77 rtp_ts=73650229 ts_ms=1787910030297
+[INFO] 2026-08-28T09:40:30 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=77 rtp_ts=73650229 ts_ms=1787910030312 inference_latency_ms=14.558
+[INFO] 2026-08-28T09:40:30 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=77 rtp_ts=73650229 ts_ms=1787910030317
+[INFO] 2026-08-28T09:40:30 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=78 rtp_ts=73674531 ts_ms=1787910030543
+[INFO] 2026-08-28T09:40:30 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=78 rtp_ts=73674531 ts_ms=1787910030544
+[INFO] 2026-08-28T09:40:30 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=78 rtp_ts=73674531 ts_ms=1787910030557 inference_latency_ms=12.328
+[INFO] 2026-08-28T09:40:30 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=78 rtp_ts=73674531 ts_ms=1787910030561
+[INFO] 2026-08-28T09:40:30 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=79 rtp_ts=73698504 ts_ms=1787910030807
+[INFO] 2026-08-28T09:40:30 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=79 rtp_ts=73698504 ts_ms=1787910030808
+[INFO] 2026-08-28T09:40:30 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=79 rtp_ts=73698504 ts_ms=1787910030823 inference_latency_ms=15.128
+[INFO] 2026-08-28T09:40:30 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=79 rtp_ts=73698504 ts_ms=1787910030828
+[INFO] 2026-08-28T09:40:31 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=80 rtp_ts=73716484 ts_ms=1787910031023
+[INFO] 2026-08-28T09:40:31 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=80 rtp_ts=73716484 ts_ms=1787910031024
+[INFO] 2026-08-28T09:40:31 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=80 rtp_ts=73716484 ts_ms=1787910031035 inference_latency_ms=11.808
+[INFO] 2026-08-28T09:40:31 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=80 rtp_ts=73716484 ts_ms=1787910031040
+[INFO] 2026-08-28T09:40:31 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=81 rtp_ts=73734792 ts_ms=1787910031241
+[INFO] 2026-08-28T09:40:31 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=81 rtp_ts=73734792 ts_ms=1787910031242
+[INFO] 2026-08-28T09:40:31 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=81 rtp_ts=73734792 ts_ms=1787910031252 inference_latency_ms=10.576
+[INFO] 2026-08-28T09:40:31 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=81 rtp_ts=73734792 ts_ms=1787910031257
+[INFO] 2026-08-28T09:40:31 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=82 rtp_ts=73758766 ts_ms=1787910031488
+[INFO] 2026-08-28T09:40:31 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=82 rtp_ts=73758766 ts_ms=1787910031489
+[INFO] 2026-08-28T09:40:31 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=82 rtp_ts=73758766 ts_ms=1787910031502 inference_latency_ms=12.839
+[INFO] 2026-08-28T09:40:31 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=82 rtp_ts=73758766 ts_ms=1787910031508
+[INFO] 2026-08-28T09:40:31 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=83 rtp_ts=73782903 ts_ms=1787910031742
+[INFO] 2026-08-28T09:40:31 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=83 rtp_ts=73782903 ts_ms=1787910031743
+[INFO] 2026-08-28T09:40:31 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=83 rtp_ts=73782903 ts_ms=1787910031754 inference_latency_ms=10.737
+[INFO] 2026-08-28T09:40:31 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=83 rtp_ts=73782903 ts_ms=1787910031758
+[INFO] 2026-08-28T09:40:32 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=84 rtp_ts=73807041 ts_ms=1787910032019
+[INFO] 2026-08-28T09:40:32 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=84 rtp_ts=73807041 ts_ms=1787910032019
+[INFO] 2026-08-28T09:40:32 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=84 rtp_ts=73807041 ts_ms=1787910032034 inference_latency_ms=14.613
+[INFO] 2026-08-28T09:40:32 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=84 rtp_ts=73807041 ts_ms=1787910032039
+[INFO] 2026-08-28T09:40:32 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=85 rtp_ts=73831015 ts_ms=1787910032241
+[INFO] 2026-08-28T09:40:32 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=85 rtp_ts=73831015 ts_ms=1787910032242
+[INFO] 2026-08-28T09:40:32 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=85 rtp_ts=73831015 ts_ms=1787910032253 inference_latency_ms=11.091
+[INFO] 2026-08-28T09:40:32 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=85 rtp_ts=73831015 ts_ms=1787910032258
+[INFO] 2026-08-28T09:40:32 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=86 rtp_ts=73849323 ts_ms=1787910032490
+[INFO] 2026-08-28T09:40:32 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=86 rtp_ts=73849323 ts_ms=1787910032491
+[INFO] 2026-08-28T09:40:32 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=86 rtp_ts=73849323 ts_ms=1787910032507 inference_latency_ms=15.829
+[INFO] 2026-08-28T09:40:32 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=86 rtp_ts=73849323 ts_ms=1787910032515
+[INFO] 2026-08-28T09:40:32 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=87 rtp_ts=73873296 ts_ms=1787910032733
+[INFO] 2026-08-28T09:40:32 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=87 rtp_ts=73873296 ts_ms=1787910032735
+[INFO] 2026-08-28T09:40:32 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=87 rtp_ts=73873296 ts_ms=1787910032748 inference_latency_ms=12.819
+[INFO] 2026-08-28T09:40:32 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=87 rtp_ts=73873296 ts_ms=1787910032753
+[INFO] 2026-08-28T09:40:32 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=88 rtp_ts=73891277 ts_ms=1787910032973
+[INFO] 2026-08-28T09:40:32 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=88 rtp_ts=73891277 ts_ms=1787910032974
+[INFO] 2026-08-28T09:40:32 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=88 rtp_ts=73891277 ts_ms=1787910032985 inference_latency_ms=11.378
+[INFO] 2026-08-28T09:40:32 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=88 rtp_ts=73891277 ts_ms=1787910032993
+[INFO] 2026-08-28T09:40:33 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=89 rtp_ts=73915578 ts_ms=1787910033219
+[INFO] 2026-08-28T09:40:33 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=89 rtp_ts=73915578 ts_ms=1787910033220
+[INFO] 2026-08-28T09:40:33 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=89 rtp_ts=73915578 ts_ms=1787910033235 inference_latency_ms=15.617
+[INFO] 2026-08-28T09:40:33 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=89 rtp_ts=73915578 ts_ms=1787910033240
+[INFO] 2026-08-28T09:40:33 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=90 rtp_ts=73939552 ts_ms=1787910033493
+[INFO] 2026-08-28T09:40:33 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=90 rtp_ts=73939552 ts_ms=1787910033497
+[INFO] 2026-08-28T09:40:33 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=90 rtp_ts=73939552 ts_ms=1787910033516 inference_latency_ms=19.808
+[INFO] 2026-08-28T09:40:33 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=90 rtp_ts=73939552 ts_ms=1787910033522
+[INFO] 2026-08-28T09:40:33 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=91 rtp_ts=73963689 ts_ms=1787910033711
+[INFO] 2026-08-28T09:40:33 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=91 rtp_ts=73963689 ts_ms=1787910033713
+[INFO] 2026-08-28T09:40:33 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=91 rtp_ts=73963689 ts_ms=1787910033730 inference_latency_ms=17.524
+[INFO] 2026-08-28T09:40:33 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=91 rtp_ts=73963689 ts_ms=1787910033734
+[INFO] 2026-08-28T09:40:33 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=92 rtp_ts=73981834 ts_ms=1787910033968
+[INFO] 2026-08-28T09:40:33 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=92 rtp_ts=73981834 ts_ms=1787910033969
+[INFO] 2026-08-28T09:40:33 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=92 rtp_ts=73981834 ts_ms=1787910033982 inference_latency_ms=12.902
+[INFO] 2026-08-28T09:40:33 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=92 rtp_ts=73981834 ts_ms=1787910033987
+[INFO] 2026-08-28T09:40:34 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=93 rtp_ts=74005807 ts_ms=1787910034179
+[INFO] 2026-08-28T09:40:34 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=93 rtp_ts=74005807 ts_ms=1787910034180
+[INFO] 2026-08-28T09:40:34 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=93 rtp_ts=74005807 ts_ms=1787910034188 inference_latency_ms=8.637
+[INFO] 2026-08-28T09:40:34 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=93 rtp_ts=74005807 ts_ms=1787910034192
+[INFO] 2026-08-28T09:40:34 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=94 rtp_ts=74023951 ts_ms=1787910034418
+[INFO] 2026-08-28T09:40:34 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=94 rtp_ts=74023951 ts_ms=1787910034419
+[INFO] 2026-08-28T09:40:34 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=94 rtp_ts=74023951 ts_ms=1787910034430 inference_latency_ms=10.474
+[INFO] 2026-08-28T09:40:34 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=94 rtp_ts=74023951 ts_ms=1787910034434
+[INFO] 2026-08-28T09:40:34 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=95 rtp_ts=74048089 ts_ms=1787910034693
+[INFO] 2026-08-28T09:40:34 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=95 rtp_ts=74048089 ts_ms=1787910034695
+[INFO] 2026-08-28T09:40:34 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=95 rtp_ts=74048089 ts_ms=1787910034709 inference_latency_ms=14.302
+[INFO] 2026-08-28T09:40:34 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=95 rtp_ts=74048089 ts_ms=1787910034714
+[INFO] 2026-08-28T09:40:34 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=96 rtp_ts=74072062 ts_ms=1787910034908
+[INFO] 2026-08-28T09:40:34 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=96 rtp_ts=74072062 ts_ms=1787910034909
+[INFO] 2026-08-28T09:40:34 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=96 rtp_ts=74072062 ts_ms=1787910034921 inference_latency_ms=12.364
+[INFO] 2026-08-28T09:40:34 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=96 rtp_ts=74072062 ts_ms=1787910034926
+[INFO] 2026-08-28T09:40:35 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=97 rtp_ts=74084213 ts_ms=1787910035131
+[INFO] 2026-08-28T09:40:35 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=97 rtp_ts=74084213 ts_ms=1787910035132
+[INFO] 2026-08-28T09:40:35 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=97 rtp_ts=74084213 ts_ms=1787910035157 inference_latency_ms=25.586
+[INFO] 2026-08-28T09:40:35 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=97 rtp_ts=74084213 ts_ms=1787910035162
+[INFO] 2026-08-28T09:40:35 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=98 rtp_ts=74114344 ts_ms=1787910035418
+[INFO] 2026-08-28T09:40:35 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=98 rtp_ts=74114344 ts_ms=1787910035419
+[INFO] 2026-08-28T09:40:35 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=98 rtp_ts=74114344 ts_ms=1787910035436 inference_latency_ms=16.802
+[INFO] 2026-08-28T09:40:35 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=98 rtp_ts=74114344 ts_ms=1787910035440
+[INFO] 2026-08-28T09:40:35 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=99 rtp_ts=74132324 ts_ms=1787910035622
+[INFO] 2026-08-28T09:40:35 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=99 rtp_ts=74132324 ts_ms=1787910035623
+[INFO] 2026-08-28T09:40:35 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=99 rtp_ts=74132324 ts_ms=1787910035636 inference_latency_ms=13.006
+[INFO] 2026-08-28T09:40:35 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=99 rtp_ts=74132324 ts_ms=1787910035640
+[INFO] 2026-08-28T09:40:35 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=100 rtp_ts=74150632 ts_ms=1787910035820
+[INFO] 2026-08-28T09:40:35 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=100 rtp_ts=74150632 ts_ms=1787910035822
+[INFO] 2026-08-28T09:40:35 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=100 rtp_ts=74150632 ts_ms=1787910035836 inference_latency_ms=14.412
+[INFO] 2026-08-28T09:40:35 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=100 rtp_ts=74150632 ts_ms=1787910035841
+[INFO] 2026-08-28T09:40:36 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=101 rtp_ts=74168613 ts_ms=1787910036060
+[INFO] 2026-08-28T09:40:36 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=101 rtp_ts=74168613 ts_ms=1787910036061
+[INFO] 2026-08-28T09:40:36 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=101 rtp_ts=74168613 ts_ms=1787910036071 inference_latency_ms=10.830
+[INFO] 2026-08-28T09:40:36 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=101 rtp_ts=74168613 ts_ms=1787910036076
+[INFO] 2026-08-28T09:40:36 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=102 rtp_ts=74198579 ts_ms=1787910036369
+[INFO] 2026-08-28T09:40:36 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=102 rtp_ts=74198579 ts_ms=1787910036369
+[INFO] 2026-08-28T09:40:36 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=102 rtp_ts=74198579 ts_ms=1787910036378 inference_latency_ms=8.823
+[INFO] 2026-08-28T09:40:36 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=102 rtp_ts=74198579 ts_ms=1787910036382
+[INFO] 2026-08-28T09:40:36 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=103 rtp_ts=74216888 ts_ms=1787910036577
+[INFO] 2026-08-28T09:40:36 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=103 rtp_ts=74216888 ts_ms=1787910036578
+[INFO] 2026-08-28T09:40:36 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=103 rtp_ts=74216888 ts_ms=1787910036587 inference_latency_ms=9.920
+[INFO] 2026-08-28T09:40:36 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=103 rtp_ts=74216888 ts_ms=1787910036592
+[INFO] 2026-08-28T09:40:36 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=104 rtp_ts=74240861 ts_ms=1787910036823
+[INFO] 2026-08-28T09:40:36 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=104 rtp_ts=74240861 ts_ms=1787910036824
+[INFO] 2026-08-28T09:40:36 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=104 rtp_ts=74240861 ts_ms=1787910036836 inference_latency_ms=11.834
+[INFO] 2026-08-28T09:40:36 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=104 rtp_ts=74240861 ts_ms=1787910036841
+[INFO] 2026-08-28T09:40:37 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=105 rtp_ts=74258841 ts_ms=1787910037063
+[INFO] 2026-08-28T09:40:37 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=105 rtp_ts=74258841 ts_ms=1787910037063
+[INFO] 2026-08-28T09:40:37 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=105 rtp_ts=74258841 ts_ms=1787910037076 inference_latency_ms=12.364
+[INFO] 2026-08-28T09:40:37 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=105 rtp_ts=74258841 ts_ms=1787910037081
+[INFO] 2026-08-28T09:40:37 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=106 rtp_ts=74283143 ts_ms=1787910037302
+[INFO] 2026-08-28T09:40:37 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=106 rtp_ts=74283143 ts_ms=1787910037303
+[INFO] 2026-08-28T09:40:37 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=106 rtp_ts=74283143 ts_ms=1787910037320 inference_latency_ms=17.032
+[INFO] 2026-08-28T09:40:37 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=106 rtp_ts=74283143 ts_ms=1787910037325
+[INFO] 2026-08-28T09:40:37 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=107 rtp_ts=74307117 ts_ms=1787910037558
+[INFO] 2026-08-28T09:40:37 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=107 rtp_ts=74307117 ts_ms=1787910037559
+[INFO] 2026-08-28T09:40:37 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=107 rtp_ts=74307117 ts_ms=1787910037570 inference_latency_ms=11.516
+[INFO] 2026-08-28T09:40:37 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=107 rtp_ts=74307117 ts_ms=1787910037573
+[INFO] 2026-08-28T09:40:37 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=108 rtp_ts=74325261 ts_ms=1787910037778
+[INFO] 2026-08-28T09:40:37 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=108 rtp_ts=74325261 ts_ms=1787910037779
+[INFO] 2026-08-28T09:40:37 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=108 rtp_ts=74325261 ts_ms=1787910037789 inference_latency_ms=10.445
+[INFO] 2026-08-28T09:40:37 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=108 rtp_ts=74325261 ts_ms=1787910037794
+[INFO] 2026-08-28T09:40:37 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=109 rtp_ts=74343405 ts_ms=1787910037985
+[INFO] 2026-08-28T09:40:37 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=109 rtp_ts=74343405 ts_ms=1787910037985
+[INFO] 2026-08-28T09:40:38 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=109 rtp_ts=74343405 ts_ms=1787910038009 inference_latency_ms=23.282
+[INFO] 2026-08-28T09:40:38 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=109 rtp_ts=74343405 ts_ms=1787910038015
+[INFO] 2026-08-28T09:40:38 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=110 rtp_ts=74367378 ts_ms=1787910038211
+[INFO] 2026-08-28T09:40:38 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=110 rtp_ts=74367378 ts_ms=1787910038212
+[INFO] 2026-08-28T09:40:38 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=110 rtp_ts=74367378 ts_ms=1787910038224 inference_latency_ms=12.514
+[INFO] 2026-08-28T09:40:38 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=110 rtp_ts=74367378 ts_ms=1787910038229
+[INFO] 2026-08-28T09:40:38 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=111 rtp_ts=74385523 ts_ms=1787910038414
+[INFO] 2026-08-28T09:40:38 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=111 rtp_ts=74385523 ts_ms=1787910038415
+[INFO] 2026-08-28T09:40:38 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=111 rtp_ts=74385523 ts_ms=1787910038429 inference_latency_ms=13.586
+[INFO] 2026-08-28T09:40:38 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=111 rtp_ts=74385523 ts_ms=1787910038433
+[INFO] 2026-08-28T09:40:38 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=112 rtp_ts=74403667 ts_ms=1787910038659
+[INFO] 2026-08-28T09:40:38 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=112 rtp_ts=74403667 ts_ms=1787910038660
+[INFO] 2026-08-28T09:40:38 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=112 rtp_ts=74403667 ts_ms=1787910038674 inference_latency_ms=13.865
+[INFO] 2026-08-28T09:40:38 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=112 rtp_ts=74403667 ts_ms=1787910038679
+[INFO] 2026-08-28T09:40:38 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=113 rtp_ts=74427640 ts_ms=1787910038873
+[INFO] 2026-08-28T09:40:38 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=113 rtp_ts=74427640 ts_ms=1787910038874
+[INFO] 2026-08-28T09:40:38 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=113 rtp_ts=74427640 ts_ms=1787910038882 inference_latency_ms=8.153
+[INFO] 2026-08-28T09:40:38 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=113 rtp_ts=74427640 ts_ms=1787910038885
+[INFO] 2026-08-28T09:40:39 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=114 rtp_ts=74445785 ts_ms=1787910039091
+[INFO] 2026-08-28T09:40:39 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=114 rtp_ts=74445785 ts_ms=1787910039092
+[INFO] 2026-08-28T09:40:39 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=114 rtp_ts=74445785 ts_ms=1787910039103 inference_latency_ms=10.232
+[INFO] 2026-08-28T09:40:39 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=114 rtp_ts=74445785 ts_ms=1787910039107
+[INFO] 2026-08-28T09:40:39 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=115 rtp_ts=74463929 ts_ms=1787910039294
+[INFO] 2026-08-28T09:40:39 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=115 rtp_ts=74463929 ts_ms=1787910039295
+[INFO] 2026-08-28T09:40:39 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=115 rtp_ts=74463929 ts_ms=1787910039316 inference_latency_ms=20.918
+[INFO] 2026-08-28T09:40:39 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=115 rtp_ts=74463929 ts_ms=1787910039321
+[INFO] 2026-08-28T09:40:39 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=116 rtp_ts=74481909 ts_ms=1787910039534
+[INFO] 2026-08-28T09:40:39 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=116 rtp_ts=74481909 ts_ms=1787910039535
+[INFO] 2026-08-28T09:40:39 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=116 rtp_ts=74481909 ts_ms=1787910039547 inference_latency_ms=11.979
+[INFO] 2026-08-28T09:40:39 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=116 rtp_ts=74481909 ts_ms=1787910039551
+[INFO] 2026-08-28T09:40:39 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=117 rtp_ts=74506047 ts_ms=1787910039774
+[INFO] 2026-08-28T09:40:39 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=117 rtp_ts=74506047 ts_ms=1787910039774
+[INFO] 2026-08-28T09:40:39 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=117 rtp_ts=74506047 ts_ms=1787910039782 inference_latency_ms=8.095
+[INFO] 2026-08-28T09:40:39 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=117 rtp_ts=74506047 ts_ms=1787910039786
+[INFO] 2026-08-28T09:40:40 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=118 rtp_ts=74530184 ts_ms=1787910040077
+[INFO] 2026-08-28T09:40:40 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=118 rtp_ts=74530184 ts_ms=1787910040078
+[INFO] 2026-08-28T09:40:40 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=118 rtp_ts=74530184 ts_ms=1787910040093 inference_latency_ms=14.474
+[INFO] 2026-08-28T09:40:40 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=118 rtp_ts=74530184 ts_ms=1787910040100
+[INFO] 2026-08-28T09:40:40 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=119 rtp_ts=74554158 ts_ms=1787910040279
+[INFO] 2026-08-28T09:40:40 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=119 rtp_ts=74554158 ts_ms=1787910040280
+[INFO] 2026-08-28T09:40:40 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=119 rtp_ts=74554158 ts_ms=1787910040292 inference_latency_ms=12.337
+[INFO] 2026-08-28T09:40:40 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=119 rtp_ts=74554158 ts_ms=1787910040297
+[INFO] 2026-08-28T09:40:40 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=120 rtp_ts=74572466 ts_ms=1787910040502
+[INFO] 2026-08-28T09:40:40 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=120 rtp_ts=74572466 ts_ms=1787910040503
+[INFO] 2026-08-28T09:40:40 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=120 rtp_ts=74572466 ts_ms=1787910040513 inference_latency_ms=10.574
+[INFO] 2026-08-28T09:40:40 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=120 rtp_ts=74572466 ts_ms=1787910040519
+[INFO] 2026-08-28T09:40:40 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=121 rtp_ts=74590446 ts_ms=1787910040706
+[INFO] 2026-08-28T09:40:40 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=121 rtp_ts=74590446 ts_ms=1787910040707
+[INFO] 2026-08-28T09:40:40 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=121 rtp_ts=74590446 ts_ms=1787910040719 inference_latency_ms=11.453
+[INFO] 2026-08-28T09:40:40 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=121 rtp_ts=74590446 ts_ms=1787910040723
+[INFO] 2026-08-28T09:40:40 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=122 rtp_ts=74614419 ts_ms=1787910040984
+[INFO] 2026-08-28T09:40:40 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=122 rtp_ts=74614419 ts_ms=1787910040985
+[INFO] 2026-08-28T09:40:40 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=122 rtp_ts=74614419 ts_ms=1787910040996 inference_latency_ms=11.268
+[INFO] 2026-08-28T09:40:41 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=122 rtp_ts=74614419 ts_ms=1787910041001
+[INFO] 2026-08-28T09:40:41 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=123 rtp_ts=74638721 ts_ms=1787910041251
+[INFO] 2026-08-28T09:40:41 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=123 rtp_ts=74638721 ts_ms=1787910041252
+[INFO] 2026-08-28T09:40:41 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=123 rtp_ts=74638721 ts_ms=1787910041264 inference_latency_ms=11.759
+[INFO] 2026-08-28T09:40:41 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=123 rtp_ts=74638721 ts_ms=1787910041267
+[INFO] 2026-08-28T09:40:41 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=124 rtp_ts=74656701 ts_ms=1787910041454
+[INFO] 2026-08-28T09:40:41 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=124 rtp_ts=74656701 ts_ms=1787910041455
+[INFO] 2026-08-28T09:40:41 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=124 rtp_ts=74656701 ts_ms=1787910041465 inference_latency_ms=10.861
+[INFO] 2026-08-28T09:40:41 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=124 rtp_ts=74656701 ts_ms=1787910041470
+[INFO] 2026-08-28T09:40:41 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=125 rtp_ts=74680675 ts_ms=1787910041668
+[INFO] 2026-08-28T09:40:41 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=125 rtp_ts=74680675 ts_ms=1787910041669
+[INFO] 2026-08-28T09:40:41 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=125 rtp_ts=74680675 ts_ms=1787910041680 inference_latency_ms=11.056
+[INFO] 2026-08-28T09:40:41 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=125 rtp_ts=74680675 ts_ms=1787910041683
+[INFO] 2026-08-28T09:40:41 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=126 rtp_ts=74698983 ts_ms=1787910041887
+[INFO] 2026-08-28T09:40:41 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=126 rtp_ts=74698983 ts_ms=1787910041888
+[INFO] 2026-08-28T09:40:41 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=126 rtp_ts=74698983 ts_ms=1787910041900 inference_latency_ms=11.930
+[INFO] 2026-08-28T09:40:41 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=126 rtp_ts=74698983 ts_ms=1787910041905
+[INFO] 2026-08-28T09:40:42 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=127 rtp_ts=74722957 ts_ms=1787910042185
+[INFO] 2026-08-28T09:40:42 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=127 rtp_ts=74722957 ts_ms=1787910042186
+[INFO] 2026-08-28T09:40:42 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=127 rtp_ts=74722957 ts_ms=1787910042200 inference_latency_ms=14.524
+[INFO] 2026-08-28T09:40:42 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=127 rtp_ts=74722957 ts_ms=1787910042205
+[INFO] 2026-08-28T09:40:42 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=128 rtp_ts=74747094 ts_ms=1787910042466
+[INFO] 2026-08-28T09:40:42 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=128 rtp_ts=74747094 ts_ms=1787910042467
+[INFO] 2026-08-28T09:40:42 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=128 rtp_ts=74747094 ts_ms=1787910042478 inference_latency_ms=10.931
+[INFO] 2026-08-28T09:40:42 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=128 rtp_ts=74747094 ts_ms=1787910042480
+[INFO] 2026-08-28T09:40:42 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=129 rtp_ts=74771232 ts_ms=1787910042701
+[INFO] 2026-08-28T09:40:42 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=129 rtp_ts=74771232 ts_ms=1787910042702
+[INFO] 2026-08-28T09:40:42 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=129 rtp_ts=74771232 ts_ms=1787910042716 inference_latency_ms=14.485
+[INFO] 2026-08-28T09:40:42 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=129 rtp_ts=74771232 ts_ms=1787910042721
+[INFO] 2026-08-28T09:40:42 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=130 rtp_ts=74795205 ts_ms=1787910042971
+[INFO] 2026-08-28T09:40:42 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=130 rtp_ts=74795205 ts_ms=1787910042972
+[INFO] 2026-08-28T09:40:42 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=130 rtp_ts=74795205 ts_ms=1787910042982 inference_latency_ms=10.112
+[INFO] 2026-08-28T09:40:42 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=130 rtp_ts=74795205 ts_ms=1787910042985
+[INFO] 2026-08-28T09:40:43 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=131 rtp_ts=74813514 ts_ms=1787910043227
+[INFO] 2026-08-28T09:40:43 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=131 rtp_ts=74813514 ts_ms=1787910043228
+[INFO] 2026-08-28T09:40:43 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=131 rtp_ts=74813514 ts_ms=1787910043246 inference_latency_ms=18.015
+[INFO] 2026-08-28T09:40:43 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=131 rtp_ts=74813514 ts_ms=1787910043252
+[INFO] 2026-08-28T09:40:43 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=132 rtp_ts=74837487 ts_ms=1787910043458
+[INFO] 2026-08-28T09:40:43 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=132 rtp_ts=74837487 ts_ms=1787910043459
+[INFO] 2026-08-28T09:40:43 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=132 rtp_ts=74837487 ts_ms=1787910043468 inference_latency_ms=9.094
+[INFO] 2026-08-28T09:40:43 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=132 rtp_ts=74837487 ts_ms=1787910043471
+[INFO] 2026-08-28T09:40:43 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=133 rtp_ts=74861461 ts_ms=1787910043735
+[INFO] 2026-08-28T09:40:43 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=133 rtp_ts=74861461 ts_ms=1787910043738
+[INFO] 2026-08-28T09:40:43 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=133 rtp_ts=74861461 ts_ms=1787910043753 inference_latency_ms=15.058
+[INFO] 2026-08-28T09:40:43 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=133 rtp_ts=74861461 ts_ms=1787910043758
+[INFO] 2026-08-28T09:40:44 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=134 rtp_ts=74885762 ts_ms=1787910044028
+[INFO] 2026-08-28T09:40:44 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=134 rtp_ts=74885762 ts_ms=1787910044029
+[INFO] 2026-08-28T09:40:44 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=134 rtp_ts=74885762 ts_ms=1787910044040 inference_latency_ms=11.118
+[INFO] 2026-08-28T09:40:44 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=134 rtp_ts=74885762 ts_ms=1787910044047
+[INFO] 2026-08-28T09:40:44 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=135 rtp_ts=74909736 ts_ms=1787910044248
+[INFO] 2026-08-28T09:40:44 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=135 rtp_ts=74909736 ts_ms=1787910044249
+[INFO] 2026-08-28T09:40:44 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=135 rtp_ts=74909736 ts_ms=1787910044265 inference_latency_ms=16.634
+[INFO] 2026-08-28T09:40:44 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=135 rtp_ts=74909736 ts_ms=1787910044270
+[INFO] 2026-08-28T09:40:44 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=136 rtp_ts=74927880 ts_ms=1787910044449
+[INFO] 2026-08-28T09:40:44 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=136 rtp_ts=74927880 ts_ms=1787910044450
+[INFO] 2026-08-28T09:40:44 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=136 rtp_ts=74927880 ts_ms=1787910044460 inference_latency_ms=10.054
+[INFO] 2026-08-28T09:40:44 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=136 rtp_ts=74927880 ts_ms=1787910044463
+[INFO] 2026-08-28T09:40:44 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=137 rtp_ts=74952018 ts_ms=1787910044750
+[INFO] 2026-08-28T09:40:44 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=137 rtp_ts=74952018 ts_ms=1787910044750
+[INFO] 2026-08-28T09:40:44 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=137 rtp_ts=74952018 ts_ms=1787910044762 inference_latency_ms=11.555
+[INFO] 2026-08-28T09:40:44 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=137 rtp_ts=74952018 ts_ms=1787910044767
+[INFO] 2026-08-28T09:40:45 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=138 rtp_ts=74975991 ts_ms=1787910045019
+[INFO] 2026-08-28T09:40:45 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=138 rtp_ts=74975991 ts_ms=1787910045019
+[INFO] 2026-08-28T09:40:45 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=138 rtp_ts=74975991 ts_ms=1787910045030 inference_latency_ms=10.801
+[INFO] 2026-08-28T09:40:45 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=138 rtp_ts=74975991 ts_ms=1787910045035
+[INFO] 2026-08-28T09:40:45 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=139 rtp_ts=75000293 ts_ms=1787910045291
+[INFO] 2026-08-28T09:40:45 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=139 rtp_ts=75000293 ts_ms=1787910045292
+[INFO] 2026-08-28T09:40:45 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=139 rtp_ts=75000293 ts_ms=1787910045304 inference_latency_ms=11.468
+[INFO] 2026-08-28T09:40:45 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=139 rtp_ts=75000293 ts_ms=1787910045311
+[INFO] 2026-08-28T09:40:45 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=140 rtp_ts=75018273 ts_ms=1787910045500
+[INFO] 2026-08-28T09:40:45 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=140 rtp_ts=75018273 ts_ms=1787910045501
+[INFO] 2026-08-28T09:40:45 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=140 rtp_ts=75018273 ts_ms=1787910045514 inference_latency_ms=13.244
+[INFO] 2026-08-28T09:40:45 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=140 rtp_ts=75018273 ts_ms=1787910045522
+[INFO] 2026-08-28T09:40:45 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=141 rtp_ts=75042246 ts_ms=1787910045746
+[INFO] 2026-08-28T09:40:45 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=141 rtp_ts=75042246 ts_ms=1787910045747
+[INFO] 2026-08-28T09:40:45 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=141 rtp_ts=75042246 ts_ms=1787910045756 inference_latency_ms=8.876
+[INFO] 2026-08-28T09:40:45 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=141 rtp_ts=75042246 ts_ms=1787910045758
+[INFO] 2026-08-28T09:40:45 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=142 rtp_ts=75060555 ts_ms=1787910045990
+[INFO] 2026-08-28T09:40:45 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=142 rtp_ts=75060555 ts_ms=1787910045992
+[INFO] 2026-08-28T09:40:46 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=142 rtp_ts=75060555 ts_ms=1787910046009 inference_latency_ms=17.320
+[INFO] 2026-08-28T09:40:46 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=142 rtp_ts=75060555 ts_ms=1787910046014
+[INFO] 2026-08-28T09:40:46 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=143 rtp_ts=75084528 ts_ms=1787910046219
+[INFO] 2026-08-28T09:40:46 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=143 rtp_ts=75084528 ts_ms=1787910046219
+[INFO] 2026-08-28T09:40:46 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=143 rtp_ts=75084528 ts_ms=1787910046230 inference_latency_ms=10.700
+[INFO] 2026-08-28T09:40:46 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=143 rtp_ts=75084528 ts_ms=1787910046234
+[INFO] 2026-08-28T09:40:46 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=144 rtp_ts=75102508 ts_ms=1787910046420
+[INFO] 2026-08-28T09:40:46 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=144 rtp_ts=75102508 ts_ms=1787910046422
+[INFO] 2026-08-28T09:40:46 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=144 rtp_ts=75102508 ts_ms=1787910046434 inference_latency_ms=12.498
+[INFO] 2026-08-28T09:40:46 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=144 rtp_ts=75102508 ts_ms=1787910046439
+[INFO] 2026-08-28T09:40:46 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=145 rtp_ts=75114823 ts_ms=1787910046623
+[INFO] 2026-08-28T09:40:46 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=145 rtp_ts=75114823 ts_ms=1787910046624
+[INFO] 2026-08-28T09:40:46 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=145 rtp_ts=75114823 ts_ms=1787910046636 inference_latency_ms=11.888
+[INFO] 2026-08-28T09:40:46 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=145 rtp_ts=75114823 ts_ms=1787910046640
+[INFO] 2026-08-28T09:40:46 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=146 rtp_ts=75144790 ts_ms=1787910046909
+[INFO] 2026-08-28T09:40:46 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=146 rtp_ts=75144790 ts_ms=1787910046910
+[INFO] 2026-08-28T09:40:46 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=146 rtp_ts=75144790 ts_ms=1787910046922 inference_latency_ms=12.563
+[INFO] 2026-08-28T09:40:46 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=146 rtp_ts=75144790 ts_ms=1787910046927
+[INFO] 2026-08-28T09:40:47 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=147 rtp_ts=75168928 ts_ms=1787910047112
+[INFO] 2026-08-28T09:40:47 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=147 rtp_ts=75168928 ts_ms=1787910047113
+[INFO] 2026-08-28T09:40:47 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=147 rtp_ts=75168928 ts_ms=1787910047128 inference_latency_ms=15.120
+[INFO] 2026-08-28T09:40:47 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=147 rtp_ts=75168928 ts_ms=1787910047133
+[INFO] 2026-08-28T09:40:47 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=148 rtp_ts=75187072 ts_ms=1787910047340
+[INFO] 2026-08-28T09:40:47 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=148 rtp_ts=75187072 ts_ms=1787910047343
+[INFO] 2026-08-28T09:40:47 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=148 rtp_ts=75187072 ts_ms=1787910047353 inference_latency_ms=10.169
+[INFO] 2026-08-28T09:40:47 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=148 rtp_ts=75187072 ts_ms=1787910047356
+[INFO] 2026-08-28T09:40:47 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=149 rtp_ts=75205052 ts_ms=1787910047547
+[INFO] 2026-08-28T09:40:47 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=149 rtp_ts=75205052 ts_ms=1787910047548
+[INFO] 2026-08-28T09:40:47 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=149 rtp_ts=75205052 ts_ms=1787910047562 inference_latency_ms=14.007
+[INFO] 2026-08-28T09:40:47 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=149 rtp_ts=75205052 ts_ms=1787910047566
+[INFO] 2026-08-28T09:40:47 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=150 rtp_ts=75229190 ts_ms=1787910047823
+[INFO] 2026-08-28T09:40:47 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=150 rtp_ts=75229190 ts_ms=1787910047824
+[INFO] 2026-08-28T09:40:47 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=150 rtp_ts=75229190 ts_ms=1787910047836 inference_latency_ms=11.833
+[INFO] 2026-08-28T09:40:47 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=150 rtp_ts=75229190 ts_ms=1787910047841
+[INFO] 2026-08-28T09:40:48 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=151 rtp_ts=75253327 ts_ms=1787910048106
+[INFO] 2026-08-28T09:40:48 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=151 rtp_ts=75253327 ts_ms=1787910048107
+[INFO] 2026-08-28T09:40:48 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=151 rtp_ts=75253327 ts_ms=1787910048117 inference_latency_ms=10.371
+[INFO] 2026-08-28T09:40:48 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=151 rtp_ts=75253327 ts_ms=1787910048122
+[INFO] 2026-08-28T09:40:48 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=152 rtp_ts=75277301 ts_ms=1787910048417
+[INFO] 2026-08-28T09:40:48 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=152 rtp_ts=75277301 ts_ms=1787910048418
+[INFO] 2026-08-28T09:40:48 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=152 rtp_ts=75277301 ts_ms=1787910048431 inference_latency_ms=13.087
+[INFO] 2026-08-28T09:40:48 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=152 rtp_ts=75277301 ts_ms=1787910048441
+[INFO] 2026-08-28T09:40:48 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=153 rtp_ts=75301602 ts_ms=1787910048630
+[INFO] 2026-08-28T09:40:48 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=153 rtp_ts=75301602 ts_ms=1787910048631
+[INFO] 2026-08-28T09:40:48 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=153 rtp_ts=75301602 ts_ms=1787910048645 inference_latency_ms=14.244
+[INFO] 2026-08-28T09:40:48 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=153 rtp_ts=75301602 ts_ms=1787910048651
+[INFO] 2026-08-28T09:40:48 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=154 rtp_ts=75325576 ts_ms=1787910048848
+[INFO] 2026-08-28T09:40:48 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=154 rtp_ts=75325576 ts_ms=1787910048849
+[INFO] 2026-08-28T09:40:48 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=154 rtp_ts=75325576 ts_ms=1787910048862 inference_latency_ms=13.233
+[INFO] 2026-08-28T09:40:48 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=154 rtp_ts=75325576 ts_ms=1787910048868
+[INFO] 2026-08-28T09:40:49 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=155 rtp_ts=75343556 ts_ms=1787910049055
+[INFO] 2026-08-28T09:40:49 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=155 rtp_ts=75343556 ts_ms=1787910049056
+[INFO] 2026-08-28T09:40:49 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=155 rtp_ts=75343556 ts_ms=1787910049067 inference_latency_ms=10.781
+[INFO] 2026-08-28T09:40:49 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=155 rtp_ts=75343556 ts_ms=1787910049071
+[INFO] 2026-08-28T09:40:49 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=156 rtp_ts=75361864 ts_ms=1787910049288
+[INFO] 2026-08-28T09:40:49 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=156 rtp_ts=75361864 ts_ms=1787910049289
+[INFO] 2026-08-28T09:40:49 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=156 rtp_ts=75361864 ts_ms=1787910049302 inference_latency_ms=12.654
+[INFO] 2026-08-28T09:40:49 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=156 rtp_ts=75361864 ts_ms=1787910049306
+[INFO] 2026-08-28T09:40:49 | ai_engine | LATENCY_TRACE stage=ai_received stream_id=video-0 frame_id=157 rtp_ts=75379844 ts_ms=1787910049491
+[INFO] 2026-08-28T09:40:49 | ai_engine.video | LATENCY_TRACE stage=ai_submit stream_id=video-0 frame_id=157 rtp_ts=75379844 ts_ms=1787910049492
+[INFO] 2026-08-28T09:40:49 | ai_engine.video | LATENCY_TRACE stage=ai_result stream_id=video-0 frame_id=157 rtp_ts=75379844 ts_ms=1787910049504 inference_latency_ms=11.883
+[INFO] 2026-08-28T09:40:49 | ai_engine.video.mf_callback | LATENCY_TRACE stage=ai_push stream_id=video-0 frame_id=157 rtp_ts=75379844 ts_ms=1787910049510

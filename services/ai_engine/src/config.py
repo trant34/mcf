@@ -59,6 +59,27 @@ class Config:
     VIDEO_EFFECT    = os.getenv("VIDEO_EFFECT",    "bg_blur")  # bg_blur|bg_replace|bg_remove
     BG_IMAGE_PATH   = os.getenv("BG_IMAGE_PATH",   "")
 
+    # ── v3.1: MediaPipe LIVE_STREAM + direct AI -> MF result push ──────
+    # See rtpgw_design_v3.md section 35 for the rationale for both changes.
+    #
+    # MediaPipe ImageSegmenter running mode. LIVE_STREAM replaces the old
+    # IMAGE mode: inference is asynchronous (segment_async + result_callback)
+    # instead of a blocking call per frame, and MediaPipe keeps temporal
+    # state across frames of the *same* stream, so each (session_id,
+    # stream_id) needs its own segmenter instance with strictly increasing
+    # input timestamps -- see LiveStreamSegmentSession in
+    # video/video_http_server.py.
+    VIDEO_RUNNING_MODE = os.getenv("VIDEO_RUNNING_MODE", "LIVE_STREAM")  # LIVE_STREAM|IMAGE
+
+    # Where the AI Engine HTTP-POSTs the mask RLE result once a LIVE_STREAM
+    # inference callback fires. In production this should travel with the
+    # call (e.g. carried in the RTPGW -> AI Engine VideoConfig, itself
+    # populated from RtpOpen.mf_callback_url in video_ingest.proto), but a
+    # single fixed env var is enough for the pcap-replay test pipeline,
+    # where there is exactly one MF instance.
+    MF_CALLBACK_URL = os.getenv("MF_CALLBACK_URL", "http://127.0.0.1:8090/v1/video/mask")
+    MF_CALLBACK_TIMEOUT_MS = int(os.getenv("MF_CALLBACK_TIMEOUT_MS", "800"))
+
     # VAD (Voice Activity Detection) Configuration
     VAD_THRESHOLD = float(os.getenv("VAD_THRESHOLD", "0.5"))
     

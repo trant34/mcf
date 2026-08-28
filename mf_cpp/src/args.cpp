@@ -48,12 +48,24 @@ Args parse_args(int argc, char** argv) {
             args.infer_width = std::stoi(require_value(argc, argv, i, flag));
         } else if (flag == "--infer-height") {
             args.infer_height = std::stoi(require_value(argc, argv, i, flag));
-        } else if (flag == "--jpeg-quality") {
-            args.jpeg_quality = std::stoi(require_value(argc, argv, i, flag));
-        } else if (flag == "--mcf-url") {
-            args.mcf_url = require_value(argc, argv, i, flag);
-        } else if (flag == "--http-timeout") {
-            args.http_timeout = std::stod(require_value(argc, argv, i, flag));
+        } else if (flag == "--rtpgw-grpc-addr") {
+            args.rtpgw_grpc_addr = require_value(argc, argv, i, flag);
+        } else if (flag == "--leg") {
+            args.leg = require_value(argc, argv, i, flag);
+        } else if (flag == "--codec") {
+            args.codec = require_value(argc, argv, i, flag);
+        } else if (flag == "--clock-rate") {
+            args.clock_rate = static_cast<uint32_t>(std::stoul(require_value(argc, argv, i, flag)));
+        } else if (flag == "--mask-callback-listen-addr") {
+            args.mask_callback_listen_addr = require_value(argc, argv, i, flag);
+        } else if (flag == "--mask-callback-listen-port") {
+            args.mask_callback_listen_port = std::stoi(require_value(argc, argv, i, flag));
+        } else if (flag == "--mask-callback-path") {
+            args.mask_callback_path = require_value(argc, argv, i, flag);
+        } else if (flag == "--mf-callback-url") {
+            args.mf_callback_url = require_value(argc, argv, i, flag);
+        } else if (flag == "--shutdown-grace-ms") {
+            args.shutdown_grace_ms = std::stoi(require_value(argc, argv, i, flag));
         } else if (flag == "--session-id") {
             args.session_id = require_value(argc, argv, i, flag);
         } else if (flag == "--stream-id") {
@@ -73,16 +85,24 @@ Args parse_args(int argc, char** argv) {
             args.background_blur_sigma = std::stod(require_value(argc, argv, i, flag));
         } else if (flag == "--end-idle-seconds") {
             args.end_idle_seconds = std::stod(require_value(argc, argv, i, flag));
-        } else if (flag == "--ffmpeg") {
-            args.ffmpeg = require_value(argc, argv, i, flag);
-        } else if (flag == "--debug-ffmpeg") {
-            args.debug_ffmpeg = true;
         } else if (flag == "-h" || flag == "--help") {
             std::cout << "Usage: mf_cpp [options]\n"
-                      << "See mf_v1.py argparse options for the full flag list; "
-                         "flags are identical (e.g. --listen-host, --listen-port, "
-                         "--width, --height, --fps, --infer-fps, --mcf-url, "
-                         "--effect, --background, --output, ...).\n";
+                      << "\n"
+                      << "v3.2 (rtpgw_design_v3.md section 37): MF forwards RTP to RTPGW and\n"
+                      << "composites frames RTPGW decodes and streams back -- MF does not decode\n"
+                      << "H264 itself anymore, so there is no local-decode / --legacy-http-infer\n"
+                      << "fallback (removed from v3.1).\n"
+                      << "\n"
+                      << "RTP input:      --listen-host --listen-port --payload-type --ssrc\n"
+                      << "Video/output:   --width --height --fps --effect --background --output\n"
+                      << "                --mask-blur-sigma --background-blur-sigma --end-idle-seconds\n"
+                      << "AI hint:        --infer-fps --infer-width --infer-height (sent to RTPGW as a\n"
+                      << "                hint in RtpOpen; RTPGW's own env config wins if it disagrees)\n"
+                      << "RTPGW link:     --rtpgw-grpc-addr HOST:PORT (default 127.0.0.1:50060)\n"
+                      << "                --leg --codec --clock-rate --session-id --stream-id\n"
+                      << "                --shutdown-grace-ms (default 3000)\n"
+                      << "Mask callback:  --mask-callback-listen-addr --mask-callback-listen-port\n"
+                      << "                --mask-callback-path --mf-callback-url\n";
             std::exit(0);
         } else {
             throw std::runtime_error("unknown argument: " + flag);

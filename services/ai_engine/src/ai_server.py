@@ -16,8 +16,12 @@ sys.path.append(os.path.join(current_dir, 'pb'))
 from pb import ai_service_pb2
 from pb import ai_service_pb2_grpc
 from config import Config
-# from video.video_http_server import start_video_http_server
-from video.video_http_server import LazySegmenter, _rle_encode, start_video_http_server  
+from video.video_http_server import (
+    LazySegmenter,
+    LiveStreamSegmentPool,
+    _rle_encode,
+    start_video_http_server,
+)
 
 
 # Setup structured logger
@@ -30,8 +34,8 @@ logger.info("Loading Whisper model", extra={"context": {
     "device": Config.DEVICE,
     "compute_type": Config.COMPUTE_TYPE
 }})
-whisper_model = WhisperModel(Config.WHISPER_MODEL_SIZE, device=Config.DEVICE, compute_type=Config.COMPUTE_TYPE)
-logger.info("Whisper model loaded, ready to process streams")
+# whisper_model = WhisperModel(Config.WHISPER_MODEL_SIZE, device=Config.DEVICE, compute_type=Config.COMPUTE_TYPE)
+# logger.info("Whisper model loaded, ready to process streams")
 
 Config.log_config(logger)
 
@@ -48,9 +52,22 @@ VIDEO_MOCK_MASK = os.getenv("VIDEO_MOCK_MASK", "false").lower() in {
     "on",
 }
 
-# One shared runtime for the prototype. LazySegmenter serializes calls internally.
-# For high load, replace this with a model pool/batch scheduler.
+# One shared runtime for the legacy synchronous IMAGE-mode HTTP endpoint
+# (VIDEO_HTTP_ENABLED=true, disabled by default as of v3.1). LazySegmenter
+# serializes calls internally.
 video_segmenter = LazySegmenter(str(VIDEO_MODEL_PATH), VIDEO_MASK_THRESHOLD)
+
+# one LIVE_STREAM MediaPipe
+# ImageSegmenter instance per (session_id, stream_id), created lazily on the
+# video stream's `config` message and pushing mask results directly to MF
+# over HTTP instead of returning them synchronously. This is what
+# RealTranslationService.ProcessVideoStream (below) actually drives now.
+video_stream_pool = LiveStreamSegmentPool(
+    model_path=str(VIDEO_MODEL_PATH),
+    default_threshold=VIDEO_MASK_THRESHOLD,
+    mf_callback_url=Config.MF_CALLBACK_URL,
+    mf_callback_timeout_ms=Config.MF_CALLBACK_TIMEOUT_MS,
+)
 
 
 def decode_pcma_chunk(payload_bytes):
@@ -204,7 +221,16 @@ class RealTranslationService(ai_service_pb2_grpc.TranslationServiceServicer):
         logger.info("Stream closed", extra={"session_id": session_id})
 
     def ProcessVideoStream(self, request_iterator, context):
-        """Persistent LOGIC <-> AI Engine video inference stream."""
+        """Persistent RTPGW <-> AI Engine video inference stream.
+
+        v3.1 (rtpgw_design_v3.md section 35): this stream is now purely
+        input (RTPGW pushes frames) + lightweight acks (this method yields
+        no mask anymore). Inference runs asynchronously via MediaPipe
+        LIVE_STREAM (video_stream_pool), and the mask result is pushed
+        directly to MF over HTTP from LiveStreamSegmentSession._on_result,
+        not returned on this stream. RTPGW's SendFrameAsync (video_proxy.go)
+        already does not wait for a per-frame reply, matching this.
+        """
         session_id = "UNKNOWN"
         stream_id = "video-0"
         threshold = VIDEO_MASK_THRESHOLD
@@ -225,6 +251,7 @@ class RealTranslationService(ai_service_pb2_grpc.TranslationServiceServicer):
                             "context": {"stream_id": stream_id},
                         },
                     )
+                    video_stream_pool.close(session_id, stream_id)
                     yield ai_service_pb2.VideoResponse(
                         session_id=session_id,
                         stream_id=stream_id,
@@ -249,67 +276,78 @@ class RealTranslationService(ai_service_pb2_grpc.TranslationServiceServicer):
                                 "inference_height": config.inference_height,
                                 "inference_fps": config.inference_fps,
                                 "threshold": threshold,
+                                "running_mode": Config.VIDEO_RUNNING_MODE,
+                                "mf_callback_url": Config.MF_CALLBACK_URL,
                                 "model_path": str(VIDEO_MODEL_PATH),
                             },
                         },
                     )
+                    video_stream_pool.open(session_id, stream_id, threshold=threshold)
                     continue
 
                 if payload_type != "frame":
                     continue
 
                 frame = request.frame
+                if VIDEO_MOCK_MASK:
+                    # Mock mode keeps the old synchronous path so it stays
+                    # useful as a fast, model-free smoke test; it is not
+                    # representative of the LIVE_STREAM timing behaviour.
+                    try:
+                        mask, latency_ms = infer_video_mask(bytes(frame.image_data), threshold)
+                        runs = _rle_encode(mask)
+                        yield ai_service_pb2.VideoResponse(
+                            session_id=session_id,
+                            stream_id=stream_id,
+                            mask=ai_service_pb2.VideoMask(
+                                frame_id=frame.frame_id,
+                                rtp_timestamp=frame.rtp_timestamp,
+                                mask_width=int(mask.shape[1]),
+                                mask_height=int(mask.shape[0]),
+                                rle_counts=runs,
+                                latency_ms=float(latency_ms),
+                                status="ok",
+                            ),
+                            is_final=False,
+                        )
+                    except Exception:
+                        logger.exception(
+                            "Mock video inference failed",
+                            extra={"session_id": session_id, "context": {"stream_id": stream_id}},
+                        )
+                    continue
+
+                session = video_stream_pool.get(session_id, stream_id)
+                if session is None:
+                    # No `config` message seen yet (e.g. test client sends
+                    # frames straight away); open lazily with defaults so
+                    # the pipeline still works instead of dropping frames.
+                    session = video_stream_pool.open(session_id, stream_id, threshold=threshold)
+
+                # LATENCY_TRACE T3: frame received on the gRPC stream from
+                # RTPGW. See rtpgw_design_v3.md section 36.
+                logger.info(
+                    "LATENCY_TRACE stage=ai_received stream_id=%s frame_id=%s rtp_ts=%s ts_ms=%s",
+                    stream_id, frame.frame_id, frame.rtp_timestamp, int(time.time() * 1000),
+                )
+
                 try:
-                    mask, latency_ms = infer_video_mask(
-                        bytes(frame.image_data),
-                        threshold,
-                    )
-                    runs = _rle_encode(mask)
-                    response_mask = ai_service_pb2.VideoMask(
-                        frame_id=frame.frame_id,
-                        rtp_timestamp=frame.rtp_timestamp,
-                        mask_width=int(mask.shape[1]),
-                        mask_height=int(mask.shape[0]),
-                        rle_counts=runs,
-                        latency_ms=float(latency_ms),
-                        status="ok",
-                    )
-
-                    logger.debug(
-                        "Video inference completed",
-                        extra={
-                            "session_id": session_id,
-                            "context": {
-                                "stream_id": stream_id,
-                                "frame_id": frame.frame_id,
-                                "rtp_timestamp": frame.rtp_timestamp,
-                                "latency_ms": round(latency_ms, 3),
-                                "rle_runs": len(runs),
-                            },
-                        },
-                    )
-                except Exception as exc:
+                    session.submit(bytes(frame.image_data), frame.frame_id, frame.rtp_timestamp)
+                except Exception:
                     logger.exception(
-                        "Video inference failed",
+                        "Failed to submit frame to LIVE_STREAM segmenter",
                         extra={
                             "session_id": session_id,
-                            "context": {
-                                "stream_id": stream_id,
-                                "frame_id": frame.frame_id,
-                            },
+                            "context": {"stream_id": stream_id, "frame_id": frame.frame_id},
                         },
                     )
-                    response_mask = ai_service_pb2.VideoMask(
-                        frame_id=frame.frame_id,
-                        rtp_timestamp=frame.rtp_timestamp,
-                        status="error",
-                        error_message=str(exc),
-                    )
+                    continue
 
+                # Lightweight ack, no mask -- lets RTPGW observe liveness on
+                # the stream without correlating it to any specific frame.
                 yield ai_service_pb2.VideoResponse(
                     session_id=session_id,
                     stream_id=stream_id,
-                    mask=response_mask,
                     is_final=False,
                 )
 
@@ -327,6 +365,7 @@ class RealTranslationService(ai_service_pb2_grpc.TranslationServiceServicer):
             )
             context.abort(grpc.StatusCode.INTERNAL, "video stream processing failed")
         finally:
+            video_stream_pool.close(session_id, stream_id)
             logger.info(
                 "Video stream closed",
                 extra={
@@ -352,6 +391,7 @@ class RealTranslationService(ai_service_pb2_grpc.TranslationServiceServicer):
         except KeyboardInterrupt: 
             logger.info("Stopping gRPC server...")
             server.stop(0)
+            video_stream_pool.close_all()
             if video_http_server is not None:
                 video_http_server.shutdown()
 

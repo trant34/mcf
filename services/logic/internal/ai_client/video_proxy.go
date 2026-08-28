@@ -193,8 +193,14 @@ func (p *VideoGRPCProxy) recvLoop(session *videoSessionStream) {
 		session.mu.Unlock()
 
 		if waiter == nil {
-			p.logger.Warn(
-				"Received video mask without pending request",
+			// Expected for frames sent via SendFrameAsync: the AI Engine
+			// (LIVE_STREAM mode) no longer carries the mask back over this
+			// stream for those frames -- it pushes the result to MF over
+			// HTTP directly (rtpgw_design_v3.md section 35). Only the
+			// legacy synchronous Infer() path registers a waiter, so an ack
+			// with no waiter here is normal, not an error.
+			p.logger.Debug(
+				"video ack without pending waiter (async frame, expected)",
 				zap.String("session_id", resp.GetSessionId()),
 				zap.String("stream_id", resp.GetStreamId()),
 				zap.Int64("frame_id", mask.GetFrameId()),
@@ -340,6 +346,52 @@ func (p *VideoGRPCProxy) Infer(
 		session.mu.Unlock()
 		return nil, fmt.Errorf("video inference timeout: %w", requestCtx.Err())
 	}
+}
+
+// SendFrameAsync pushes one decoded/JPEG-encoded frame onto the persistent
+// ProcessVideoStream gRPC stream to the AI Engine without waiting for a
+// matched response. Used by the new MF -> RTPGW -> AI Engine pipeline
+// (video_ingest_server.go): the AI Engine runs MediaPipe in LIVE_STREAM
+// mode and pushes the mask result straight to MF over HTTP once inference
+// completes, so RTPGW never needs to correlate a response to this send.
+// This is what makes the pipeline non-blocking end-to-end, matching
+// MediaPipe LIVE_STREAM's own async contract (detect_async/segment_async).
+func (p *VideoGRPCProxy) SendFrameAsync(sessionID, streamID string, in VideoInferenceRequest) error {
+	if sessionID == "" {
+		return fmt.Errorf("missing session id")
+	}
+	if len(in.JPEG) == 0 {
+		return fmt.Errorf("empty JPEG")
+	}
+
+	session, err := p.getOrCreateSession(context.Background(), sessionID, streamID)
+	if err != nil {
+		return err
+	}
+
+	req := &pb.VideoRequest{
+		SessionId: sessionID,
+		StreamId:  streamID,
+		Payload: &pb.VideoRequest_Frame{
+			Frame: &pb.VideoFrame{
+				FrameId:        in.FrameID,
+				RtpTimestamp:   in.RTPTimestamp,
+				OriginalWidth:  in.OriginalWidth,
+				OriginalHeight: in.OriginalHeight,
+				Encoding:       "jpeg",
+				ImageData:      in.JPEG,
+			},
+		},
+	}
+
+	session.sendMu.Lock()
+	err = session.stream.Send(req)
+	session.sendMu.Unlock()
+	if err != nil {
+		p.closeSession(session, err)
+		return fmt.Errorf("send video frame over gRPC (async): %w", err)
+	}
+	return nil
 }
 
 func (p *VideoGRPCProxy) Close() {

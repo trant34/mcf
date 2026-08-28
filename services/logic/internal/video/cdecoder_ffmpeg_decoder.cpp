@@ -1,12 +1,10 @@
-#include "ffmpeg_decoder.hpp"
+#include "cdecoder_ffmpeg_decoder.hpp"
 
 #include <cerrno>
 #include <chrono>
 #include <csignal>
 #include <cstdio>
-#include <cstring>
 #include <iostream>
-#include <thread>
 
 #include <fcntl.h>
 #include <sys/wait.h>
@@ -18,7 +16,7 @@ namespace {
 void log(const std::string& message) {
     std::cout << message << std::endl;
 }
-}
+} // namespace
 
 FFmpegDecoder::FFmpegDecoder(int width, int height, const std::string& ffmpeg_bin, bool debug)
     : width_(width), height_(height), frame_size_(static_cast<size_t>(width) * height * 3) {
@@ -56,7 +54,6 @@ FFmpegDecoder::FFmpegDecoder(int width, int height, const std::string& ffmpeg_bi
                "-i", "pipe:0", "-an", "-vsync", "0",
                "-f", "rawvideo", "-pix_fmt", "bgr24", "pipe:1",
                static_cast<char*>(nullptr));
-        // execlp only returns on failure.
         std::perror("execlp ffmpeg failed");
         _exit(127);
     }
@@ -89,7 +86,7 @@ void FFmpegDecoder::feed(const std::vector<uint8_t>& annexb, uint32_t rtp_timest
         ssize_t n = write(stdin_fd_, annexb.data() + written, annexb.size() - written);
         if (n < 0) {
             if (errno == EINTR) continue;
-            log(std::string("[MF][decoder] feed failed: ") + std::strerror(errno));
+            log(std::string("[RTPGW][cdecoder] feed failed: ") + std::strerror(errno));
             return;
         }
         written += static_cast<size_t>(n);
@@ -97,12 +94,10 @@ void FFmpegDecoder::feed(const std::vector<uint8_t>& annexb, uint32_t rtp_timest
 }
 
 void FFmpegDecoder::reader_loop() {
-    // Reads until the pipe's write end closes (ffmpeg exits or closes
-    // stdout) or a hard read error occurs. Deliberately does not consult
-    // running_/waitpid here: ffmpeg must be able to flush its remaining
-    // buffered frames through this pipe during shutdown, and reading is
-    // what allows that to happen (a full, undrained pipe would otherwise
-    // block ffmpeg's write() and prevent it from ever exiting).
+    // See mf_cpp's original reader_loop() for why this deliberately doesn't
+    // consult running_/waitpid: ffmpeg must be able to flush buffered
+    // frames through this pipe during shutdown, which requires the pipe to
+    // keep being drained.
     while (true) {
         ssize_t n = read(stdout_fd_, chunk_buf_.data(), chunk_buf_.size());
         if (n < 0) {
@@ -113,8 +108,8 @@ void FFmpegDecoder::reader_loop() {
 
         buffer_.insert(buffer_.end(), chunk_buf_.begin(), chunk_buf_.begin() + n);
         while (buffer_.size() >= frame_size_) {
-            cv::Mat frame(height_, width_, CV_8UC3);
-            std::memcpy(frame.data, buffer_.data(), frame_size_);
+            RawFrame frame;
+            frame.data.assign(buffer_.begin(), buffer_.begin() + frame_size_);
             buffer_.erase(buffer_.begin(), buffer_.begin() + frame_size_);
 
             uint32_t rtp_ts = 0;
@@ -125,7 +120,8 @@ void FFmpegDecoder::reader_loop() {
                     timestamps_.pop_front();
                 }
             }
-            frames.put_latest(DecodedFrame{rtp_ts, frame});
+            frame.rtp_ts = rtp_ts;
+            frames.put_latest(std::move(frame));
         }
     }
 }
@@ -135,15 +131,10 @@ void FFmpegDecoder::close() {
     if (!running_.compare_exchange_strong(expected, false)) {
         return; // already closed
     }
-    // Signal EOF on stdin so ffmpeg starts flushing its remaining frames.
     if (stdin_fd_ >= 0) {
         ::close(stdin_fd_);
         stdin_fd_ = -1;
     }
-    // The reader thread is still draining stdout in the background (see
-    // reader_loop) -- that draining is required for ffmpeg to be able to
-    // finish writing and exit. Give it a bounded window to exit cleanly,
-    // then force-kill if it hasn't.
     if (pid_ > 0) {
         int status = 0;
         bool exited = false;
@@ -161,8 +152,6 @@ void FFmpegDecoder::close() {
         }
         pid_ = -1;
     }
-    // ffmpeg has exited by now, so stdout has hit EOF and reader_loop()
-    // will have returned (or is about to) -- safe to join.
     if (reader_thread_.joinable()) {
         reader_thread_.join();
     }

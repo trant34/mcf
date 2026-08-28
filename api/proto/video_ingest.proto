@@ -1,0 +1,122 @@
+syntax = "proto3";
+
+// video_ingest.proto
+//
+// v3.2 (see rtpgw_design_v3.md section 37). MF no longer decodes H264 at
+// all -- decode moved entirely into RTPGW (embedded C++ decoder via cgo,
+// see services/logic/internal/video/cdecoder/). MF's role is now strictly
+// "forward RTP + compositor": it forwards every RTP packet to RTPGW
+// unchanged, and RTPGW decodes ONCE and fans the result out two ways:
+//   1. every decoded frame, raw (DecodedFrame), streamed straight back to
+//      MF over THIS SAME connection, for MF's compositor to consume;
+//   2. a FPS-sampled + JPEG-encoded subset, forwarded on to the AI Engine
+//      over the separate RTPGW <-> AI Engine gRPC stream (ai_service.proto,
+//      unchanged from v3.1).
+// The AI Engine still pushes mask results directly to MF over HTTP
+// (unchanged from v3.1) -- RTPGW is never in the mask's return path.
+package mcf.video.v1;
+
+option go_package = "mcf/services/logic/internal/pb/api/proto";
+
+// ---------------------------------------------------------
+// SERVICE DEFINITION
+// ---------------------------------------------------------
+service VideoIngestService {
+  // MF -> RTPGW: RtpFrame (open/packet/eos), standard RTP fields only.
+  // RTPGW -> MF: IngestResponse, either a control IngestEvent or an actual
+  // DecodedFrame -- see the two are now interleaved on the SAME stream, so
+  // MF's reader thread must switch on IngestResponse.payload.
+  rpc Transport(stream RtpFrame) returns (stream IngestResponse);
+}
+
+// ---------------------------------------------------------
+// MF -> RTPGW  (unchanged shape from v3.1 -- still standard RTP fields)
+// ---------------------------------------------------------
+
+message RtpOpen {
+  string session_id = 1;
+  string stream_id  = 2;         // e.g. "call-001:taccess:video"
+  string leg         = 3;        // "tcore" | "taccess"
+
+  string codec        = 4;       // "H264"
+  uint32 clock_rate    = 5;      // 90000 for H264
+
+  string effect_type   = 6;      // "bg_replace" | "bg_blur" | "bg_remove"
+  int32  target_width  = 7;      // AI inference resize target (JPEG leg)
+  int32  target_height = 8;
+  int32  target_fps    = 9;      // AI inference sampling FPS (JPEG leg)
+
+  string mf_callback_url = 10;   // where the AI Engine pushes mask results
+
+  // NEW in v3.2: the resolution MF's own VideoWriter/compositor is
+  // configured for (its --width/--height CLI flags). RTPGW's embedded
+  // decoder MUST decode+return raw frames at exactly this resolution, or
+  // MF's compose()/writer_.write() will fail/corrupt -- previously this
+  // was two independently-configured values (MF's --width/--height vs
+  // RTPGW's VIDEO_FRAME_WIDTH/HEIGHT env var) that had to be kept in sync
+  // by hand; carrying it in RtpOpen removes that footgun (see
+  // rtpgw_design_v3.md section 35.6 for the class of bug this caused
+  // before, and section 37 for this fix).
+  int32 decode_width = 11;
+  int32 decode_height = 12;
+}
+
+message RtpPacket {
+  uint32 sequence_number = 1;
+  uint32 timestamp        = 2;
+  uint32 ssrc              = 3;
+  bool   marker             = 4;
+  uint32 payload_type       = 5;
+  bytes  payload             = 6;
+}
+
+message RtpFrame {
+  string session_id = 1;
+  string stream_id  = 2;
+  bool   is_eos      = 3;
+
+  oneof payload {
+    RtpOpen   open   = 4;
+    RtpPacket packet = 5;
+  }
+}
+
+// ---------------------------------------------------------
+// RTPGW -> MF
+// ---------------------------------------------------------
+
+// One fully decoded frame, raw pixels, at MF's decode_width x decode_height
+// (see RtpOpen above). encoding is always "bgr24" (OpenCV's native channel
+// order, matching what MF's compose() already expects -- zero conversion
+// needed on MF's side when building a cv::Mat from frame_data). NOT
+// FPS-sampled: every frame RTPGW decodes is sent here, since MF's
+// compositor needs continuity to produce a normal-looking output video
+// (only the separate RTPGW -> AI Engine leg is FPS-sampled).
+message DecodedFrame {
+  int64  frame_id      = 1;  // RTPGW's own counter, independent of AI-leg frame_id
+  uint32 rtp_timestamp  = 2;
+  int32  width           = 3;
+  int32  height           = 4;
+  string encoding          = 5; // "bgr24"
+  bytes  frame_data         = 6;
+}
+
+message IngestEvent {
+  string session_id      = 1;
+  string stream_id       = 2;
+  string status           = 3; // "opened" | "ack" | "warn" | "error" | "closed"
+  string message           = 4;
+  uint64 packets_received  = 5;
+  uint64 frames_decoded    = 6;
+  uint64 frames_dropped    = 7;
+}
+
+message IngestResponse {
+  string session_id = 1;
+  string stream_id  = 2;
+
+  oneof payload {
+    IngestEvent   event = 3;
+    DecodedFrame  frame = 4;
+  }
+}

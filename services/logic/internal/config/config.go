@@ -27,6 +27,19 @@ type Config struct {
 	VideoInferenceHeight uint32
 	VideoInferenceFPS    uint32
 	VideoMaskThreshold   float32
+
+	// VideoIngestListenAddr is the MF -> RTPGW gRPC bidirectional stream
+	// (api/proto/video_ingest.proto). VideoFrameWidth/Height are now only
+	// a FALLBACK default (v3.2, rtpgw_design_v3.md section 37): the real
+	// decode resolution normally travels per-call in RtpOpen.decode_width/
+	// decode_height (set from MF's own --width/--height), which removes
+	// the old footgun of two independently-configured values that had to
+	// be kept in sync by hand.
+	VideoIngestListenAddr string
+	VideoFrameWidth       int
+	VideoFrameHeight      int
+	VideoFFmpegBinary     string
+	VideoJPEGQuality      int
 }
 
 func Load() *Config {
@@ -50,6 +63,11 @@ func Load() *Config {
 		VideoInferenceFPS:    uint32(getEnvInt("VIDEO_INFER_FPS", 5)),
 		VideoMaskThreshold:   float32(getEnvFloat("VIDEO_MASK_THRESHOLD", 0.5)),
 
+		VideoIngestListenAddr: getEnv("VIDEO_INGEST_LISTEN_ADDR", "0.0.0.0:50060"),
+		VideoFrameWidth:       getEnvInt("VIDEO_FRAME_WIDTH", 240),
+		VideoFrameHeight:      getEnvInt("VIDEO_FRAME_HEIGHT", 320),
+		VideoFFmpegBinary:     getEnv("VIDEO_FFMPEG_BINARY", "ffmpeg"),
+		VideoJPEGQuality:      getEnvInt("VIDEO_JPEG_QUALITY", 80),
 	}
 
 	logger.Info("Configuration loaded",
@@ -67,6 +85,10 @@ func Load() *Config {
 
 		zap.String("session_id", cfg.SessionID),
 		zap.String("log_level", cfg.LogLevel),
+
+		zap.String("video_ingest_listen_addr", cfg.VideoIngestListenAddr),
+		zap.Int("video_frame_width", cfg.VideoFrameWidth),
+		zap.Int("video_frame_height", cfg.VideoFrameHeight),
 	)
 
 	return cfg

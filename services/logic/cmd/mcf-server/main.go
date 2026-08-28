@@ -7,6 +7,7 @@ import (
 	"mcf/services/logic/internal/gateway"
 	"mcf/services/logic/internal/logic_core"
 	pb "mcf/services/logic/internal/pb/api/proto"
+	"net"
 	"net/http"
 	"os"
 	"os/signal"
@@ -14,6 +15,7 @@ import (
 	"time"
 
 	"go.uber.org/zap"
+	"google.golang.org/grpc"
 )
 
 func main() {
@@ -71,10 +73,37 @@ func main() {
 		})
 	})
 
+	// v3.2 (rtpgw_design_v3.md section 37): MF no longer decodes -- it only
+	// forwards RTP and composites. RTPGW decodes (embedded C++ via cgo,
+	// see internal/video/cdecoder.go) and fans frames out two ways: raw
+	// back to MF (every frame, for compositing) and JPEG-sampled to the AI
+	// Engine (unchanged leg from v3.1).
+	videoIngest := gateway.NewVideoIngestServer(gateway.VideoIngestConfig{
+		DefaultDecodeWidth: cfg.VideoFrameWidth, DefaultDecodeHeight: cfg.VideoFrameHeight,
+		InferWidth: int(cfg.VideoInferenceWidth), InferHeight: int(cfg.VideoInferenceHeight),
+		InferFPS:     float64(cfg.VideoInferenceFPS),
+		JPEGQuality:  cfg.VideoJPEGQuality,
+		FFmpegBinary: cfg.VideoFFmpegBinary,
+	}, videoProxy, cfg.Logger)
+
+	videoIngestGRPCServer := grpc.NewServer()
+	pb.RegisterVideoIngestServiceServer(videoIngestGRPCServer, videoIngest)
+
 	// Orchestrator
 	orchestrator := logic_core.NewOrchestrator(httpGW, rtpGW, aiClient, cfg.Logger)
 
 	go httpGW.StartServer(cfg.HTTPListenAddr)
+
+	go func() {
+		lis, lerr := net.Listen("tcp", cfg.VideoIngestListenAddr)
+		if lerr != nil {
+			cfg.Logger.Fatal("Failed to bind video ingest gRPC listener", zap.Error(lerr))
+		}
+		cfg.Logger.Info("Video ingest gRPC server listening (MF -> RTPGW)", zap.String("addr", cfg.VideoIngestListenAddr))
+		if serr := videoIngestGRPCServer.Serve(lis); serr != nil {
+			cfg.Logger.Error("Video ingest gRPC server stopped", zap.Error(serr))
+		}
+	}()
 
 	// Start RTP listener in a separate goroutine
 	go orchestrator.HandleCallSession(ctx, cfg.SessionID)
@@ -91,6 +120,7 @@ func main() {
 		cfg.Logger.Warn("MCF context cancelled")
 	}
 	cancel()
+	videoIngestGRPCServer.GracefulStop()
 	time.Sleep(1 * time.Second)
 	cfg.Logger.Info("=== MCF Server Stopped Successfully ===")
 }
